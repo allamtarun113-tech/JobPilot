@@ -1,0 +1,17 @@
+.env*
+.git
+.venv
+var
+Data/user
+Data/books
+Data/reports
+Raw_data
+tests
+evals
+docs
+**/__pycache__
+**/*.pyc
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.vercel

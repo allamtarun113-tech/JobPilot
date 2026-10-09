@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block title %}Profile - JobPilot{% endblock %}
+{% block content %}
+<style>
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .entry { scroll-margin-top: 80px; }
+  .entry-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .entry-head h3 { margin: 0 0 4px; font-size: 17px; }
+  .entry-meta { color: var(--muted); font-size: 13px; }
+  .entry-meta span + span::before { content: " · "; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+  .chip { padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface-2); font-size: 12px; }
+  .about { margin: 12px 0 0; white-space: pre-line; }
+  .entry h4 { margin: 18px 0 8px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .add-detail { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; gap: 8px; margin-top: 10px; }
+  .actions { white-space: nowrap; text-align: right; }
+  .actions form.inline { display: inline; }
+  .fields-form { padding: 14px 0; }
+  .fields-form .wide { grid-column: 1 / -1; }
+  .warn-text { color: var(--warn); }
+  @media (max-width: 700px) { .add-detail { grid-template-columns: 1fr; } .actions { text-align: left; white-space: normal; } }
+</style>
+
+{% macro hidden(suffix, version=none) -%}
+  <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-{{ suffix }}">
+  {%- if version is not none %}<input type="hidden" name="version" value="{{ version }}">{% endif %}
+{%- endmacro %}
+
+{% macro status_actions(i) -%}
+  {% for action, label in [("confirmed", "Confirm"), ("rejected", "Reject"), ("draft", "Undo")] %}
+    {% if i.status != action %}
+    <form class="inline" method="post" action="/profile/items/{{ i.id }}">
+      {{ hidden(action ~ i.id, i.version) }}<input type="hidden" name="action" value="{{ action }}">
+      <button>{{ label }}</button>
+    </form>
+    {% endif %}
+  {% endfor %}
+{%- endmacro %}
+
+{% macro item_row(i, movable=false, parent=none) -%}
+  <tr id="item-{{ i.id }}">
+    <td style="width:100px"><span class="pill {{ i.status }}">{{ i.status }}</span></td>
+    <td>
+      <details>
+        <summary>{% if i.kind == "metric" %}<span class="muted">Result:</span> {% endif %}{{ i.text }}{% if i.attrs.skill_id %} <span class="muted">· {{ i.attrs.skill_id }}</span>{% endif %}</summary>
+        <form method="post" action="/profile/items/{{ i.id }}" style="margin:8px 0">
+          {{ hidden("e" ~ i.id, i.version) }}<input type="hidden" name="action" value="edit">
+          <textarea name="text" rows="2">{{ i.text }}</textarea>
+          <button>Save edit</button> <span class="muted">Source: {{ i.evidence }}</span>
+        </form>
+        {% if movable %}
+        <form method="post" action="/profile/items/{{ i.id }}" style="margin:0 0 10px">
+          {{ hidden("m" ~ i.id, i.version) }}<input type="hidden" name="action" value="move">
+          <label>Belongs to
+            <select name="parent_id">
+              <option value="">Not filed under anything</option>
+              {% for e in layout.entries %}<option value="{{ e.item.id }}" {% if parent == e.item.id %}selected{% endif %}>{{ "Experience" if e.item.kind == "role" else "Project" }}: {{ e.item.text }}</option>{% endfor %}
+            </select>
+          </label>
+          <button>Move</button>
+        </form>
+        {% endif %}
+      </details>
+    </td>
+    <td class="actions" style="width:190px">{{ status_actions(i) }}</td>
+  </tr>
+{%- endmacro %}
+
+{% macro entry_form(kind, values, action, suffix, version=none, submit="Save") -%}
+  <form method="post" action="{{ action }}" class="fields-form">
+    {{ hidden(suffix, version) }}<input type="hidden" name="kind" value="{{ kind }}">
+    <div class="grid">
+      {% for key, label in fields[kind] %}
+      <div {% if key in ("about", "tech") %}class="wide"{% endif %}><label>{{ label }}
+        {% if key == "about" %}<textarea name="{{ key }}" rows="3">{{ values.get(key, "") }}</textarea>
+        {% else %}<input type="text" name="{{ key }}" value="{{ values.get(key, "") }}">{% endif %}
+      </label></div>
+      {% endfor %}
+    </div>
+    <p><button class="primary">{{ submit }}</button></p>
+  </form>
+{%- endmacro %}
+
+{% macro entry_card(e, noun) -%}
+  {% set i = e.item %}{% set f = e.fields %}
+  <article class="card entry" id="item-{{ i.id }}">
+    <div class="entry-head">
+      <div>
+        {% if i.kind == "role" %}
+          <h3>{{ f.title }}{% if f.organization %} <span class="muted">at</span> {{ f.organization }}{% endif %}</h3>
+          <div class="entry-meta">{% if f.dates %}<span>{{ f.dates }}</span>{% endif %}{% if f.employment_type %}<span>{{ f.employment_type }}</span>{% endif %}{% if f.location %}<span>{{ f.location }}</span>{% endif %}{% if f.team %}<span>{{ f.team }}</span>{% endif %}</div>
+          <div class="entry-meta">{% if months[i.id] %}Counts as {{ months[i.id] }} month{{ "s" if months[i.id] != 1 }} of experience{% if "intern" in (f.title ~ f.employment_type)|lower %} (internships are not added to your years){% endif %}{% else %}<span class="warn-text">Dates not readable - write them like "Jun 2024 - Present" so this counts towards your years.</span>{% endif %}</div>
+        {% else %}
+          <h3>{{ f.name }}</h3>
+          <div class="entry-meta">{% if f.your_role %}<span>{{ f.your_role }}</span>{% endif %}{% if f.context %}<span>{{ f.context }}</span>{% endif %}{% if f.dates %}<span>{{ f.dates }}</span>{% endif %}{% if f.link %}<span><a href="{{ f.link }}" target="_blank" rel="noopener noreferrer">link</a></span>{% endif %}</div>
+        {% endif %}
+      </div>
+      <div class="actions"><span class="pill {{ i.status }}">{{ i.status }}</span> {{ status_actions(i) }}</div>
+    </div>
+    {% if f.tech %}<div class="chips">{% for t in f.tech.split(",") %}<span class="chip">{{ t.strip() }}</span>{% endfor %}</div>{% endif %}
+    {% if f.about %}<p class="about">{{ f.about }}</p>{% endif %}
+
+    <h4>What you did here <span class="muted">{{ e.details|length }}</span></h4>
+    {% if e.details %}
+    <div class="table-wrap"><table>{% for d in e.details %}{{ item_row(d, movable=true, parent=i.id) }}{% endfor %}</table></div>
+    {% else %}<p class="muted">No details yet. Add what you built, owned or improved here - each one is a fact JobPilot may cite.</p>{% endif %}
+    <form method="post" action="/profile/items/{{ i.id }}/details" class="add-detail">
+      {{ hidden("d" ~ i.id) }}
+      <select name="kind" aria-label="Kind of detail"><option value="achievement">What I did</option><option value="metric">A result (with a number)</option></select>
+      <input type="text" name="text" placeholder="e.g. Built a RAG pipeline with LangChain that answered support tickets" required>
+      <button>Add detail</button>
+    </form>
+
+    <details style="margin-top:14px">
+      <summary>Edit {{ noun }} details</summary>
+      {{ entry_form(i.kind, f, "/profile/items/" ~ i.id ~ "/fields", "f" ~ i.id, i.version) }}
+    </details>
+  </article>
+{%- endmacro %}
+
+<div class="page-header"><div><p class="eyebrow">Evidence library</p><h1>Your profile</h1><p class="lead">Each experience and project holds its own details. JobPilot only uses confirmed facts for scoring, tailoring and outreach.</p></div></div>
+{% if not has_resume %}
+<div class="empty">No resume imported yet. Run <code>uv run python scripts/import_resume.py</code>.</div>
+{% else %}
+<div class="stats"><div class="stat"><span class="stat-label">to review</span><span class="stat-value">{{ counts.draft }}</span><span class="stat-detail">draft facts</span></div><div class="stat"><span class="stat-label">Confirmed</span><span class="stat-value ok">{{ counts.confirmed }}</span><span class="stat-detail">safe to use</span></div><div class="stat"><span class="stat-label">Rejected</span><span class="stat-value bad">{{ counts.rejected }}</span><span class="stat-detail">excluded facts</span></div>{% if backing %}<div class="stat"><span class="stat-label">Resume evidence</span><span class="stat-value">{{ backing.backed }}/{{ backing.total }}</span><span class="stat-detail">{% if backing.ok %}every bullet rests on confirmed items{% else %}lines backed by facts{% endif %}</span></div>{% endif %}</div>
+{% if counts.draft %}
+<form method="post" action="/profile/confirm-all" style="margin-bottom:20px">
+  <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}">
+  <button class="primary">Confirm all {{ counts.draft }} items as shown</button>
+</form>
+{% endif %}
+
+<nav class="jump" aria-label="Profile sections">
+  <a class="pill" href="#experience">Experience · {{ layout.experiences|length }}</a>
+  <a class="pill" href="#projects">Projects · {{ layout.projects|length }}</a>
+  {% if layout.unattached %}<a class="pill draft" href="#unfiled">Unfiled details · {{ layout.unattached|length }}</a>{% endif %}
+  {% for label, rows in layout.others %}<a class="pill" href="#{{ label|lower }}">{{ label }}</a>{% endfor %}
+  <a class="pill" href="#skills">Skills</a>
+  <a class="pill" href="#notes">Add notes</a>
+</nav>
+
+{% if layout.summary %}
+<section class="card">
+  <div class="card-header"><h2>Summary</h2></div>
+  <div class="table-wrap"><table>{% for i in layout.summary %}{{ item_row(i) }}{% endfor %}</table></div>
+</section>
+{% endif %}
+
+<section id="experience">
+  <div class="card-header"><div><h2>Experience <span class="muted">{{ layout.experiences|length }}</span></h2><p class="muted">One card per job or internship, with its own details.</p></div></div>
+  {% for e in layout.experiences %}{{ entry_card(e, "experience") }}{% endfor %}
+  <details class="card">
+    <summary>+ Add an experience</summary>
+    {{ entry_form("role", {}, "/profile/entries", "add-role", submit="Add experience") }}
+  </details>
+</section>
+
+<section id="projects" style="margin-top:28px">
+  <div class="card-header"><div><h2>Projects <span class="muted">{{ layout.projects|length }}</span></h2><p class="muted">One card per project: what it is, the tools, and what you did.</p></div></div>
+  {% for e in layout.projects %}{{ entry_card(e, "project") }}{% endfor %}
+  <details class="card">
+    <summary>+ Add a project</summary>
+    {{ entry_form("project", {}, "/profile/entries", "add-project", submit="Add project") }}
+  </details>
+</section>
+
+{% if layout.unattached %}
+<section class="card" id="unfiled">
+  <div class="card-header"><div><h2>Unfiled details <span class="muted">{{ layout.unattached|length }}</span></h2><p class="muted">Facts not filed under an experience or project. Open one and use "Belongs to" to move it.</p></div></div>
+  <div class="table-wrap"><table>{% for i in layout.unattached %}{{ item_row(i, movable=true) }}{% endfor %}</table></div>
+</section>
+{% endif %}
+
+{% for label, rows in layout.others %}
+<section class="card" id="{{ label|lower }}">
+  <div class="card-header"><h2>{{ label }} <span class="muted">{{ rows|length }}</span></h2></div>
+  <div class="table-wrap"><table>{% for i in rows %}{{ item_row(i) }}{% endfor %}</table></div>
+</section>
+{% endfor %}
+
+<section class="card" id="skills">
+  <div class="card-header"><div><h2>Skills <span class="muted">{{ layout.skills.values()|map("length")|sum }}</span></h2><p class="muted">Tools listed on an experience or project also count as skills, backed by that entry.</p></div></div>
+  {% for category, rows in layout.skills.items() %}
+  <h4 style="margin:16px 0 8px">{{ category }}</h4>
+  <div class="table-wrap"><table>{% for i in rows %}{{ item_row(i) }}{% endfor %}</table></div>
+  {% endfor %}
+</section>
+
+<section class="card" id="notes">
+  <h2>Things that never made it onto the page</h2>
+  <p class="muted">Write freely - skills, results, more about a job or project. Each fact becomes a draft item; a detail about one of your experiences or projects is filed under it.
+  {% if not llm_ready %}<br><strong>Needs OPENAI_API_KEY in .env.</strong>{% endif %}</p>
+  <form method="post" action="/profile/notes">
+    <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-notes">
+    <textarea name="notes" rows="5" placeholder="e.g. At Turing I also used Docker and FastAPI to deploy an internal evaluation tool."></textarea>
+    <p><button {% if not llm_ready %}disabled{% endif %}>Read my notes</button></p>
+  </form>
+</section>
+{% endif %}
+{% endblock %}

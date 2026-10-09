@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Starts the laptop backend (worker + dispatcher) at login and restarts it if it stops.
+     Installed by `make autostart-install` (REPO is replaced with this folder's path). -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.jobpilot.backend</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>REPO/.venv/bin/supervisord</string>
+    <string>-n</string>
+    <string>-c</string>
+    <string>REPO/deploy/supervisor-backend.conf</string>
+  </array>
+  <key>WorkingDirectory</key><string>REPO</string>
+  <key>EnvironmentVariables</key>
+  <dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>REPO/var/launchd-backend.log</string>
+  <key>StandardErrorPath</key><string>REPO/var/launchd-backend.log</string>
+</dict>
+</plist>

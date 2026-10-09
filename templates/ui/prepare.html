@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Prepare · {{ job.title if job else "Job" }}{% endblock %}
+{% block content %}
+{% if not job %}<div class="empty"><h1>Job not found</h1></div>{% else %}
+<a class="back-link" href="/jobs/{{ job.id }}">&larr;&nbsp; {{ job.company }} · {{ job.title }}</a>
+<div class="page-header"><div><p class="eyebrow">Interview workspace</p><h1>Prepare with confidence</h1><p class="lead">A skill recap, resources, and interview Q&amp;A for this job - built mostly from your knowledge base, every answer with its source.</p></div>
+{% if not card or not card.approved_resume_version_id %}
+<span class="pill rejected">Resume approval required</span>
+{% else %}
+<form method="post" action="/jobs/{{ job.id }}/prepare">
+  <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}">
+  <button class="primary">{{ "Regenerate" if prep else "Generate preparation set" }}</button>
+</form>
+{% endif %}
+</div>
+{% if not card or not card.approved_resume_version_id %}<div class="card bad">Approve a resume version before generating preparation material.</div>{% endif %}
+{% if working %}<div class="card" hx-get="/jobs/{{ job.id }}/prepare" hx-trigger="every 4s" hx-select="main" hx-target="main" hx-swap="outerHTML"><strong>Generating…</strong> <span class="muted">gathering your notes, resources and saved Q&amp;A, and writing only what's missing. This page refreshes by itself.</span></div>{% endif %}
+<div class="card"><h2>Built from</h2><table class="meta-table">
+  <tr><th>Job description</th><td>{% if built_from.snippet %}<span class="pill rejected">only a snippet was found</span> <span class="muted">questions are less specific; the full JD is fetched when the jobs API allows it</span>{% else %}full JD{% endif %}</td></tr>
+  <tr><th>Must-have skills</th><td>{% for s in built_from.must %}<span class="pill">{{ s }}</span> {% else %}<span class="muted">none extracted</span>{% endfor %}</td></tr>
+  {% if built_from.nice %}<tr><th>Nice to have</th><td>{% for s in built_from.nice %}<span class="pill">{{ s }}</span> {% endfor %}</td></tr>{% endif %}
+  <tr><th>Your missing skills</th><td>{% for s in built_from.gaps %}<span class="pill draft">{{ s }}</span> {% else %}<span class="muted">none</span>{% endfor %}</td></tr>
+  <tr><th>Your resume</th><td>{% if built_from.resume_version %}approved v{{ built_from.resume_version }} + your confirmed profile ({{ built_from.resume_items }} items cited){% else %}<span class="muted">not approved yet</span>{% endif %}</td></tr>
+  {% if prep %}<tr><th>Books &amp; web</th><td>{{ built_from.book_passages }} book passages cited · {{ built_from.web_notes }} interview/company notes from the web</td></tr>{% endif %}
+</table></div>
+{% if prep %}
+{% set pack = prep.pack or {} %}{% set stats = pack.stats or {} %}
+<div class="stats">
+  <div class="stat"><span class="stat-label">Status</span><span class="stat-value" style="font-size:18px">{{ prep.status|capitalize }}</span><span class="stat-detail">preparation pack</span></div>
+  <div class="stat"><span class="stat-label">Questions</span><span class="stat-value">{{ prep.questions|length }}</span><span class="stat-detail">{{ stats.from_storage or 0 }} reused · {{ stats.generated or 0 }} new</span></div>
+  <div class="stat"><span class="stat-label">AI calls</span><span class="stat-value">{{ stats.ai_calls or 0 }}</span><span class="stat-detail">the rest came from your knowledge base</span></div>
+</div>
+{% if prep.error %}<div class="card bad">{{ prep.error }}</div>{% endif %}
+
+{% if pack.recap %}<div class="card"><h2>Skill recap</h2><p class="muted">Simple-English notes on the job's skills you already have, written once and reused.</p>
+{% for note in pack.recap %}<details class="soft-card" style="margin:10px 0"><summary><strong>{{ note.name }}</strong>{% if note.new %} <span class="pill draft">new</span>{% endif %}</summary>
+  <p>{{ note.summary }}</p>
+  {% if note.how_it_works %}<p><strong>How it works.</strong> {{ note.how_it_works }}</p>{% endif %}
+  {% if note.key_concepts %}<ul>{% for c in note.key_concepts %}<li><strong>{{ c.name }}</strong>: {{ c.explanation }}</li>{% endfor %}</ul>{% endif %}
+  {% if note.pitfalls %}<p><strong>Pitfalls:</strong> {{ note.pitfalls|join("; ") }}</p>{% endif %}
+  {% if note.interview_points %}<p><strong>What interviewers listen for:</strong> {{ note.interview_points|join("; ") }}</p>{% endif %}
+  {% if note.example %}<pre style="white-space:pre-wrap">{{ note.example }}</pre>{% endif %}
+  <p class="muted">Sources: {{ (note.source_labels or ["general knowledge (no book passage)"])|join("; ") }}</p>
+</details>{% endfor %}</div>{% endif %}
+
+{% if pack.resources_added or pack.resources_learn %}<div class="card"><h2>Resources</h2>
+{% if pack.resources_added %}<h3>Skills your tailored resume added - learn these first</h3>
+{% for item in pack.resources_added %}<p><strong>{{ item.skill }}</strong><br>{% for r in item.resources %}<a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title }} ↗</a> <span class="muted">{{ r.kind }}{% if r.level %} · {{ r.level }}{% endif %}{% if r.est_hours %} · ~{{ r.est_hours }} h{% endif %}</span><br>{% else %}<span class="muted">No catalog resource yet.</span>{% endfor %}</p>{% endfor %}{% endif %}
+{% if pack.resources_learn %}<h3>Missing skills worth learning</h3><p class="muted">Ranked by match points and how quick they are to learn.</p>
+{% for item in pack.resources_learn %}<p><strong>{{ item.skill }}</strong> <span class="pill draft">+{{ item.points }}</span>{% if item.easy %} <span class="pill confirmed">quick to learn</span>{% endif %}{% if item.learn_reason %} <span class="muted">{{ item.learn_reason }}</span>{% endif %}<br>{% for r in item.resources %}<a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title }} ↗</a> <span class="muted">{{ r.kind }}{% if r.level %} · {{ r.level }}{% endif %}</span><br>{% else %}<span class="muted">No catalog resource yet.</span>{% endfor %}</p>{% endfor %}{% endif %}
+</div>{% endif %}
+
+{% if prep.questions %}
+{% set titles = {"skill": "Job skills", "project": "Your projects", "job": "This job and company", "experience": "Your experience", "hr": "HR round"} %}
+{% for group, items in prep.questions|groupby("group") %}<h2>{{ titles.get(group, group or "Questions") }}</h2>
+{% for question in items %}<section class="card">
+  <h3>{{ question.question }}</h3><p><span class="pill">{{ question.category }}</span> · {{ question.topic }}{% if question.from_storage %} · <span class="muted">from your Q&amp;A bank</span>{% endif %}{% if question.why_asked %}<br><span class="muted">Why they'd ask: {{ question.why_asked }}</span>{% endif %}</p>
+  <div style="white-space:pre-wrap">{{ question.answer }}</div>
+  {% if question.pattern %}<p><strong>Pattern:</strong> {{ question.pattern }}<br><strong>Approach:</strong> {{ question.approach }}<br><strong>Complexity:</strong> {{ question.complexity }}</p>{% endif %}
+  <p class="{{ 'ok' if question.verified else 'bad' }}">{{ 'Sources checked' if question.verified else 'Unverified - check this answer yourself' }} · {% for label in question.source_labels %}{% if label.startswith('http') %}<a href="{{ label }}" target="_blank" rel="noopener noreferrer">{{ label|truncate(60) }}</a>{% else %}{{ label }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</p>
+  <form class="inline" method="post" action="/jobs/{{ job.id }}/prepare/questions/{{ question.id }}"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-{{ question.id }}-k"><input type="hidden" name="version" value="{{ prep.version }}">{% if question.known is not none %}<span class="pill {{ 'confirmed' if question.known else 'draft' }}">{{ 'known' if question.known else 'weak' }}</span> {% endif %}<button name="result" value="known">Known</button><button name="result" value="weak">Weak</button></form>
+</section>{% endfor %}{% endfor %}{% endif %}
+
+{% if prep.dsa %}<div class="card"><h2>Coding practice</h2><ul>{% for p in prep.dsa %}<li><strong>{{ p.pattern }}</strong><br><span class="muted">{{ p.approach }} · {{ p.complexity }}</span></li>{% endfor %}</ul></div>{% endif %}
+{% if prep.study_plan %}<div class="card"><h2>Next study plan</h2><ul>{% for action in prep.study_plan.next_actions %}<li>{{ action }}</li>{% endfor %}</ul>
+{% for project in prep.study_plan.projects %}<p><strong>Project:</strong> {{ project.name }} · {{ project.scope }}</p>{% endfor %}
+{% for checkpoint in prep.study_plan.checkpoints %}<p><strong>Mock checkpoint:</strong> {{ checkpoint.prompt }}</p>{% endfor %}</div>{% endif %}
+{% endif %}
+{% endif %}
+{% endblock %}

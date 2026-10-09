@@ -1,0 +1,132 @@
+((= templates/resume/resume.tex.j2 - template_id resume_v1 =))
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=0.38in,bottom=0.30in,left=0.48in,right=0.48in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1}
+\urlstyle{same}
+
+% Compact bullets matching the original resume.
+\setlist[itemize]{
+  leftmargin=1.25em,
+  itemsep=0pt,
+  topsep=1pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textbullet
+}
+
+% Section heading: sans-serif bold text with a spaced rule underneath it.
+\newcommand{\resumesection}[1]{%
+  \par\vspace{7pt}%
+  {\fontfamily{phv}\selectfont\bfseries\fontsize{10.8}{11.5}\selectfont
+   \MakeUppercase{#1}}\par
+  \vspace{2pt}% Space between the heading and the rule
+  \hrule height 0.7pt
+  \vspace{3pt}% Space between the rule and the section content
+}
+
+% Two-column row with flexible left content and a right-aligned date/value.
+\newcommand{\datedrow}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    #1 & #2
+  \end{tabularx}\vspace{-1pt}%
+}
+
+\newcommand{\skill}[2]{\textbf{#1}: #2\par}
+
+\begin{document}
+((= The ONE fixed resume template. Built from the user's own .tex: preamble and macros kept verbatim,
+    content replaced by loops over the structured resume. Every value passes through |e (LaTeX escape)
+    or |u (URL escape); nothing from the data is ever interpreted as LaTeX. =))
+
+% Header
+\begin{center}
+  {\fontfamily{phv}\selectfont\bfseries\fontsize{25}{27}\selectfont (((header.name|e)))}\par
+  \vspace{2pt}\hrule height 1.2pt\vspace{4pt}
+  {\fontsize{10.5}{12}\selectfont
+((* for c in header.contacts *))
+    ((* if c.url *))\href{(((c.url|u)))}{((* if c.underline *))\underline{(((c.text|e)))}((* else *))(((c.text|e)))((* endif *))}((* else *))(((c.text|e)))((* endif *))((* if not loop.last *))((* if not c.url *)) ((* endif *))\enspace\textbullet\enspace((* endif *))
+
+((* endfor *))
+  }
+\end{center}
+\vspace{-3pt}
+((* for s in sections if not s.hidden *))
+
+\resumesection{(((s.title|e)))}
+((* set entries = s.entries|rejectattr("hidden")|list *))
+((* if s.layout == "paragraph" *))
+((* for e in entries *))
+{\fontsize{11}{13.5}\selectfont
+(((e.text|e)))\par}
+((* endfor *))
+((* elif s.layout == "dated_pairs" *))
+((* for e in entries *))
+\datedrow{\textbf{(((e.title|e)))}}{(((e.date|e)))}
+\datedrow{(((e.subtitle|e)))}{(((e.detail|e)))}
+((* endfor *))
+((* elif s.layout == "skills" *))
+((* for e in entries *))
+\skill{(((e.title|e)))}{(((e["items"]|join(", ")|e)))}
+((* endfor *))
+((* elif s.layout == "projects" *))
+((* for e in entries *))
+((* if not loop.first *))
+\vspace{2pt}
+((* endif *))
+\textbf{(((e.title|e)))}\par
+((* if e.note *))
+\hspace{1.25em}(((e.note|e)))\par
+((* endif *))
+((* set bullets = e.bullets|rejectattr("hidden")|list *))
+((* if bullets *))
+\begin{itemize}
+((* for b in bullets *))
+  \item (((b.text|e)))((* if b.sub *))\\
+        \hspace{0.35em}(((b.sub|e)))((* endif *))
+
+((* endfor *))
+\end{itemize}
+((* endif *))
+((* endfor *))
+((* elif s.layout == "roles" *))
+((* for e in entries *))
+\datedrow{\fontfamily{phv}\selectfont\bfseries (((e.title|e)))}{(((e.date|e)))}
+((* set bullets = e.bullets|rejectattr("hidden")|list *))
+((* if bullets *))
+\begin{itemize}
+((* for b in bullets *))
+  \item (((b.text|e)))((* if b.sub *))\\
+        \hspace{0.35em}(((b.sub|e)))((* endif *))
+
+((* endfor *))
+\end{itemize}
+((* endif *))
+((* endfor *))
+((* elif s.layout == "bullets" *))
+\begin{itemize}
+((* for e in entries *))
+((* for b in e.bullets if not b.hidden *))
+  \item (((b.text|e)))((* if b.sub *))\\
+        \hspace{0.35em}(((b.sub|e)))((* endif *))
+
+((* endfor *))
+((* endfor *))
+\end{itemize}
+((* endif *))
+((* endfor *))
+
+\end{document}

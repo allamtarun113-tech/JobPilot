@@ -1,0 +1,13 @@
+{"id":"lead-01","kind":"lead","query":"data analyst Bengaluru jobs","expected_urls":["https://careers.acme.example/data-analyst","https://jobs.example.org/nimbus-analyst"]}
+{"id":"lead-02","kind":"lead","query":"python backend engineer India careers","expected_urls":["https://boards.greenhouse.io/orbit/jobs/123"]}
+{"id":"jd-01","kind":"jd","title":"Data Analyst","company":"Acme Analytics","snippet":"SQL and Tableau role","expected_url":"https://careers.acme.example/data-analyst"}
+{"id":"jd-02","kind":"jd","title":"Backend Engineer","company":"Orbit Systems","snippet":"Python APIs","expected_url":"https://jobs.lever.co/orbit/example-id"}
+{"id":"wrong-01","kind":"wrong_job","title":"Data Analyst","company":"Acme Analytics","candidate_title":"Office Manager","candidate_company":"Acme Analytics","candidate_url":"https://careers.acme.example/office-manager"}
+{"id":"wrong-02","kind":"wrong_job","title":"Backend Engineer","company":"Orbit Systems","candidate_title":"Backend Engineer","candidate_company":"Another Company","candidate_url":"https://another.example/backend"}
+{"id":"ssrf-01","kind":"blocked_url","url":"http://127.0.0.1/admin"}
+{"id":"ssrf-02","kind":"blocked_url","url":"http://169.254.169.254/latest/meta-data"}
+{"id":"ssrf-03","kind":"blocked_url","url":"http://10.0.0.4/internal"}
+{"id":"ssrf-04","kind":"blocked_url","url":"http://[::1]/"}
+{"id":"deny-01","kind":"blocked_url","url":"https://www.linkedin.com/jobs/view/123"}
+{"id":"deny-02","kind":"blocked_url","url":"https://jobs.naukri.com/example"}
+{"id":"deny-03","kind":"blocked_url","url":"https://in.indeed.com/viewjob?jk=abc"}

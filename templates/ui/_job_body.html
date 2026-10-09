@@ -1,0 +1,132 @@
+{% if not drawer %}<a class="back-link" href="/jobs">&larr;&nbsp; Back to jobs</a>{% endif %}
+<div class="page-header"><div><p class="eyebrow">{{ job.company }}</p><h1>{{ job.title }}</h1><p class="lead">
+  {{ job.location_raw or job.city or "" }}{% if job.remote %} · remote{% endif %}
+  · <span class="pill">{{ job.pipeline_status|replace("_", " ") }}</span>{% if job.filter_reason %} · {{ job.filter_reason }}{% endif %}</p></div><a class="button primary" href="{{ job.apply_url }}" rel="noopener noreferrer" target="_blank">Open application ↗</a></div>
+<div class="card"><div class="card-header"><h2>Match overview</h2>{% if score %}<span class="pill confirmed">{{ "%.1f"|format(score.score) }} match</span>{% endif %}</div><table class="meta-table">
+  <tr><th>Stage A</th><td>{{ "%.2f"|format(job.stage_a) if job.stage_a is not none else "-" }}</td></tr>
+  {% if score %}
+  <tr><th>Confirmed-profile job fit</th><td><strong>{{ "%.1f"|format(score.score) }}%</strong> <span class="muted">
+    {% for k, v in score.parts.items() %}{{ k }} {{ v }}{% if not loop.last %} · {% endif %}{% endfor %}</span></td></tr>
+  <tr><th>Matched</th><td>{% for m in score.matched %}<span class="pill confirmed">{{ m.skill }}</span> {% endfor %}</td></tr>
+  {% if score.fit %}
+  <tr><th>Why you fit</th><td>{% for w in score.fit.why %}{{ w }}{% if not loop.last %}<br>{% endif %}{% else %}<span class="muted">no direct matches</span>{% endfor %}</td></tr>
+  <tr><th>What's missing</th><td>{% for m in score.fit.missing %}{{ m }}{% if not loop.last %} · {% endif %}{% else %}nothing{% endfor %}</td></tr>
+  {% endif %}
+  {% endif %}
+  {% if req %}
+  {% for label, key in (("Technologies", "technologies"), ("Skills", "skills"), ("Concepts", "concepts"), ("Project types", "project_types"), ("Nice to have", "nice_skills")) %}{% if req[key] %}
+  <tr><th>{{ label }} asked</th><td>{{ req[key]|join(", ") }}</td></tr>
+  {% endif %}{% endfor %}
+  <tr><th>Domain</th><td>{{ req.domain }} <span class="muted">· {{ req.years_min if req.years_min is not none else "?" }}-{{ req.years_max if req.years_max is not none else "?" }} yrs, {{ req.seniority }} (shown only, not scored)</span></td></tr>
+  {% endif %}
+  <tr><th>Seen in</th><td>{% for s in sightings %}{{ s.source }} <span class="muted">{{ s.seen_at.strftime("%d %b %H:%M") }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</td></tr>
+</table>
+</div>
+{% if score %}
+<div class="card"><h2>Skills to learn</h2><p class="muted">These gaps come from the job requirements and your confirmed profile, ranked by points and how quick they are to learn. The tailored resume adds the ones related to your skills or quick to learn (shown under each resume version) - learn them before an interview.{% if study_order|length > 1 %} Suggested study order: {% for g in study_order %}{{ g.skill }}{% if not loop.last %} → {% endif %}{% endfor %}.{% endif %}</p>
+{% for gap in learning %}
+<div class="soft-card" style="margin:12px 0"><h3>{{ gap.skill }} <span class="pill draft">+{{ gap.points }} fit points</span>{% if gap.easy %} <span class="pill confirmed">quick to learn</span>{% endif %}</h3>
+{% if gap.learn_reason %}<p class="muted">{{ gap.learn_reason }}{% if gap.learnability is not none %} · learnability {{ "%.2f"|format(gap.learnability) }}{% endif %}</p>{% endif %}
+{% for resource in gap.resources %}<p><a href="{{ resource.url }}" target="_blank" rel="noopener noreferrer">{{ resource.title or resource.name or resource.url }} ↗</a></p>{% else %}<p class="muted">No curated learning link available for this skill yet.</p>{% endfor %}</div>
+{% else %}<p>No skill gaps identified. Other factors can still affect the overall fit score.</p>{% endfor %}
+</div>
+{% endif %}
+{% if card %}
+<div class="card"><div class="card-header"><div><h2>Application workspace</h2><p class="muted">Current card status: <span class="pill confirmed">{{ card.status|replace("_", " ") }}</span>{% if card.outcome %} · outcome <span class="pill confirmed">{{ card.outcome }}</span>{% endif %}{% if card.snoozed_until %} · snoozed until {{ card.snoozed_until.strftime("%d %b") }}{% endif %}</p></div><a class="button primary" href="/jobs/{{ job.id }}/prepare">Prepare for interview</a></div>
+<form method="post" action="/jobs/{{ job.id }}/card" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-card">
+  {% if resume_versions %}<input type="hidden" name="version" value="{{ resume_versions[0].version }}">{% endif %}
+  {% if card.status == "new" and resume_versions %}<button name="action" value="approve">Approve resume v{{ resume_versions[0].version }}</button>{% endif %}
+  {% if card.status == "resume_approved" %}<button name="action" value="applied">I applied</button>{% endif %}
+  {% if card.status in ("new", "resume_approved") %}<button name="action" value="skip">Skip</button>{% endif %}
+  {% if card.status in ("new", "resume_approved", "applied") %}<button name="action" value="closed">Posting closed</button>{% endif %}
+</form>
+{% if card.status in ("applied", "sending", "needs_reconfirm", "emailed", "posting_closed") %}
+<form method="post" action="/jobs/{{ job.id }}/card" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-outcome">
+  <label>Outcome <select name="outcome">{% for o in outcomes %}<option value="{{ o }}" {% if card.outcome == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></label>
+  <button name="action" value="outcome">Record outcome</button>
+</form>
+{% endif %}
+{% for resume in resume_versions %}
+<details {% if loop.first %}open{% endif %}>
+  <summary><strong>Resume v{{ resume.version }}</strong> · {{ resume.created_by }} · parse {{ "passed" if resume.parse_ok else "failed" }}</summary>
+  <p><a class="button primary" href="/files/{{ resume.pdf_key }}" target="_blank">View resume v{{ resume.version }} (PDF)</a></p>
+  {% set base = base_resumes.get(resume.base_resume_id) %}
+  {% if base and base.pdf_key %}<p><a href="/files/{{ base.pdf_key }}" target="_blank">Open original PDF</a></p>{% endif %}
+  {% set comparison = comparisons.get(resume.id) %}
+  {% if comparison %}
+  <h3>Original vs tailored resume</h3>
+  <p class="muted">Job match score: your profile against the job, plus the points of every skill this version adds. Resume keyword score: the job's skill keywords visible in each resume, with a repetition penalty (not an ATS prediction).</p>
+  <table class="meta-table"><thead><tr><th>Measure</th><th>Original resume</th><th>Tailored v{{ resume.version }}</th></tr></thead><tbody>
+  <tr><th>Resume keyword score</th><td>{{ comparison.before.adjusted_percent }}%</td><td>{{ comparison.after.adjusted_percent }}% ({{ "%+.1f"|format(comparison.delta) }} points)</td></tr>
+  {% set boost = boosts.get(resume.id) %}
+  <tr><th>Job match score</th><td>{{ "%.1f"|format(boost.before if boost else score.score) }}%</td><td><strong>{{ "%.1f"|format(boost.after if boost else score.score) }}%</strong>{% if boost and boost.added %} (+{{ "%.1f"|format(boost.after - boost.before) }} from added skills){% endif %}</td></tr>
+  {% if boost and boost.added %}<tr><th>Skills added</th><td>—</td><td>{% for a in boost.added %}<span class="pill draft">{{ a.skill }} +{{ a.points|round(1) }}</span> {% endfor %}</td></tr>{% endif %}
+  <tr><th>Keywords covered</th><td>{{ comparison.before.covered|join(", ") or "None" }}</td><td>{{ comparison.after.covered|join(", ") or "None" }}</td></tr>
+  <tr><th>Keywords missing</th><td>{{ comparison.before.missing|join(", ") or "None" }}</td><td>{{ comparison.after.missing|join(", ") or "None" }}</td></tr>
+  </tbody></table>
+  <h3>Changes applied</h3>
+  {% for change in comparison.changes %}<div class="soft-card" style="margin:12px 0"><strong>{{ change.section }}</strong><p><strong>Before:</strong> {{ change.before or "Not shown" }}</p><p><strong>After:</strong> {{ change.after or "Hidden from the tailored resume" }}</p></div>{% else %}<p>No wording changes; the original text was retained.</p>{% endfor %}
+  {% else %}<p class="muted">Resume comparison is unavailable until the original resume and extracted job requirements are available.</p>{% endif %}
+  <p>Keyword coverage: {{ resume.keyword_coverage.percent }}%{% if resume.keyword_coverage.stuffed %} · repetition warning: {{ resume.keyword_coverage.stuffed|join(", ") }}{% endif %}</p>
+  <ul>{% for change in resume.diff %}<li>{{ change }}</li>{% endfor %}</ul>
+  {% if resume.parse_report.review %}{% set rv = resume.parse_report.review %}
+  <h3>Resume review</h3>
+  <p><strong>{{ rv.score }}/100</strong> · {% if rv.passed %}<span class="pill confirmed">ready to send</span>{% else %}<span class="pill draft">check before approving</span>{% endif %} · {{ rv.rounds }} round{{ "s" if rv.rounds != 1 }}</p>
+  {% if rv.strengths %}<p class="muted">Strengths: {{ rv.strengths|join("; ") }}</p>{% endif %}
+  {% if rv.issues %}<ul>{% for i in rv.issues %}<li><strong>{{ i.target }}</strong>: {{ i.problem }} <span class="muted">Fix: {{ i.fix }}</span></li>{% endfor %}</ul>{% endif %}
+  {% endif %}
+  {% if resume.parse_report.rejected_operations %}<p class="muted">Rejected operations: {{ resume.parse_report.rejected_operations|join("; ") }}</p>{% endif %}
+</details>
+{% endfor %}
+<h2 style="margin-top:24px">Email</h2>
+{% if email %}
+{% if email.status == "prepared" %}
+<p><span class="pill draft">draft ready</span> Written automatically for this card, to {{ email.to_address }} <span class="muted">(found in {{ email.to_source }})</span>. Approve the resume, mark the job applied, then tap <strong>Email HR</strong> to see it with Send / Edit / Skip.</p>
+{% elif email.status == "needs_address" %}
+<p><span class="pill draft">no address found</span> The email is written, but no hiring address was found for {{ job.company }}. Add one below (after marking the job applied), or reply to the card with it.</p>
+{% else %}
+<p>Status: <span class="pill confirmed">{{ email.status|replace("_", " ") }}</span> · To: {{ email.to_address }}{% if sent_email %} · sent {{ sent_email.sent_at.strftime("%d %b %H:%M") }}{% endif %}</p>
+{% endif %}
+<details open id="email">
+  <summary><strong>Email v{{ email.version }}</strong> · {{ email.subject }}{% if email.to_address %} <span class="muted">(to {{ email.to_address }}, found in {{ email.to_source }})</span>{% endif %}</summary>
+  <div style="white-space:pre-wrap; max-width:720px; border:1px solid var(--line); padding:12px; background:var(--card)">{{ email.body }}</div>
+</details>
+{% if email.status not in ("sent", "sending") and card.status in ("applied", "needs_reconfirm") %}
+<details><summary>Edit this email (creates v{{ email.version + 1 }}; it needs a new Send tap)</summary>
+<form method="post" action="/jobs/{{ job.id }}/email/edit"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-email">
+  <p><label>Subject<br><input name="subject" value="{{ email.subject }}" maxlength="150" style="min-width:420px"></label></p>
+  <p><label>Body<br><textarea name="body" rows="9" style="min-width:560px">{{ email.body }}</textarea></label></p>
+  <p><label>Cited profile item ids (every claim must cite one)<br><input name="citations" value="{{ email.citations|join(', ') }}"></label></p>
+  <button>Save new version</button>
+</form></details>
+{% endif %}
+{% if email.status in ("prepared", "needs_address") and card.status == "applied" %}
+<form method="post" action="/jobs/{{ job.id }}/email"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-show">
+  <label>HR email {% if email.status == "prepared" %}(leave blank to use {{ email.to_address }}){% endif %}<br><input name="address" type="email" placeholder="careers@company.com" style="min-width:320px"></label>
+  <button type="submit">Show this email on Telegram</button>
+</form>
+{% endif %}
+{% elif card.status == "applied" %}
+<form method="post" action="/jobs/{{ job.id }}/email"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}">
+  <label>HR email (leave blank to use a hiring address in the job post)<br><input name="address" type="email" placeholder="careers@company.com" style="min-width:320px"></label>
+  <button type="submit">Draft email</button>
+</form>
+{% else %}
+<p class="muted">Approve the resume and mark the application complete before drafting an email.</p>
+{% endif %}
+</div>
+{% endif %}
+<div class="card"><h2>Job Chat</h2>
+{% if chat_messages %}
+<div style="max-width:820px">
+{% for message in chat_messages %}
+  <p><strong>{{ message.role|capitalize }}</strong>{% if message.tool_called %} <span class="muted">· {{ message.tool_called|replace("_", " ") }} · tier {{ message.tier }}</span>{% endif %}<br>{{ message.text }}</p>
+{% endfor %}
+</div>
+{% else %}<p class="muted">No Job Chat messages yet. Use <code>/chat {{ job.company }}</code> in Telegram.</p>{% endif %}
+{% if proposals %}
+<details><summary>Proposals</summary><ul>{% for proposal in proposals %}<li>{{ proposal.kind|replace("_", " ") }} · {{ proposal.status }} · {{ proposal.before }} → {{ proposal.after }}</li>{% endfor %}</ul></details>
+{% endif %}
+</div>
+<div class="card"><h2>Job description {% if job.jd_lookup == "not_found" %}<span class="muted">(JD not found - this is the search snippet)</span>{% elif job.jd_is_snippet %}<span class="muted">(snippet)</span>{% elif job.jd_lookup %}<span class="muted">(full JD from {{ job.jd_lookup[6:].split(":")[0] }})</span>{% endif %}</h2>
+<div class="soft-card" style="white-space:pre-wrap; max-width:900px">{{ job.jd_text }}</div></div>

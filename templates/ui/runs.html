@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Runs - JobPilot{% endblock %}
+{% block content %}
+<div class="page-header"><div><p class="eyebrow">Automation activity</p><h1>Runs</h1><p class="lead">Inspect workflow progress, usage and trace identifiers.</p></div></div>
+{% if not runs %}
+<div class="empty"><h2>No runs yet</h2><p>Send <code>/start</code> to the bot to launch your first run.</p></div>
+{% else %}
+<div class="table-wrap">
+<table>
+  <thead><tr><th>#</th><th>Status</th><th>Step</th><th>Stop reason</th><th>Started</th><th>Tokens</th><th>Trace</th></tr></thead>
+  <tbody>
+  {% for r in runs %}
+    <tr>
+      <td>{{ r.id }}</td><td>{{ r.status }}</td><td>{{ r.current_step or "" }}</td><td>{{ r.stop_reason or "" }}</td>
+      <td>{{ r.started_at.strftime("%Y-%m-%d %H:%M") }}</td><td>{{ "{:,}".format(r.tokens_in + r.tokens_out) }}</td>
+      <td class="muted">{% if trace_links.get(r.id) %}<a href="{{ trace_links[r.id] }}" target="_blank" rel="noopener noreferrer">trace {{ (r.trace_id or "")[:8] }} ↗</a>{% else %}-{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+{% endblock %}

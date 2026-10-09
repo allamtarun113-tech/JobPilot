@@ -1,0 +1,76 @@
+[project]
+name = "jobpilot"
+version = "0.1.0"
+description = "Personal AI job-hunting co-pilot (single user)."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [  # what the dashboard needs (this is all Vercel installs)
+    "cryptography>=50.0.2",
+    "fastapi>=0.115",
+    "httpx>=0.27",
+    "itsdangerous>=2.2.0",
+    "jinja2>=3.1",
+    "opentelemetry-exporter-otlp-proto-http>=1.27",
+    "opentelemetry-sdk>=1.27",
+    "psycopg[binary,pool]>=3.2",
+    "pydantic>=2.8",
+    "pydantic-settings>=2.4",
+    "pyspellchecker>=0.9.0",
+    "python-multipart>=0.0.32",
+    "pyyaml>=6.0",
+    "sqlalchemy[asyncio]>=2.0.30",
+    "uvicorn[standard]>=0.30",
+]
+
+[dependency-groups]
+backend = [  # worker, dispatcher, servers and scripts
+    "alembic>=1.13",
+    "fastembed>=0.8.1",
+    "langgraph>=0.6",
+    "langgraph-checkpoint-postgres>=2.0",
+    "mcp>=1.13",
+    "openai>=2.0",
+    "pillow>=12.3.0",
+    "pypdf>=6.19.0",
+    "pypdfium2>=5.14.0",
+    "qdrant-client>=1.19.1",
+    "supervisor>=4.2",
+]
+dev = [
+    "mypy>=1.11",
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+    "types-pyyaml",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobpilot"]
+
+[tool.vercel]
+entrypoint = "app:app"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["Raw_data", "Data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/jobpilot/db/migrations/versions/*" = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]
+markers = [
+    "db: needs the Postgres test database",
+]

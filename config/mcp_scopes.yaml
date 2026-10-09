@@ -1,0 +1,11 @@
+# caller -> server -> allowed tools. Checked in the app (mcp_clients/scopes.py) and again in each server.
+# The worker gets read-only tools; only the dispatcher gets tools with side effects.
+# These checks guard against bugs, not a compromised app.
+worker:
+  telegram: []
+  gmail: []
+  web: [search, fetch]
+dispatcher:
+  telegram: [send_message, send_document, send_photo, edit_message]
+  gmail: [create_draft, find_sent, send_draft]
+  web: []

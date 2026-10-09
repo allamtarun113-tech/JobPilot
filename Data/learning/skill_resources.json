@@ -1,0 +1,2845 @@
+{
+ "version": "1.0",
+ "generated_at": "2026-10-03",
+ "ranking": "primary skill first, then level (beginner->advanced), kind (course/video before docs/books), shorter first",
+ "skills": {
+  "a-b-testing": {
+   "resource_ids": [
+    "yt-data-science-essentials-crash-course-in-a-b-testing-with-cas",
+    "web-udacity-a-b-testing-by-google",
+    "yt-simple-explanation-of-a-b-testing"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "adaptability": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "adtech": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "agile": {
+   "resource_ids": [
+    "web-the-scrum-guide",
+    "yt-agile-in-software-engineering",
+    "yt-what-is-agile",
+    "web-jira-guide",
+    "web-atlassian-agile-coach",
+    "yt-computer-science-169-software-engineering-spring-2015-u"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "ai-agents": {
+   "resource_ids": [
+    "free-ms-agents",
+    "yt-agentic-ai-complete-course-for-beginners",
+    "web-hugging-face-agents-course",
+    "free-hf-agents",
+    "yt-uc-berkeley-llm-agents-mooc",
+    "yt-don-t-learn-ai-agents-without-learning-these-fundamentals",
+    "free-semantic-kernel",
+    "free-anthropic-building-effective-agents",
+    "free-deeplearning-ai-generative-ai-courses",
+    "free-langchain-academy",
+    "web-anthropic-tool-use",
+    "free-crewai",
+    "free-microsoft-autogen",
+    "free-langgraph"
+   ],
+   "has_video": true,
+   "count": 14
+  },
+  "airflow": {
+   "resource_ids": [
+    "yt-learn-apache-airflow-in-10-minutes-high-paying-skills-for-da",
+    "yt-apache-airflow-one-shot-building-end-to-end-etl-pipeline-usi",
+    "web-airflow-tutorials"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "algorithms": {
+   "resource_ids": [
+    "yt-data-structures-and-algorithms-full-course",
+    "yt-algorithms-design-and-analysis-1-stanford-university",
+    "yt-algorithms-design-and-analysis-2-stanford-university",
+    "yt-data-structures-and-algorithms",
+    "free-analysis-of-algorithms-cse-373",
+    "yt-mit-6-006-introduction-to-algorithms-spring-2020",
+    "yt-artificial-intelligence",
+    "yt-dsa-foundations",
+    "yt-cs221-artificial-intelligence-principles-and-techniques",
+    "yt-spring-2023",
+    "free-cs50-s-introduction-to-artificial-intelligence-with-pyt",
+    "free-data-structures-and-algorithms-2",
+    "web-mit-6-006-introduction-to-algorithms",
+    "free-leetcode"
+   ],
+   "has_video": true,
+   "count": 14
+  },
+  "android": {
+   "resource_ids": [
+    "free-programming-mobile-applications-for-android-handheld-sy",
+    "web-android-basics-with-compose",
+    "yt-android-development-for-beginners-full-course",
+    "yt-android-app-development-in-java-all-in-one-tutorial-series-4"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "angular": {
+   "resource_ids": [
+    "yt-angular-tutorial-for-beginners-learn-angular-typescript",
+    "yt-angular-for-beginners-course-full-front-end-tutorial-with-ty",
+    "web-angular-docs-tutorials"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "ansible": {
+   "resource_ids": [
+    "yt-what-is-ansible-ansible-playbook-explained-ansible-tutorial",
+    "yt-ansible-crash-course-for-beginners",
+    "web-ansible-getting-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "apis": {
+   "resource_ids": [
+    "yt-api-design-and-architecture-backend-engineering-intro-1-hour",
+    "yt-apis-for-beginners-how-to-use-an-api-full-course-tutorial",
+    "web-mdn-introduction-to-web-apis"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "ar-vr": {
+   "resource_ids": [
+    "web-unity-learn"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "assembly": {
+   "resource_ids": [
+    "free-assembly-language-programming",
+    "yt-intro-x86-32-bit-open-securitytraining",
+    "yt-introduction-to-arm-open-securitytraining",
+    "yt-intermediate-x86-32-bit-open-securitytraining"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "attention-to-detail": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "authentication": {
+   "resource_ids": [
+    "yt-django-authentication-user-management-full-tutorial",
+    "yt-master-senior-level-authentication-in-4-hours",
+    "web-owasp-authentication-cheat-sheet"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "aws": {
+   "resource_ids": [
+    "free-cloud-computing-basics-with-aws",
+    "yt-aws-certified-cloud-practitioner-training-2020-full-course",
+    "yt-aws-tutorial-for-everyone-in-one-shot",
+    "web-aws-getting-started-resource-center",
+    "free-aws-power-hour-architecting",
+    "free-deploying-spring-boot-applications-with-aws-ecs-fargate",
+    "web-aws-skill-builder-cloud-practitioner-essentials",
+    "web-owasp-cloud-security"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "aws-ec2": {
+   "resource_ids": [
+    "web-amazon-ec2-user-guide",
+    "yt-lec-31-how-to-create-instance-on-aws-ec2-amazon-ec2-explaine"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "aws-lambda": {
+   "resource_ids": [
+    "web-aws-lambda-developer-guide"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "aws-s3": {
+   "resource_ids": [
+    "yt-aws-s3-tutorial-for-beginners",
+    "web-amazon-s3-user-guide"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "aws-sagemaker": {
+   "resource_ids": [
+    "web-aws-sagemaker-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "azure": {
+   "resource_ids": [
+    "web-microsoft-learn-azure-fundamentals-az-900-path",
+    "yt-microsoft-azure-fundamentals-certification-course-az-900-upd"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "backend-development": {
+   "resource_ids": [
+    "yt-mooc-web-development-udacity",
+    "yt-intro-to-backend-web-development-node-js-express-tutorial-fo",
+    "web-roadmap-sh-backend-developer",
+    "yt-the-complete-backend-developer-roadmap",
+    "free-django-for-everybody",
+    "free-flask-a-python-microframework-tutorial"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "bash": {
+   "resource_ids": [
+    "yt-bash-scripting-tutorial-for-beginners",
+    "yt-bash-scripting-tutorial-for-beginners-2",
+    "web-the-linux-command-line"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "bayesian-methods": {
+   "resource_ids": [
+    "yt-bayesian-data-analysis",
+    "web-mackay-itila",
+    "free-pattern-recognition-and-machine-learning-bishop-errata-"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "behavioral-interviews": {
+   "resource_ids": [
+    "web-tech-interview-handbook-behavioral"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "big-data": {
+   "resource_ids": [
+    "web-flink-first-steps",
+    "web-hadoop-getting-started"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "bigquery": {
+   "resource_ids": [
+    "web-bigquery-documentation-introduction",
+    "yt-how-to-get-started-with-bigquery",
+    "yt-what-is-bigquery-breaking-down-what-bigquery-is-and-diving-i"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "bitbucket": {
+   "resource_ids": [
+    "web-bitbucket-git-tutorials"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "blockchain": {
+   "resource_ids": [
+    "yt-solidity-blockchain-and-smart-contract-course-beginner-",
+    "free-smart-contract-security",
+    "yt-blockchain-solidity-and-full-stack-web3-development-wit",
+    "web-ethereum-org-developer-resources"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "bootstrap": {
+   "resource_ids": [
+    "web-bootstrap-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "c": {
+   "resource_ids": [
+    "yt-aps-105-computer-fundamentals-winter-2025-jon-eyolfson-",
+    "yt-introduction-to-computer-science-2",
+    "yt-c-01-introduction-to-c-language-c-programming-tutorials",
+    "yt-c-language-tutorial-for-beginners-with-notes-practice-questi",
+    "free-learn-c-programming",
+    "yt-cs3-design-in-computing-richard-buckland-unsw",
+    "yt-systems-programming",
+    "free-cs50x",
+    "yt-systems-programming-2",
+    "yt-computer-systems-a-programmer-s-perspective",
+    "yt-uw-madison-cs-354-machine-organization-and-programming-",
+    "free-mit-6-s081-operating-system-engineering-fall-2020"
+   ],
+   "has_video": true,
+   "count": 12
+  },
+  "caching": {
+   "resource_ids": [
+    "web-redis-docs-get-started",
+    "yt-system-design-course-apis-databases-caching-cdns-load-balanc",
+    "free-system-design-primer"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "calculus": {
+   "resource_ids": [
+    "yt-essence-of-calculus",
+    "web-mit-18-01-single-variable-calculus",
+    "yt-calculus",
+    "web-3blue1brown-essence-of-calculus",
+    "yt-vector-calculus-for-engineers-hkust",
+    "yt-understand-calculus-in-35-minutes",
+    "yt-calculus-1-full-college-course",
+    "free-mathematics-for-machine-learning-imperial-coursera-free"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "cassandra": {
+   "resource_ids": [
+    "web-cassandra-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "celery": {
+   "resource_ids": [
+    "web-celery-first-steps"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "ci-cd": {
+   "resource_ids": [
+    "web-github-actions-understanding-github-actions",
+    "yt-what-is-ci-cd-pipeline-simply-explained-by-shradha-ma-am",
+    "yt-master-full-stack-docker-ci-cd-build-a-production-ready-pipe",
+    "web-gitlab-ci-tutorial"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "clean-code": {
+   "resource_ids": [
+    "web-refactoring-guru"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "cloud-architecture": {
+   "resource_ids": [
+    "free-aws-power-hour-architecting"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "cloud-computing": {
+   "resource_ids": [
+    "free-introduction-to-cloud",
+    "web-aws-skill-builder-cloud-practitioner-essentials",
+    "yt-cloud-computing-explained-the-most-important-concepts-to-kno",
+    "free-cloud-computing-basics-with-aws"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "cloud-security": {
+   "resource_ids": [
+    "web-owasp-cloud-security"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "cnn": {
+   "resource_ids": [
+    "yt-simple-explanation-of-convolutional-neural-network-deep-lear",
+    "yt-what-is-convolution-in-cnn-artificial-vs-convolutional-neura",
+    "yt-cs231n-convolutional-neural-networks-for-visual-recogni",
+    "yt-deep-learning-for-computer-vision",
+    "free-stanford-cs231n",
+    "free-deeplearning-ai-deep-learning-specialization",
+    "free-convolutional-neural-networks-for-visual-recognition"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "code-review": {
+   "resource_ids": [
+    "web-google-code-review"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "command-line": {
+   "resource_ids": [
+    "yt-command-line-crash-course-for-beginners-terminal-commands",
+    "yt-command-line-basics-for-beginners-full-course",
+    "web-mit-missing-semester-the-shell",
+    "free-linux-journey",
+    "yt-linux"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "communication": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "competitive-programming": {
+   "resource_ids": [
+    "yt-how-to-start-competitive-programming-for-beginners",
+    "yt-competitive-programming-how-to-start-complete-guide",
+    "web-usaco-guide"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "compilers": {
+   "resource_ids": [
+    "free-stanford-s-compilers"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "computer-architecture": {
+   "resource_ids": [
+    "yt-systems-programming",
+    "yt-basics-of-computer-architecture",
+    "yt-computer-systems-a-programmer-s-perspective",
+    "yt-uw-madison-cs-354-machine-organization-and-programming-",
+    "web-nand2tetris",
+    "yt-4-assembly-language-computer-architecture",
+    "yt-cs773-computer-architecture-for-performance-and-securit",
+    "yt-intro-x86-32-bit-open-securitytraining",
+    "yt-introduction-to-arm-open-securitytraining",
+    "yt-intermediate-x86-32-bit-open-securitytraining"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "computer-graphics": {
+   "resource_ids": [
+    "web-learnopengl"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "computer-networks": {
+   "resource_ids": [
+    "free-networking-from-scratch",
+    "free-computer-networks-5e",
+    "free-computer-networking-a-top-down-approach-8th-edition",
+    "yt-computer-networking-full-course-osi-model-deep-dive-with-rea",
+    "yt-computer-networking-course-network-engineering-comptia-netwo"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "computer-vision": {
+   "resource_ids": [
+    "web-kaggle-learn-computer-vision",
+    "yt-cs-198-126-modern-computer-vision-fall-2022-uc-berkeley",
+    "yt-dlcv-deep-learning-for-computer-vision-upc-barcelona",
+    "free-hugging-face-computer-vision-course",
+    "yt-cs231n-convolutional-neural-networks-for-visual-recogni",
+    "yt-deep-learning-for-computer-vision",
+    "free-stanford-cs231n",
+    "yt-opencv-python-course-learn-computer-vision-and-ai",
+    "yt-deep-learning-for-computer-vision-neuralearn-ai",
+    "free-convolutional-neural-networks-for-visual-recognition",
+    "yt-deep-learning-for-computer-vision-dl4cv",
+    "free-pytorch-vision-docs",
+    "yt-self-driving-cars-t-bingen"
+   ],
+   "has_video": true,
+   "count": 13
+  },
+  "concurrency": {
+   "resource_ids": [
+    "yt-multithreading-for-beginners",
+    "yt-threading-tutorial-1-concurrency-threading-and-parallelism-e",
+    "web-python-docs-asyncio",
+    "yt-gatech-cs6200-intro-to-os",
+    "yt-spring-2018"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "containers": {
+   "resource_ids": [
+    "yt-docker-tutorial-for-beginners-what-is-docker-introduction-to",
+    "yt-complete-docker-course-from-beginner-to-pro-learn-containers",
+    "web-docker-docs-what-is-a-container",
+    "yt-docker",
+    "free-docker-start"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "cpp": {
+   "resource_ids": [
+    "yt-c-full-course-for-free",
+    "yt-c-programming-course-beginner-to-advanced",
+    "web-learncpp-com",
+    "yt-cs-251-intermediate-software-design-c-version-vanderbil"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "creativity": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "cryptography": {
+   "resource_ids": [
+    "yt-cryptography-for-beginners-full-python-course-sha-256-aes-rs",
+    "free-stanford-cryptography-i"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "csharp": {
+   "resource_ids": [
+    "yt-c-full-course-for-free-2",
+    "yt-c-tutorial-full-course-for-beginners",
+    "web-microsoft-learn-c-documentation"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "css": {
+   "resource_ids": [
+    "web-web-dev-learn-css",
+    "yt-css",
+    "yt-css-tutorial-for-beginners-complete-css-with-project-notes-c",
+    "web-mdn-learn-web-development-css-styling",
+    "free-build-web-pages-with-html-and-css-for-beginners",
+    "free-mdn-web",
+    "free-freecodecamp",
+    "web-sass-guide",
+    "web-bootstrap-docs"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "cybersecurity": {
+   "resource_ids": [
+    "free-cs50-s-introduction-to-cybersecurity",
+    "yt-cybersecurity",
+    "yt-security",
+    "free-computer-systems-security",
+    "free-elastic-security-fundamentals-siem"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "cypress": {
+   "resource_ids": [
+    "yt-testing-javascript-with-cypress-full-course",
+    "web-cypress-your-first-test"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "dart": {
+   "resource_ids": [
+    "web-dart-language-tour"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "data-analysis": {
+   "resource_ids": [
+    "web-kaggle-learn-pandas",
+    "yt-introduction-to-data-analysis-with-excel-2-hour-training-tut",
+    "yt-excel-for-data-analytics-full-course-for-beginners",
+    "free-power-bi-path",
+    "yt-introduction-to-computer-science-3",
+    "free-data-analysis-with-python-zero-to-pandas",
+    "yt-stats-250-introduction-to-statistics-and-data-analysis-",
+    "yt-pandas-analysis",
+    "free-accelerate-data-science-workflows-with-zero-code-change",
+    "free-data-analysis-with-r"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "data-engineering": {
+   "resource_ids": [
+    "yt-data-engineering-course-for-beginners",
+    "web-datatalksclub-data-engineering-zoomcamp",
+    "yt-fundamentals-of-data-engineering-masterclass"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "data-science": {
+   "resource_ids": [
+    "yt-learn-data-science-tutorial-full-course-for-beginners",
+    "yt-university-of-maryland-umd-data602-msml602-principles-o",
+    "yt-python-machine-learning-tutorial-data-science",
+    "yt-python-boot-camp-fall-2016-berkeley-institute-for-data-",
+    "free-applied-data-science-with-python",
+    "free-cs250-python-for-data-science",
+    "free-kaggle-learn",
+    "free-kaggle-competitions",
+    "yt-mathematics-of-data-science-eth-zurich"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "data-structures": {
+   "resource_ids": [
+    "yt-dsa-foundations",
+    "free-data-structures-and-algorithms-2",
+    "web-mit-6-006-introduction-to-algorithms",
+    "free-advanced-data-structures",
+    "free-cs50x",
+    "yt-data-structures-and-algorithms-full-course",
+    "yt-data-structures-and-algorithms",
+    "yt-mit-6-006-introduction-to-algorithms-spring-2020",
+    "free-leetcode"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "data-visualization": {
+   "resource_ids": [
+    "web-kaggle-learn-data-visualization",
+    "yt-tableau-for-data-science-and-data-visualization-crash-course",
+    "free-kaggle-learn",
+    "yt-power-bi",
+    "web-looker-docs"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "data-warehousing": {
+   "resource_ids": [
+    "web-dbt-learn-fundamentals",
+    "yt-data-warehouse-vs-data-lake-vs-data-lakehouse-etl-olap-vs-ol"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "databases": {
+   "resource_ids": [
+    "yt-introduction-to-database-management-systems",
+    "web-cmu-15-445-database-systems",
+    "yt-sql-databases",
+    "yt-database-systems-2",
+    "yt-database-systems-3",
+    "free-database-systems"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "databricks": {
+   "resource_ids": [
+    "web-databricks-free-training"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "dbms": {
+   "resource_ids": [
+    "yt-lec-1-introduction-to-dbms-database-management-system",
+    "yt-principles-of-database-management-bart-baesens",
+    "yt-database-systems",
+    "yt-database-systems-2",
+    "yt-database-systems-3",
+    "free-database-systems",
+    "yt-cs-5530-database-systems-spring-2016-university-of-utah",
+    "yt-introduction-to-database-management-systems",
+    "web-cmu-15-445-database-systems"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "dbt": {
+   "resource_ids": [
+    "yt-netflix-data-analysis-dbt-databuildtool-tutorial-course-end",
+    "web-dbt-learn-fundamentals"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "debugging": {
+   "resource_ids": [
+    "yt-debugging-in-python-debugging-tips-python-tutorials-for-begi",
+    "web-mit-missing-semester-debugging-and-profiling"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "deep-learning": {
+   "resource_ids": [
+    "yt-introduction-to-deep-learning",
+    "free-mit-6-s191-introduction-to-deep-learning",
+    "yt-neural-networks",
+    "yt-deep-learning-crash-course-for-beginners",
+    "free-neural-networks-and-deep-learning-nielsen",
+    "yt-6-s094-deep-learning-for-self-driving-cars-mit",
+    "yt-reinforcement-learning-lecture-series-deepmind",
+    "yt-stanford-cs230-deep-learning-2018",
+    "yt-neural-networks-zero-to-hero-by-andrej-karpathy",
+    "yt-practical-deep-learning-for-coders",
+    "free-fastai",
+    "free-deeplearning-ai-deep-learning-specialization",
+    "yt-mit-deep-learning",
+    "yt-deep-learning-indepth-tutorials-in-5-hours-with-krish-naik",
+    "free-d2l",
+    "free-nyu-deep-learning-yann-lecun",
+    "free-deep-learning-book-goodfellow-bengio-courville",
+    "free-introduction-to-tensorflow-for-artificial-intelligence-",
+    "yt-pytorch",
+    "free-tensorflow-tutorials",
+    "yt-cs-198-126-modern-computer-vision-fall-2022-uc-berkeley",
+    "yt-dlcv-deep-learning-for-computer-vision-upc-barcelona",
+    "yt-cs224n-natural-language-processing-with-deep-learning",
+    "yt-cs231n-convolutional-neural-networks-for-visual-recogni",
+    "free-full-stack-dl",
+    "yt-deep-learning-for-computer-vision",
+    "free-stanford-cs231n",
+    "yt-nlp-stanford",
+    "yt-deep-learning-for-computer-vision-neuralearn-ai",
+    "yt-a-course-on-generative-ai-diffusion-models-israel-insti",
+    "yt-deep-learning-for-computer-vision-dl4cv",
+    "yt-stanford-cs330-deep-multi-task-and-meta-learning",
+    "yt-cmu-neural-networks-for-nlp",
+    "free-stanford-cs224n",
+    "yt-practical-deep-learning-for-coders-2"
+   ],
+   "has_video": true,
+   "count": 35
+  },
+  "deployment": {
+   "resource_ids": [
+    "web-heroku-getting-started",
+    "web-vercel-docs",
+    "yt-machine-learning-engineering-for-production-mlops",
+    "free-mlops-zoomcamp",
+    "free-deploying-spring-boot-applications-with-aws-ecs-fargate"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "design-patterns": {
+   "resource_ids": [
+    "yt-master-design-patterns-solid-principles-in-c-full-oop-course",
+    "yt-10-design-patterns-explained-in-10-minutes",
+    "web-refactoring-guru-design-patterns",
+    "yt-oose-object-oriented-software-engineering-dr-tim-lethbr",
+    "yt-cs-251-intermediate-software-design-c-version-vanderbil",
+    "web-refactoring-guru"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "devops": {
+   "resource_ids": [
+    "yt-devops-engineering-course-for-beginners",
+    "yt-devops-from-zero-to-hero-build-and-deploy-a-production-api",
+    "web-roadmap-sh-devops"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "digital-electronics": {
+   "resource_ids": [
+    "web-hdlbits",
+    "web-nand2tetris"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "discrete-math": {
+   "resource_ids": [
+    "yt-discrete-mathematics-course-for-beginners",
+    "yt-cmu-21-228-discrete-mathematics-spring-2021-by-po-shen-",
+    "free-mit-s-mathematics-for-computer-science"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "distributed-systems": {
+   "resource_ids": [
+    "yt-distributed-systems-lecture-series",
+    "yt-distributed-systems-prof-pallab-dasgupta",
+    "yt-cse-138-distributed-systems-uc-santa-cruz-spring-2020",
+    "yt-system-design-primer-how-to-start-with-distributed-systems",
+    "yt-cmu-15-440-640-distributed-systems-spring-2022-by-mahad",
+    "web-mit-6-824-distributed-systems",
+    "free-system-design-primer"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "django": {
+   "resource_ids": [
+    "free-django-for-everybody",
+    "yt-django-tutorial-for-beginners-full-course",
+    "web-django-writing-your-first-app",
+    "yt-python-django-7-hour-course",
+    "free-real-python"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "docker": {
+   "resource_ids": [
+    "yt-docker-tutorial-for-beginners",
+    "yt-docker",
+    "free-docker-start",
+    "free-deploying-spring-boot-applications-with-aws-ecs-fargate"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "dotnet": {
+   "resource_ids": [
+    "yt-asp-net-core-mvc-course-for-beginners-net-9",
+    "web-microsoft-learn-asp-net-core"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "dsa": {
+   "resource_ids": [
+    "web-roadmap-sh-data-structures-and-algorithms",
+    "yt-data-structures-and-algorithms-dsa-in-java-2024",
+    "free-leetcode",
+    "yt-data-structures-and-algorithms-full-course",
+    "yt-algorithms-design-and-analysis-1-stanford-university",
+    "yt-algorithms-design-and-analysis-2-stanford-university",
+    "free-analysis-of-algorithms-cse-373",
+    "yt-mit-6-006-introduction-to-algorithms-spring-2020"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "dynamodb": {
+   "resource_ids": [
+    "web-dynamodb-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "ecommerce": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "edtech": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "elasticsearch": {
+   "resource_ids": [
+    "yt-elasticsearch-course-for-beginners",
+    "web-elasticsearch-getting-started"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "elixir": {
+   "resource_ids": [
+    "web-elixir-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "embedded-systems": {
+   "resource_ids": [
+    "web-arduino-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "embeddings": {
+   "resource_ids": [
+    "yt-vector-embeddings-tutorial-code-your-own-ai-assistant-with-g",
+    "yt-what-are-word-embeddings",
+    "web-openai-embeddings-guide",
+    "free-sentence-transformers",
+    "free-faiss",
+    "free-openai-cookbook"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "excel": {
+   "resource_ids": [
+    "yt-excel-tutorial-for-beginners",
+    "yt-excel",
+    "web-microsoft-excel-help-learning",
+    "web-excel-vba-getting-started"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "excel-vba": {
+   "resource_ids": [
+    "web-excel-vba-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "explainable-ai": {
+   "resource_ids": [
+    "free-interpretable-ml"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "express": {
+   "resource_ids": [
+    "web-express-getting-started",
+    "yt-learn-express-js-in-35-minutes",
+    "yt-node-express"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "fastapi": {
+   "resource_ids": [
+    "yt-fastapi-course-for-beginners",
+    "yt-fastapi-for-beginners-python-web-framework",
+    "web-fastapi-tutorial-user-guide"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "feature-engineering": {
+   "resource_ids": [
+    "web-kaggle-learn-feature-engineering",
+    "yt-complete-exploratory-data-analysis-and-feature-engineering-i",
+    "yt-mit-introduction-to-data-centric-ai"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "figma": {
+   "resource_ids": [
+    "yt-figma-tutorial-for-beginners",
+    "web-figma-learn"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "finance": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "fine-tuning": {
+   "resource_ids": [
+    "web-hf-fine-tuning",
+    "free-hf-llm-course"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "fintech": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "firebase": {
+   "resource_ids": [
+    "yt-firebase-ultimate-beginner-s-guide",
+    "yt-firebase-full-course-for-beginners",
+    "web-firebase-documentation"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "flask": {
+   "resource_ids": [
+    "web-flask-tutorial",
+    "yt-learn-flask-for-python-full-tutorial",
+    "free-flask-a-python-microframework-tutorial",
+    "free-real-python"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "flink": {
+   "resource_ids": [
+    "web-flink-first-steps"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "flutter": {
+   "resource_ids": [
+    "yt-flutter-course-for-beginners-37-hour-cross-platform-app-deve",
+    "web-flutter-get-started"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "frontend-development": {
+   "resource_ids": [
+    "web-freecodecamp-responsive-web-design",
+    "web-roadmap-sh-frontend-developer",
+    "yt-the-complete-frontend-developer-roadmap",
+    "yt-frontend-web-development-bootcamp-course-javascript-html-css"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "fullstack": {
+   "resource_ids": [
+    "yt-full-stack-engineering-course-build-and-deploy-a-full-stack",
+    "free-odin-project",
+    "free-full-stack-open"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "functional-programming": {
+   "resource_ids": [
+    "web-sicp-js",
+    "web-elixir-getting-started",
+    "web-learn-you-a-haskell"
+   ],
+   "has_video": false,
+   "count": 3
+  },
+  "game-development": {
+   "resource_ids": [
+    "web-unity-learn",
+    "yt-javascript-game-development-course-for-beginners"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "gaming": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "gcp": {
+   "resource_ids": [
+    "web-google-cloud-skills-boost",
+    "yt-google-cloud-associate-cloud-engineer-course-2025-pass-the-e"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "generative-models": {
+   "resource_ids": [
+    "yt-stanford-cs236-deep-generative-models-i-2023-i-lecture-1-int",
+    "yt-lec-14-generative-models-basics",
+    "yt-course-on-diffusion-models-for-generative-ai-ut-austin",
+    "yt-a-course-on-generative-ai-diffusion-models-israel-insti",
+    "web-hugging-face-diffusion-models-course",
+    "yt-mathematical-foundations-of-generative-ai-iit-madras",
+    "yt-practical-deep-learning-for-coders-2",
+    "yt-foundation-models"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "gin": {
+   "resource_ids": [
+    "web-gin-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "git": {
+   "resource_ids": [
+    "yt-git-github",
+    "yt-git-tutorial-for-beginners-learn-git-in-1-hour",
+    "yt-learn-git-full-course-for-beginners",
+    "web-learn-git-branching",
+    "free-pro-git",
+    "web-bitbucket-git-tutorials"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "github": {
+   "resource_ids": [
+    "yt-complete-git-and-github-tutorial-for-beginners",
+    "web-github-skills",
+    "yt-complete-git-and-github-tutorial",
+    "yt-git-github"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "github-actions": {
+   "resource_ids": [
+    "yt-complete-github-actions-course-from-beginner-to-pro",
+    "web-github-actions-documentation",
+    "yt-github-actions-tutorial-basic-concepts-and-ci-cd-pipeline-wi"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "gitlab": {
+   "resource_ids": [
+    "web-gitlab-ci-tutorial"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "go": {
+   "resource_ids": [
+    "yt-golang-tutorial-for-beginners-full-go-course",
+    "yt-go-programming-full-course",
+    "web-a-tour-of-go",
+    "web-gin-docs"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "gpu-programming": {
+   "resource_ids": [
+    "yt-spring-2018",
+    "free-accelerate-data-science-workflows-with-zero-code-change"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "grafana": {
+   "resource_ids": [
+    "web-grafana-get-started",
+    "yt-grafana-is-the-goat-let-s-deploy-the-lgtm-stack",
+    "yt-understanding-dashboards-in-grafana-panels-visualizations-qu"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "graphql": {
+   "resource_ids": [
+    "yt-graphql-course-for-beginners",
+    "web-learn-graphql",
+    "free-full-stack-open"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "grpc": {
+   "resource_ids": [
+    "web-grpc-intro"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "hadoop": {
+   "resource_ids": [
+    "web-hadoop-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "haskell": {
+   "resource_ids": [
+    "web-learn-you-a-haskell"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "healthcare": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "heroku": {
+   "resource_ids": [
+    "web-heroku-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "hibernate": {
+   "resource_ids": [
+    "web-hibernate-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "html": {
+   "resource_ids": [
+    "free-build-web-pages-with-html-and-css-for-beginners",
+    "free-mdn-web",
+    "yt-html-tutorial-for-beginners-html-crash-course",
+    "yt-html",
+    "yt-learn-html-full-tutorial-for-beginners",
+    "web-mdn-learn-web-development-html",
+    "free-freecodecamp"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "http": {
+   "resource_ids": [
+    "yt-http-crash-course-exploration",
+    "web-mdn-an-overview-of-http",
+    "yt-full-http-networking-course-fetch-and-rest-apis-in-javascrip",
+    "yt-mooc-web-development-udacity",
+    "free-computer-networking-a-top-down-approach-8th-edition"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "hugging-face": {
+   "resource_ids": [
+    "yt-nlp-course-hugging-face",
+    "free-hf-llm-course",
+    "yt-1-getting-started-building-generative-ai-using-huggingface-o",
+    "yt-deploying-ai-models-with-hugging-face-hands-on-course",
+    "web-hf-audio-course",
+    "web-hugging-face-llm-course",
+    "free-hugging-face-computer-vision-course",
+    "web-hf-fine-tuning"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "information-theory": {
+   "resource_ids": [
+    "web-mackay-itila"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "infrastructure-as-code": {
+   "resource_ids": [
+    "yt-infrastructure-as-code-crash-course",
+    "yt-what-is-infrastructure-as-code",
+    "web-hashicorp-developer-terraform-tutorials"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "integration-testing": {
+   "resource_ids": [
+    "yt-javascript-testing-introduction-tutorial-unit-tests-integrat",
+    "yt-software-testing-tutorial-learn-unit-testing-and-integration",
+    "web-playwright-getting-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "ios": {
+   "resource_ids": [
+    "web-apple-develop-in-swift-tutorials",
+    "yt-complete-ios-developer-course"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "iot": {
+   "resource_ids": [
+    "web-arduino-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "java": {
+   "resource_ids": [
+    "yt-java-full-course-for-beginners",
+    "yt-java-tutorial-for-beginners",
+    "web-dev-java-learn-java",
+    "yt-oose-software-dev-using-uml-and-java",
+    "free-programming-mobile-applications-for-android-handheld-sy",
+    "free-building-microservices-with-spring-boot-free-course-wit"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "javascript": {
+   "resource_ids": [
+    "free-freecodecamp",
+    "free-odin-project",
+    "yt-javascript",
+    "yt-javascript-programming-tutorial-for-beginners",
+    "yt-javascript-full-course-for-free",
+    "web-mdn-javascript-guide",
+    "web-the-modern-javascript-tutorial",
+    "free-mdn-web",
+    "yt-blockchain-solidity-and-full-stack-web3-development-wit",
+    "web-threejs-journey-docs"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "jax": {
+   "resource_ids": [
+    "free-jax-documentation"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "jenkins": {
+   "resource_ids": [
+    "yt-jenkins-for-beginners",
+    "yt-ci-cd-in-production-with-jenkins-complete-devops-course",
+    "web-jenkins-user-handbook"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "jest": {
+   "resource_ids": [
+    "yt-javascript-testing-with-jest-crash-course",
+    "yt-jest-crash-course-unit-testing-in-javascript",
+    "web-jest-getting-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "jetpack-compose": {
+   "resource_ids": [
+    "yt-android-programming-course-kotlin-jetpack-compose-ui-graph-d",
+    "web-android-basics-with-compose"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "jira": {
+   "resource_ids": [
+    "web-jira-guide"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "jquery": {
+   "resource_ids": [
+    "web-jquery-learning-center"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "julia": {
+   "resource_ids": [
+    "web-julia-learning"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "junit": {
+   "resource_ids": [
+    "yt-java-testing-junit-5-crash-course",
+    "web-junit-5-user-guide",
+    "yt-junit-5-tutorial-by-hyder-abbas"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "jupyter": {
+   "resource_ids": [
+    "yt-a-beginners-guide-to-jupyter-notebook-with-shortcuts",
+    "yt-jupyter-notebook-tutorial-introduction-setup-and-walkthrough",
+    "web-project-jupyter-documentation"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "kafka": {
+   "resource_ids": [
+    "yt-apache-kafka-crash-course-kafka-tutorial-for-beginners-kodek",
+    "yt-kafka-crash-course-hands-on-project",
+    "web-apache-kafka-quickstart"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "keras": {
+   "resource_ids": [
+    "yt-2-training-deep-nns-cont-introduction-to-keras-tensorflow-ap",
+    "yt-keras-with-tensorflow-course-python-deep-learning-and-neural",
+    "web-keras-getting-started",
+    "free-tensorflow-tutorials"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "kotlin": {
+   "resource_ids": [
+    "yt-kotlin-tutorial-for-beginners-full-course",
+    "yt-android-kotlin-development-masterclass-full-course",
+    "web-kotlin-docs-getting-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "kubernetes": {
+   "resource_ids": [
+    "yt-kubernetes-tutorial-for-beginners-full-course-in-4-hours",
+    "yt-complete-kubernetes-course-from-beginner-to-pro",
+    "web-kubernetes-basics",
+    "web-kubernetes-docs-concepts"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "langchain": {
+   "resource_ids": [
+    "yt-langchain-crash-course-for-beginners-langchain-tutorial",
+    "yt-langchain-explained-in-10-minutes-components-breakdown-build",
+    "web-langchain-docs-tutorials",
+    "free-langchain-academy"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "langgraph": {
+   "resource_ids": [
+    "web-langgraph-quickstart",
+    "free-langchain-academy",
+    "free-langgraph"
+   ],
+   "has_video": false,
+   "count": 3
+  },
+  "laravel": {
+   "resource_ids": [
+    "web-laravel-bootcamp"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "leadership": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "linear-algebra": {
+   "resource_ids": [
+    "yt-essence-of-linear-algebra",
+    "yt-a-first-course-in-linear-algebra-n-j-wildberger-unsw",
+    "yt-linear-algebra-princeton-university",
+    "free-mathematics-for-machine-learning-imperial-coursera-free",
+    "yt-linear-algebra",
+    "web-3blue1brown-essence-of-linear-algebra",
+    "free-immersive-linear-algebra",
+    "web-mit-18-06-linear-algebra",
+    "yt-linear-algebra-full-college-course",
+    "yt-mathematics-of-data-science-eth-zurich"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "linux": {
+   "resource_ids": [
+    "free-linux-journey",
+    "yt-linux",
+    "yt-60-linux-commands-you-need-to-know-in-10-minutes",
+    "web-the-linux-command-line"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "llamaindex": {
+   "resource_ids": [
+    "web-llamaindex-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "llm-apis": {
+   "resource_ids": [
+    "web-anthropic-tool-use",
+    "web-openai-function-calling",
+    "free-openai-cookbook",
+    "free-openai-prompt-engineering-guide",
+    "free-anthropic-prompt-engineering-overview",
+    "web-anthropic-mcp-course",
+    "free-semantic-kernel"
+   ],
+   "has_video": false,
+   "count": 7
+  },
+  "llm-evaluation": {
+   "resource_ids": [
+    "web-openai-evals-guide",
+    "web-promptfoo-docs"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "llm-security": {
+   "resource_ids": [
+    "free-owasp-top-10-for-llm-applications",
+    "web-promptfoo-docs"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "llm-serving": {
+   "resource_ids": [
+    "web-ollama-docs",
+    "web-vllm-docs"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "llms": {
+   "resource_ids": [
+    "free-deeplearning-ai-generative-ai-courses",
+    "free-ms-genai",
+    "yt-intro-llms",
+    "yt-foundation-models",
+    "yt-stanford-cme295-transformers-llms-autumn-2025-stanford",
+    "yt-introduction-to-large-language-models-iit-madras",
+    "yt-create-a-large-language-model-from-scratch-with-python-tutor",
+    "yt-build-gpt",
+    "free-gpt-3-language-models-are-few-shot-learners",
+    "yt-transformers-visual",
+    "web-hugging-face-llm-course",
+    "yt-neural-networks-zero-to-hero-by-andrej-karpathy",
+    "free-hf-llm-course",
+    "yt-uc-berkeley-llm-agents-mooc",
+    "free-full-stack-dl",
+    "yt-stanford-cs25-transformers-united"
+   ],
+   "has_video": true,
+   "count": 16
+  },
+  "load-testing": {
+   "resource_ids": [
+    "web-k6-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "logistics": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "looker": {
+   "resource_ids": [
+    "web-looker-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "lua": {
+   "resource_ids": [
+    "web-programming-in-lua"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "machine-learning": {
+   "resource_ids": [
+    "web-kaggle-learn-intro-to-machine-learning",
+    "yt-making-friends-with-machine-learning",
+    "free-google-mlcc",
+    "yt-artificial-intelligence",
+    "free-elements-of-ai",
+    "free-andrew-ng-machine-learning-specialization",
+    "yt-machine-learning-tutorial-for-beginners",
+    "yt-caltech-cs156-learning-from-data",
+    "yt-cs221-artificial-intelligence-principles-and-techniques",
+    "yt-introduction-to-machine-learning-t-bingen",
+    "yt-applied-machine-learning",
+    "yt-machine-learning-lecture-stefan-harmeling",
+    "yt-spring-2023",
+    "yt-stanford-cs229-machine-learning",
+    "free-cs50-s-introduction-to-artificial-intelligence-with-pyt",
+    "free-mit-6-036-introduction-to-machine-learning",
+    "yt-complete-machine-learning-in-6-hours-krish-naik",
+    "yt-mit-introduction-to-data-centric-ai",
+    "free-hands-on-machine-learning-resources-geron-companion",
+    "free-kaggle-competitions",
+    "free-an-introduction-to-statistical-learning-islp",
+    "yt-stanford-cs330-deep-multi-task-and-meta-learning",
+    "yt-statistical-machine-learning-t-bingen",
+    "free-pattern-recognition-and-machine-learning-bishop-errata-",
+    "free-kaggle-learn",
+    "yt-machine-learning-system-design-system-design-fight-club",
+    "free-made-with-ml",
+    "yt-university-of-maryland-umd-data602-msml602-principles-o",
+    "free-scikit-learn",
+    "yt-stanford-mlsys-seminars"
+   ],
+   "has_video": true,
+   "count": 30
+  },
+  "manual-testing": {
+   "resource_ids": [
+    "web-istqb-glossary"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "marketing-analytics": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "material-ui": {
+   "resource_ids": [
+    "web-mui-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "matlab": {
+   "resource_ids": [
+    "web-matlab-onramp"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "matplotlib": {
+   "resource_ids": [
+    "yt-matplotlib-crash-course",
+    "web-matplotlib-quick-start-guide",
+    "yt-learn-matplotlib-in-1-hour",
+    "yt-pandas-analysis"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "mcp": {
+   "resource_ids": [
+    "web-mcp-docs",
+    "web-anthropic-mcp-course"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "message-queues": {
+   "resource_ids": [
+    "yt-rabbitmq-tutorial-message-queues-and-distributed-systems",
+    "yt-what-is-a-message-queue-and-where-is-it-used",
+    "web-rabbitmq-tutorials",
+    "web-celery-first-steps"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "microservices": {
+   "resource_ids": [
+    "yt-microservices-tutorial-for-beginners",
+    "web-microservices-io-patterns",
+    "free-building-microservices-with-spring-boot-free-course-wit"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "mlflow": {
+   "resource_ids": [
+    "web-mlflow-quickstart",
+    "free-mlflow-documentation",
+    "free-mlops-zoomcamp"
+   ],
+   "has_video": false,
+   "count": 3
+  },
+  "mlops": {
+   "resource_ids": [
+    "yt-learn-mlops-with-mlflow-and-databricks-full-course-for-machi",
+    "yt-machine-learning-engineering-for-production-mlops",
+    "free-full-stack-dl",
+    "free-made-with-ml",
+    "free-mlops-zoomcamp",
+    "yt-what-is-ml-ops",
+    "yt-mlops",
+    "yt-stanford-mlsys-seminars",
+    "yt-machine-learning-system-design-system-design-fight-club",
+    "yt-mit-introduction-to-data-centric-ai",
+    "free-mlflow-documentation"
+   ],
+   "has_video": true,
+   "count": 11
+  },
+  "mobile-development": {
+   "resource_ids": [
+    "free-programming-mobile-applications-for-android-handheld-sy",
+    "web-android-basics-with-compose"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "model-evaluation": {
+   "resource_ids": [
+    "web-sklearn-model-evaluation"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "mongodb": {
+   "resource_ids": [
+    "web-mongodb-university",
+    "yt-learn-mongodb-in-1-hour"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "monitoring": {
+   "resource_ids": [
+    "yt-observability-vs-apm-vs-monitoring",
+    "yt-opentelemetry-course-understand-software-performance",
+    "web-prometheus-getting-started",
+    "free-mlops-zoomcamp"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "multi-agent-systems": {
+   "resource_ids": [
+    "free-crewai",
+    "free-microsoft-autogen",
+    "free-ms-agents",
+    "yt-uc-berkeley-llm-agents-mooc"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "mysql": {
+   "resource_ids": [
+    "yt-sql-tutorial-for-beginners-mysql-tutorial",
+    "web-mysql-tutorial",
+    "yt-sql-complete-course-in-3-hours-sql-one-shot-using-mysql"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "neo4j": {
+   "resource_ids": [
+    "web-neo4j-graphacademy"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "nestjs": {
+   "resource_ids": [
+    "web-nestjs-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "network-security": {
+   "resource_ids": [
+    "web-cloudflare-learning"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "networking-protocols": {
+   "resource_ids": [
+    "web-cloudflare-learning"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "nextjs": {
+   "resource_ids": [
+    "yt-next-js-tutorial-for-beginners-nextjs-13-app-router-with-typ",
+    "yt-next-js-16-full-course-build-and-deploy-a-production-ready-f",
+    "web-next-js-learn-course"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "nginx": {
+   "resource_ids": [
+    "yt-nginx-tutorial-for-beginners",
+    "web-nginx-beginner-s-guide",
+    "yt-full-nginx-tutorial-demo-project-with-node-js-docker"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "nlp": {
+   "resource_ids": [
+    "free-advanced-nlp-using-spacy",
+    "web-hugging-face-llm-course",
+    "yt-cs224n-natural-language-processing-with-deep-learning",
+    "yt-nlp-stanford",
+    "yt-complete-natural-language-processing-nlp-tutorial-in-python",
+    "yt-complete-nlp-machine-learning-in-one-shot",
+    "yt-xcs224u-natural-language-understanding-2023",
+    "yt-cmu-neural-networks-for-nlp",
+    "free-stanford-cs224n",
+    "yt-nlp-course-hugging-face",
+    "yt-introduction-to-large-language-models-iit-madras",
+    "free-sentence-transformers",
+    "free-bert"
+   ],
+   "has_video": true,
+   "count": 13
+  },
+  "nodejs": {
+   "resource_ids": [
+    "yt-node-js-full-course-for-beginners-complete-all-in-one-tutori",
+    "web-node-js-learn",
+    "yt-node-express",
+    "free-odin-project",
+    "free-full-stack-open",
+    "web-nestjs-docs"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "nosql": {
+   "resource_ids": [
+    "yt-intro-to-nosql-databases-system-design",
+    "yt-nosql-database-tutorial-full-course-for-beginners",
+    "web-mongodb-university",
+    "yt-principles-of-database-management-bart-baesens",
+    "web-cassandra-getting-started",
+    "web-dynamodb-getting-started"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "numpy": {
+   "resource_ids": [
+    "yt-python-numpy-tutorial-for-beginners",
+    "web-numpy-the-absolute-basics-for-beginners",
+    "yt-learn-numpy-in-1-hour",
+    "free-data-analysis-with-python-zero-to-pandas",
+    "free-cs250-python-for-data-science",
+    "yt-pandas-analysis",
+    "free-jax-documentation"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "nuxt": {
+   "resource_ids": [
+    "web-nuxt-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "oop": {
+   "resource_ids": [
+    "yt-object-oriented-systems-analysis-and-design-systems-ana",
+    "yt-python-object-oriented-programming-oop-full-course-for-begin",
+    "web-python-docs-classes",
+    "yt-oose-object-oriented-software-engineering-dr-tim-lethbr",
+    "yt-oops-tutorial-in-one-shot-object-oriented-programming-in-c-l",
+    "yt-oose-software-dev-using-uml-and-java",
+    "yt-cs-251-intermediate-software-design-c-version-vanderbil"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "opencv": {
+   "resource_ids": [
+    "web-opencv-python-tutorials",
+    "yt-opencv-course-full-tutorial-with-python"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "operating-systems": {
+   "resource_ids": [
+    "yt-operating-systems-course-for-beginners",
+    "yt-gatech-cs6200-intro-to-os",
+    "yt-systems-programming-2",
+    "web-operating-systems-three-easy-pieces",
+    "free-mit-6-s081-operating-system-engineering-fall-2020",
+    "yt-systems-programming",
+    "yt-computer-systems-a-programmer-s-perspective"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "oracle-db": {
+   "resource_ids": [
+    "web-oracle-dev-gym"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "orm": {
+   "resource_ids": [
+    "web-sqlalchemy-unified-tutorial",
+    "web-hibernate-getting-started"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "ownership": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "pandas": {
+   "resource_ids": [
+    "yt-pandas-analysis",
+    "web-pandas-10-minutes-to-pandas",
+    "free-accelerate-data-science-workflows-with-zero-code-change",
+    "yt-learn-pandas-in-1-hour",
+    "yt-complete-python-pandas-data-science-tutorial-2025-updated-ed",
+    "web-kaggle-learn-pandas",
+    "free-applied-data-science-with-python",
+    "free-data-analysis-with-python-zero-to-pandas",
+    "free-cs250-python-for-data-science",
+    "free-kaggle-learn"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "penetration-testing": {
+   "resource_ids": [
+    "yt-ethical-hacking-101-web-app-penetration-testing-a-full-cours",
+    "free-ethical-hacking",
+    "free-owasp-wstg",
+    "web-portswigger-web-security-academy"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "perl": {
+   "resource_ids": [
+    "web-learn-perl"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "php": {
+   "resource_ids": [
+    "web-php-manual-tutorial",
+    "web-laravel-bootcamp"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "playwright": {
+   "resource_ids": [
+    "web-playwright-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "postgresql": {
+   "resource_ids": [
+    "yt-learn-postgresql-tutorial-full-course-for-beginners",
+    "web-supabase-docs",
+    "web-postgresql-tutorial",
+    "free-pgvector"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "postman": {
+   "resource_ids": [
+    "web-postman-learning-center"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "power-bi": {
+   "resource_ids": [
+    "free-power-bi-path",
+    "web-microsoft-learn-power-bi-training",
+    "yt-power-bi",
+    "yt-power-bi-for-data-analytics-full-course-for-beginners",
+    "yt-learn-power-bi-in-under-3-hours-formatting-visualizations-da"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "powershell": {
+   "resource_ids": [
+    "web-powershell-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "probability": {
+   "resource_ids": [
+    "yt-introduction-to-probability-basic-overview-sample-space-tree",
+    "yt-stanford-cs109-introduction-to-probability-for-computer",
+    "yt-mit-res-6-012-introduction-to-probability-spring-2018-m",
+    "yt-purdue-ece302-introduction-to-probability-for-data-scie",
+    "yt-statistics-110-probability-harvard-university",
+    "web-harvard-stat-110-probability",
+    "yt-probability-explained-independent-and-dependent-events-proba",
+    "yt-statistics",
+    "free-openintro-statistics",
+    "yt-mooc-artificial-intelligence-for-robotics-udacity",
+    "free-mit-s-mathematics-for-computer-science",
+    "yt-mathematics-of-data-science-eth-zurich",
+    "yt-mathematical-foundations-of-generative-ai-iit-madras"
+   ],
+   "has_video": true,
+   "count": 13
+  },
+  "problem-solving": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "product-management": {
+   "resource_ids": [
+    "web-svpg-product-articles"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "programming": {
+   "resource_ids": [
+    "yt-cs3-design-in-computing-richard-buckland-unsw",
+    "free-cs50x",
+    "yt-introduction-to-programming-and-computer-science-full-course",
+    "yt-aps-105-computer-fundamentals-winter-2025-jon-eyolfson-",
+    "yt-introduction-to-computer-science-2",
+    "free-mit-s-introduction-to-computer-science-and-programming-",
+    "web-sicp-js"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "project-management": {
+   "resource_ids": [
+    "web-atlassian-agile-coach"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "prometheus": {
+   "resource_ids": [
+    "yt-how-prometheus-monitoring-works-prometheus-architecture-expl",
+    "web-prometheus-getting-started"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "prompt-engineering": {
+   "resource_ids": [
+    "yt-prompt-engineering-full-course",
+    "yt-prompt-engineering",
+    "free-openai-prompt-engineering-guide",
+    "web-openai-prompt-engineering-guide",
+    "free-anthropic-prompt-engineering-overview",
+    "free-prompt-guide",
+    "yt-prompt-engineering-tutorial-master-chatgpt-and-llm-responses",
+    "free-deeplearning-ai-generative-ai-courses",
+    "free-ms-genai"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "pytest": {
+   "resource_ids": [
+    "web-pytest-get-started",
+    "yt-please-learn-how-to-write-tests-in-python-pytest-tutorial",
+    "yt-pytest-tutorial-how-to-test-python-code"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "python": {
+   "resource_ids": [
+    "free-ai-python-for-beginners",
+    "web-kaggle-learn-python",
+    "yt-introduction-to-computer-science-4",
+    "yt-python-boot-camp-fall-2016-berkeley-institute-for-data-",
+    "free-an-introduction-to-interactive-programming-in-python-pa",
+    "free-applied-data-science-with-python",
+    "free-data-analysis-with-python-zero-to-pandas",
+    "free-cs50p",
+    "free-cs250-python-for-data-science",
+    "free-kaggle-learn",
+    "free-mit-s-introduction-to-computer-science-and-programming-",
+    "free-real-python",
+    "yt-python-beginners",
+    "yt-python-full-course-for-beginners",
+    "free-python-org-official-tutorial",
+    "yt-mooc-web-development-udacity",
+    "free-django-for-everybody",
+    "free-cs50x",
+    "free-freecodecamp",
+    "yt-solidity-blockchain-and-smart-contract-course-beginner-",
+    "free-advanced-nlp-using-spacy",
+    "free-cs50-s-introduction-to-artificial-intelligence-with-pyt",
+    "free-flask-a-python-microframework-tutorial"
+   ],
+   "has_video": true,
+   "count": 23
+  },
+  "pytorch": {
+   "resource_ids": [
+    "yt-deep-learning-with-pytorch-full-course",
+    "yt-pytorch",
+    "free-pytorch-tutorials",
+    "free-pytorch-vision-docs",
+    "web-pytorch-learn-the-basics",
+    "yt-neural-networks-zero-to-hero-by-andrej-karpathy",
+    "yt-practical-deep-learning-for-coders",
+    "free-fastai",
+    "free-d2l",
+    "yt-build-gpt"
+   ],
+   "has_video": true,
+   "count": 10
+  },
+  "query-optimization": {
+   "resource_ids": [
+    "yt-query-optimization-sql-query-optimization-with-examples",
+    "web-use-the-index-luke",
+    "yt-database-systems-2",
+    "yt-database-systems-3"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "r": {
+   "resource_ids": [
+    "yt-introduction-to-computer-science-3",
+    "yt-r-programming-tutorial-learn-the-basics-of-statistical-compu",
+    "web-r-for-data-science-2e",
+    "free-data-analysis-with-r"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "rabbitmq": {
+   "resource_ids": [
+    "yt-rabbitmq-crash-course",
+    "web-rabbitmq-tutorials"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "rag": {
+   "resource_ids": [
+    "yt-complete-rag-crash-course-with-langchain-in-2-hours",
+    "yt-learn-rag-from-scratch-python-ai-tutorial-from-a-langchain-e",
+    "web-langchain-docs-build-a-rag-app",
+    "free-deeplearning-ai-generative-ai-courses",
+    "free-ms-genai",
+    "free-prompt-guide",
+    "web-llamaindex-docs",
+    "free-openai-cookbook"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "rails": {
+   "resource_ids": [
+    "yt-computer-science-169-software-engineering-spring-2015-u"
+   ],
+   "has_video": true,
+   "count": 1
+  },
+  "react": {
+   "resource_ids": [
+    "yt-react-tutorial-for-beginners",
+    "yt-react",
+    "yt-learn-react-js-full-beginner-s-tutorial-practice-projects",
+    "web-react-docs-learn-react",
+    "free-full-stack-open",
+    "free-odin-project",
+    "web-mui-getting-started"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "react-native": {
+   "resource_ids": [
+    "yt-react-native-tutorial-for-beginners-build-a-react-native-app",
+    "yt-react-native-full-course-for-beginners",
+    "web-react-native-getting-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "recommender-systems": {
+   "resource_ids": [
+    "web-google-recommendation-systems-course",
+    "yt-recommendation-systems-using-machine-learning",
+    "yt-recommender-systems"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "redis": {
+   "resource_ids": [
+    "yt-redis-crash-course",
+    "yt-redis-crash-course-the-what-why-and-how-to-use-redis-as-your",
+    "web-redis-docs-get-started"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "redux": {
+   "resource_ids": [
+    "yt-react-redux-full-course-for-beginners-redux-toolkit-complete",
+    "yt-redux-tutorial-learn-redux-from-scratch",
+    "web-redux-essentials-tutorial"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "reinforcement-learning": {
+   "resource_ids": [
+    "yt-reinforcement-learning-in-3-hours-full-course-using-python",
+    "yt-foundations-of-deep-rl",
+    "yt-reinforcement-learning-polytechnique-montreal-fall-2021",
+    "free-deep-reinforcement-learning-course",
+    "yt-reinforcement-learning-course-full-machine-learning-tutorial",
+    "yt-stanford-cs234-reinforcement-learning",
+    "yt-deep-reinforcement-learning",
+    "free-stanford-cs234-reinforcement-learning",
+    "free-berkeley-deep-rl",
+    "web-openai-spinning-up-in-deep-rl",
+    "free-an-introduction-to-robot-learning-and-isaac-lab",
+    "yt-advanced-robotics-uc-berkeley"
+   ],
+   "has_video": true,
+   "count": 12
+  },
+  "relational-databases": {
+   "resource_ids": [
+    "yt-cs-5530-database-systems-spring-2016-university-of-utah",
+    "yt-introduction-to-relational-databases",
+    "yt-relational-database-design-full-course",
+    "web-postgresql-tutorial",
+    "yt-sql-databases",
+    "yt-principles-of-database-management-bart-baesens",
+    "yt-database-systems"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "responsible-ai": {
+   "resource_ids": [
+    "free-fairness-ml"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "responsive-design": {
+   "resource_ids": [
+    "web-web-dev-learn-responsive-design",
+    "yt-introduction-to-responsive-web-design-html-css-tutorial",
+    "yt-a-practical-guide-to-responsive-web-design",
+    "yt-css"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "rest-api": {
+   "resource_ids": [
+    "yt-rest-api-crash-course-introduction-full-python-api-tutorial",
+    "yt-rest-api-web-service-tutorial",
+    "web-microsoft-restful-web-api-design",
+    "web-postman-learning-center",
+    "yt-node-express"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "rnn": {
+   "resource_ids": [
+    "free-deeplearning-ai-deep-learning-specialization"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "robotics": {
+   "resource_ids": [
+    "free-an-introduction-to-ai-based-robot-development-with-isaa",
+    "free-an-introduction-to-robot-learning-and-isaac-lab",
+    "free-develop-simulate-and-deploy-robot-intelligence-with-sca",
+    "free-developing-robots-with-software-in-the-loop-sil-in-isaa",
+    "yt-mooc-artificial-intelligence-for-robotics-udacity",
+    "yt-self-driving-cars-t-bingen",
+    "yt-advanced-robotics-uc-berkeley",
+    "yt-6-s094-deep-learning-for-self-driving-cars-mit"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "ros": {
+   "resource_ids": [
+    "free-an-introduction-to-ai-based-robot-development-with-isaa",
+    "free-developing-robots-with-software-in-the-loop-sil-in-isaa"
+   ],
+   "has_video": false,
+   "count": 2
+  },
+  "rpa": {
+   "resource_ids": [
+    "web-uipath-academy"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "ruby": {
+   "resource_ids": [
+    "web-ruby-in-twenty-minutes"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "rust": {
+   "resource_ids": [
+    "yt-introduction-to-computer-science",
+    "yt-learn-rust-programming-complete-course",
+    "web-the-rust-programming-language"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "saas": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "salesforce": {
+   "resource_ids": [
+    "web-trailhead"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "sap": {
+   "resource_ids": [
+    "web-sap-learning"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "sass": {
+   "resource_ids": [
+    "web-sass-guide"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "scala": {
+   "resource_ids": [
+    "web-scala-tour"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "scikit-learn": {
+   "resource_ids": [
+    "yt-scikit-learn-crash-course-machine-learning-library-for-pytho",
+    "web-scikit-learn-getting-started",
+    "free-scikit-learn",
+    "yt-applied-machine-learning",
+    "web-sklearn-model-evaluation",
+    "free-hands-on-machine-learning-resources-geron-companion"
+   ],
+   "has_video": true,
+   "count": 6
+  },
+  "selenium": {
+   "resource_ids": [
+    "web-selenium-documentation",
+    "yt-python-selenium-tutorial-automate-websites-and-create-bots",
+    "yt-java-testing-with-selenium-course"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "serverless": {
+   "resource_ids": [
+    "yt-lec-29-what-is-serverless-aws-lambda-vs-ec2-serverless-vs-se",
+    "yt-serverless-node-js-tutorial-neon-serverless-postgres-aws-lam",
+    "web-aws-lambda-developer-guide"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "shell-scripting": {
+   "resource_ids": [
+    "web-mit-missing-semester-shell-tools-and-scripting",
+    "yt-bash-scripting-tutorial-for-beginners",
+    "yt-bash-scripting-tutorial-for-beginners-2"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "siem": {
+   "resource_ids": [
+    "free-elastic-security-fundamentals-siem"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "snowflake": {
+   "resource_ids": [
+    "web-snowflake-quickstarts",
+    "yt-learn-snowflake-in-10-minutes-high-paying-skills-step-by-ste",
+    "yt-what-is-snowflake-learn-snowflake-in-30-minutes"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "software-engineering": {
+   "resource_ids": [
+    "web-mit-missing-semester-of-your-cs-education",
+    "free-roadmap-sh",
+    "free-software-engineering-the-easy-way",
+    "yt-computer-science-169-software-engineering-spring-2015-u",
+    "yt-object-oriented-systems-analysis-and-design-systems-ana",
+    "yt-oose-object-oriented-software-engineering-dr-tim-lethbr",
+    "yt-oose-software-dev-using-uml-and-java"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "solidity": {
+   "resource_ids": [
+    "yt-solidity-blockchain-and-smart-contract-course-beginner-",
+    "free-smart-contract-security",
+    "yt-blockchain-solidity-and-full-stack-web3-development-wit"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "spark": {
+   "resource_ids": [
+    "yt-learn-apache-spark-in-10-minutes-step-by-step-guide",
+    "web-spark-quick-start",
+    "web-databricks-free-training"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "speech-recognition": {
+   "resource_ids": [
+    "web-hf-audio-course"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "spring": {
+   "resource_ids": [
+    "yt-spring-boot-tutorial-for-beginners-2025",
+    "yt-spring-framework-tutorial-full-course",
+    "web-spring-guides"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "spring-boot": {
+   "resource_ids": [
+    "yt-spring-boot-tutorials-full-course",
+    "web-spring-guides-building-an-application-with-spring-boot",
+    "free-building-microservices-with-spring-boot-free-course-wit",
+    "yt-spring-boot-tutorial-for-beginners-2025",
+    "free-deploying-spring-boot-applications-with-aws-ecs-fargate"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "sql": {
+   "resource_ids": [
+    "web-kaggle-learn-intro-to-sql",
+    "yt-sql-course-for-beginners-full-course",
+    "yt-sql-databases",
+    "free-sqlbolt",
+    "yt-cs-5530-database-systems-spring-2016-university-of-utah",
+    "free-kaggle-learn",
+    "free-cs50x",
+    "web-sqlite-docs",
+    "web-sql-server-tutorial",
+    "yt-database-systems",
+    "yt-sql-complete-course-in-3-hours-sql-one-shot-using-mysql",
+    "web-oracle-dev-gym"
+   ],
+   "has_video": true,
+   "count": 12
+  },
+  "sql-server": {
+   "resource_ids": [
+    "web-sql-server-tutorial"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "sqlite": {
+   "resource_ids": [
+    "web-sqlite-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "sre": {
+   "resource_ids": [
+    "yt-what-is-site-reliability-engineering-sre",
+    "yt-what-is-sre-tasks-and-responsibilities-of-an-sre-sre-vs-devo",
+    "web-google-sre-book"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "stakeholder-management": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "state-management": {
+   "resource_ids": [
+    "web-redux-essentials-tutorial"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "statistics": {
+   "resource_ids": [
+    "yt-statistics-crashcourse",
+    "yt-stat-2-1x-descriptive-statistics-uc-berkeley",
+    "yt-stats-250-introduction-to-statistics-and-data-analysis-",
+    "web-khan-academy-statistics-and-probability",
+    "yt-statistics",
+    "free-openintro-statistics",
+    "yt-complete-statistics-for-data-science-in-6-hours-by-krish-nai",
+    "free-mathematics-for-machine-learning-imperial-coursera-free",
+    "yt-stanford-cs109-introduction-to-probability-for-computer",
+    "yt-purdue-ece302-introduction-to-probability-for-data-scie",
+    "yt-university-of-maryland-umd-data602-msml602-principles-o",
+    "yt-statistics-110-probability-harvard-university",
+    "free-an-introduction-to-statistical-learning-islp",
+    "yt-bayesian-data-analysis",
+    "yt-statistical-machine-learning-t-bingen"
+   ],
+   "has_video": true,
+   "count": 15
+  },
+  "supabase": {
+   "resource_ids": [
+    "web-supabase-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "svelte": {
+   "resource_ids": [
+    "yt-svelte-crash-course",
+    "yt-learn-svelte-full-course-for-beginners",
+    "web-svelte-interactive-tutorial"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "swift": {
+   "resource_ids": [
+    "yt-swift-programming-tutorial-full-course-for-beginners",
+    "web-the-swift-programming-language"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "system-design": {
+   "resource_ids": [
+    "yt-system-design-one-shot-full-course",
+    "yt-machine-learning-system-design-system-design-fight-club",
+    "yt-system-design",
+    "free-system-design-primer",
+    "yt-distributed-systems-lecture-series",
+    "yt-cse-138-distributed-systems-uc-santa-cruz-spring-2020",
+    "yt-system-design-course-apis-databases-caching-cdns-load-balanc"
+   ],
+   "has_video": true,
+   "count": 7
+  },
+  "tableau": {
+   "resource_ids": [
+    "web-tableau-free-training-videos",
+    "yt-learn-tableau-in-under-2-hours-dashboards-relationships-visu"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "tailwind": {
+   "resource_ids": [
+    "yt-tailwind-css-v4-full-course-2026-master-tailwind-in-one-hour",
+    "yt-tailwind-css-v4-for-beginners-full-course-2026",
+    "web-tailwind-css-documentation"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "tdd": {
+   "resource_ids": [
+    "yt-test-driven-development-fun-tdd-introduction-with-javascript",
+    "yt-test-driven-development-tdd-crash-course-2020",
+    "web-martin-fowler-test-driven-development",
+    "yt-computer-science-169-software-engineering-spring-2015-u"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "teamwork": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "technical-writing": {
+   "resource_ids": [
+    "web-google-technical-writing-courses",
+    "yt-technical-writing-course-for-beginners"
+   ],
+   "has_video": true,
+   "count": 2
+  },
+  "tensorflow": {
+   "resource_ids": [
+    "free-introduction-to-tensorflow-for-artificial-intelligence-",
+    "yt-tensorflow-2-0-complete-course-python-neural-networks-for-be",
+    "free-tensorflow-tutorials",
+    "yt-deep-learning-for-computer-vision-neuralearn-ai",
+    "free-hands-on-machine-learning-resources-geron-companion"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "terraform": {
+   "resource_ids": [
+    "yt-terraform-explained-in-15-mins-terraform-tutorial-for-beginn",
+    "yt-complete-terraform-course-from-beginner-to-pro-learn-infrast",
+    "web-hashicorp-developer-terraform-tutorials"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "test-automation": {
+   "resource_ids": [
+    "web-playwright-getting-started"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "testing": {
+   "resource_ids": [
+    "web-martin-fowler-the-practical-test-pyramid",
+    "yt-types-of-testing-in-software-engineering-levels-of-testing",
+    "yt-what-is-software-testing",
+    "web-istqb-glossary",
+    "free-made-with-ml"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "three-js": {
+   "resource_ids": [
+    "web-threejs-journey-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "time-management": {
+   "resource_ids": [],
+   "has_video": false,
+   "count": 0
+  },
+  "time-series": {
+   "resource_ids": [
+    "yt-time-series-forecasting-in-python-tutorial-for-beginners",
+    "web-kaggle-learn-time-series",
+    "yt-pandas-time-series-analysis-part-1-datetimeindex-and-resampl"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "transformers": {
+   "resource_ids": [
+    "yt-transformers-visual",
+    "yt-evolution-of-the-transformer-architecture-used-in-llms-2017",
+    "free-illustrated-transformer-jay-alammar",
+    "yt-attention",
+    "yt-complete-transformers-for-nlp-deep-learning-one-shot-with-ha",
+    "yt-stanford-cs25-transformers-united",
+    "free-attention-is-all-you-need",
+    "free-bert",
+    "yt-nlp-course-hugging-face",
+    "yt-stanford-cme295-transformers-llms-autumn-2025-stanford",
+    "free-hf-llm-course",
+    "yt-cs224n-natural-language-processing-with-deep-learning",
+    "yt-introduction-to-large-language-models-iit-madras",
+    "yt-xcs224u-natural-language-understanding-2023",
+    "free-stanford-cs224n",
+    "yt-build-gpt"
+   ],
+   "has_video": true,
+   "count": 16
+  },
+  "typescript": {
+   "resource_ids": [
+    "yt-typescript-tutorial-for-beginners",
+    "yt-learn-typescript-full-tutorial",
+    "web-typescript-handbook",
+    "free-full-stack-open",
+    "web-nestjs-docs"
+   ],
+   "has_video": true,
+   "count": 5
+  },
+  "ui-ux": {
+   "resource_ids": [
+    "yt-ui-ux-design-tutorial-wireframe-mockup-design-in-figma"
+   ],
+   "has_video": true,
+   "count": 1
+  },
+  "unit-testing": {
+   "resource_ids": [
+    "yt-javascript-unit-testing-tutorial-for-beginners",
+    "web-martin-fowler-the-practical-test-pyramid",
+    "yt-software-testing-tutorial-learn-unit-testing-and-integration"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "vector-databases": {
+   "resource_ids": [
+    "yt-production-rag-with-langchain-vector-databases-full-course",
+    "free-chroma",
+    "free-pinecone",
+    "free-qdrant",
+    "free-weaviate",
+    "yt-what-is-a-vector-database-powering-semantic-search-ai-applic",
+    "free-pgvector",
+    "free-faiss",
+    "free-ms-genai"
+   ],
+   "has_video": true,
+   "count": 9
+  },
+  "vercel": {
+   "resource_ids": [
+    "web-vercel-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "verilog": {
+   "resource_ids": [
+    "web-hdlbits"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "vite": {
+   "resource_ids": [
+    "web-vite-guide"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "vscode": {
+   "resource_ids": [
+    "web-vscode-docs"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "vue": {
+   "resource_ids": [
+    "yt-learn-vue-js-tutorial-for-beginners",
+    "yt-vue-js-crash-course",
+    "web-vue-js-guide",
+    "web-nuxt-docs"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "web-accessibility": {
+   "resource_ids": [
+    "web-web-dev-learn-accessibility",
+    "yt-the-only-accessibility-video-you-will-ever-need",
+    "yt-learn-accessibility-full-a11y-tutorial",
+    "free-mdn-web"
+   ],
+   "has_video": true,
+   "count": 4
+  },
+  "web-performance": {
+   "resource_ids": [
+    "web-web-dev-learn-performance"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "web-scraping": {
+   "resource_ids": [
+    "yt-scrapy-course-python-web-scraping-for-beginners",
+    "web-beautiful-soup-documentation",
+    "yt-comprehensive-python-beautiful-soup-web-scraping-tutorial-fi"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "web-security": {
+   "resource_ids": [
+    "free-ethical-hacking",
+    "web-owasp-top-10",
+    "yt-owasp-top-10-web-application-security-risks",
+    "free-owasp-wstg",
+    "web-portswigger-web-security-academy",
+    "free-smart-contract-security",
+    "free-owasp-top-10-for-llm-applications",
+    "yt-security"
+   ],
+   "has_video": true,
+   "count": 8
+  },
+  "webpack": {
+   "resource_ids": [
+    "web-webpack-concepts"
+   ],
+   "has_video": false,
+   "count": 1
+  },
+  "websockets": {
+   "resource_ids": [
+    "yt-websockets-beginners-tutorial-with-socket-io",
+    "yt-what-is-websocket-why-is-it-used-how-is-it-different-from-ht",
+    "web-mdn-the-websocket-api"
+   ],
+   "has_video": true,
+   "count": 3
+  },
+  "xgboost": {
+   "resource_ids": [
+    "web-kaggle-learn-intermediate-machine-learning",
+    "yt-xgboost-classification-indepth-maths-intuition-machine-learn",
+    "yt-xgboost-part-1-of-4-regression"
+   ],
+   "has_video": true,
+   "count": 3
+  }
+ }
+}

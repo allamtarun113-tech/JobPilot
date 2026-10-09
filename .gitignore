@@ -1,0 +1,25 @@
+.venv/
+.vercel/
+__pycache__/
+*.pyc
+.env
+var/
+Data/user/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+evals/reports/*
+!evals/reports/.gitkeep
+
+# Generated local session databases
+:memory:.ses
+*.ses-journal
+.vercel
+.env*
+!.env.example
+
+# Kept out of the repo: copyrighted book PDFs, original inputs and personal notes (see README)
+Data/books/pdfs/
+Raw_data/
+changes.txt

@@ -1,0 +1,48 @@
+# Scoring rubric. Code computes the score; the LLM only extracts requirements.
+# 3: six dimensions from what the job needs and what you know and have built (decision 29). Experience and
+#    role direction are not scored.
+# 4: weights tuned for an early-career AI/ML search (decision 30): named tools and similar projects count
+#    more; loosely listed concepts and the business domain count less.
+rubric_version: 4
+dimensions:
+  technologies: {weight: 30, extracted: technologies,  computed: share of required tools you have}
+  skills:       {weight: 20, extracted: skills,        computed: share of required abilities you have}
+  concepts:     {weight: 10, extracted: concepts,      computed: share of required concepts you know}
+  domain:       {weight: 10, extracted: domain,        computed: embedding similarity to your projects and roles}
+  projects:     {weight: 20, extracted: project_types, computed: embedding similarity to what you have built}
+  nice:         {weight: 10, extracted: nice_skills,   computed: share found}
+# A JD that names no technologies, skills or concepts gives that dimension's weight to the ones it does
+# name. If it names none of the three (or no nice-to-haves): full points from a full JD, half from a snippet.
+
+# Skill normalization uses Data/taxonomy/skills.json (id, name, aliases). Add only overrides here.
+skill_taxonomy: Data/taxonomy/skills.json
+skill_synonym_overrides: {}
+
+# Similarity calibration for the local embedding model (bge-small: unrelated text ~0.55, close text ~0.8).
+calibration:
+  skill_similar_min: 0.90       # an unmatched JD skill counts as matched only above this
+  domain_low: 0.55
+  domain_high: 0.80
+  projects_low: 0.55
+  projects_high: 0.80
+  # Partial credit for a required ability or concept by meaning (bge-small, measured 2026-10-07 on your
+  # profile: unrelated phrases reach ~0.60-0.71, close ones 0.75-0.87): credit 0 at phrase_low, full at phrase_high.
+  phrase_low: 0.72
+  phrase_high: 0.88
+
+# Learnability of a missing skill (matching/gap.py), from the Qdrant knowledge base - no model call.
+# material: learning resources and book sections tagged with the skill (full marks at these counts).
+# closeness: best similarity between the skill and one of your confirmed skills (bge-small: low..high -> 0..1);
+# a taxonomy link (prerequisite / implied) to a skill you have counts as close_linked.
+learnability:
+  resources_full: 6
+  sections_full: 40
+  material_weight: 0.5
+  closeness_weight: 0.5
+  closeness_low: 0.6
+  closeness_high: 0.85
+  close_linked: 0.9
+  easy_at: 0.6
+  # Skills to learn are ranked by points x (rank_base + (1 - rank_base) x learnability): a skill worth many
+  # points that is also quick to learn comes first. Unknown learnability counts as 0.5.
+  rank_base: 0.6

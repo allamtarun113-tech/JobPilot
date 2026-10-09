@@ -1,0 +1,57 @@
+name: Python checks
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "30 21 * * *"   # nightly (03:00 IST): contract tests + offline evals
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: jobpilot_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      JOBPILOT_ENV: test
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@localhost:5432/jobpilot_test
+      TEST_DB: postgresql+psycopg://postgres:postgres@localhost:5432/jobpilot_test
+      TELEGRAM_CHAT_ID: '4242'
+      TELEGRAM_BOT_TOKEN: ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked --all-groups
+      - name: Build offline resume compiler
+        run: docker build -t jobpilot-tectonic deploy/sandbox
+      - run: make migrate
+      - run: make check TEST_DB="$TEST_DB"
+      - run: make eval-offline
+      - run: make contract TEST_DB="$TEST_DB"
+  nightly-live-contracts:
+    # Harmless live calls to the providers; runs only when the repository has the secrets configured.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      JOBPILOT_ENV: dev
+      CONTRACT_LIVE: '1'
+      JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked --all-groups
+      - name: Live provider contracts
+        if: env.JSEARCH_API_KEY != ''
+        run: uv run pytest -q tests/contract -k live

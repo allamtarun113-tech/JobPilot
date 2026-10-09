@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Resume - JobPilot{% endblock %}
+{% block content %}
+<div class="page-header"><div><p class="eyebrow">Career foundation</p><h1>Base resume</h1><p class="lead">Your verified source document for tailored applications.</p></div></div>
+{% if not row %}
+<div class="empty">No resume imported yet. Run <code>uv run python scripts/import_resume.py</code>.</div>
+{% else %}
+<div class="card">
+<div class="card-header"><div><h2>Document health</h2><p class="muted">Rendered from structured data through your fixed template.</p></div>
+<form method="post" action="/resume/render"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}"><button class="primary">Re-render PDF</button></form></div>
+<table class="meta-table">
+  <tr><th>Source</th><td>{{ row.source_file }} · version {{ row.version }}</td></tr>
+  <tr><th>Parse check</th><td>
+    {% if row.parse_ok is none %}<span class="muted">not rendered yet</span>
+    {% elif row.parse_ok %}<span class="ok">OK</span> - a text extractor recovers every section in order, {{ row.render_report.pages }} page(s)
+    {% else %}<span class="bad">FAILED</span> {{ row.render_report }}{% endif %}</td></tr>
+  <tr><th>Evidence</th><td>
+    {% if backing and backing.ok %}<span class="ok">every line rests on confirmed profile items</span>
+    {% elif backing %}<span class="bad">{{ backing.unbacked|length }} line(s) rest on unconfirmed items</span> - <a href="/profile">confirm your profile</a>{% endif %}</td></tr>
+  <tr><th>Sections</th><td>{% for s in doc.sections %}{{ s.title }}{% if not loop.last %} · {% endif %}{% endfor %}</td></tr>
+</table>
+</div>
+{% if row.pdf_key %}
+<div class="card"><div class="card-header"><div><h2>PDF preview</h2><p class="muted">Latest rendered version</p></div><a class="button" href="/files/{{ row.pdf_key }}" target="_blank">Open full screen</a></div>
+<iframe src="/files/{{ row.pdf_key }}" title="Resume PDF" style="width:100%; height:75vh; border:1px solid var(--line)"></iframe></div>
+{% endif %}
+{% endif %}
+{% endblock %}

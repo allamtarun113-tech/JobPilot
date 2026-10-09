@@ -1,0 +1,16 @@
+;; macOS sandbox profile for compiling the resume (sandbox-exec -f tectonic.sb -D WORKDIR=... -D CACHE=... -D HOME=...).
+;; No network at all; writes only to the job's temp dir and Tectonic's package cache; nothing under the home
+;; folder can be read except Tectonic's cache (so a hostile document can't read ~/.ssh, .env, Data/user ...).
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write*
+  (subpath (param "WORKDIR"))
+  (subpath (param "CACHE"))
+  (literal "/dev/null")
+  (literal "/dev/tty"))
+(deny file-read* (subpath (param "HOME")))
+(allow file-read*
+  (subpath (param "WORKDIR"))
+  (subpath (param "CACHE")))

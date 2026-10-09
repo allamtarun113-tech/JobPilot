@@ -1,0 +1,450 @@
+[
+ {
+  "id": "yt-6-824-distributed-systems-spring-2015-mit",
+  "title": "6.824 - Distributed Systems, Spring 2015 - MIT",
+  "url": "https://www.youtube.com/playlist?list=PLkcQbKbegkMqiWf7nF8apfMRL4P4sw8UL",
+  "source": "youtube_courses.json",
+  "reason": "playlist unavailable (403); Kleppmann and CSE138 cover the topic"
+ },
+ {
+  "id": "yt-graph-algorithms-robert-sedgewick-princeton-university",
+  "title": "Graph Algorithms - Robert Sedgewick - Princeton University",
+  "url": "https://www.youtube.com/watch?v=0qF7tPSQdCg",
+  "source": "youtube_courses.json",
+  "reason": "unofficial re-upload of a Coursera course"
+ },
+ {
+  "id": "yt-csse490-android-development-rose-hulman-winter-2010-201",
+  "title": "CSSE490 Android Development Rose-Hulman Winter 2010-2011, Dave Fisher",
+  "url": "https://www.youtube.com/playlist?list=PLF3EEB647F6B52F03",
+  "source": "youtube_courses.json",
+  "reason": "2010 Android content is obsolete"
+ },
+ {
+  "id": "yt-linfo-2266-advanced-algorithms-for-optimization-2021-by",
+  "title": "LINFO 2266 Advanced Algorithms for Optimization 2021, by Pierre Schaus - UCLouvain",
+  "url": "https://www.youtube.com/playlist?list=PL682UO4IMem-wgYnJl5yMswlNkve_8oGU",
+  "source": "youtube_courses.json",
+  "reason": "playlist not found (404)"
+ },
+ {
+  "id": "yt-space-science-with-python-astroniz",
+  "title": "Space Science with Python - Astroniz",
+  "url": "https://www.youtube.com/playlist?list=PLNvIBWkEdZ2iCc8G9dvx6MQvBruJG-TE8",
+  "source": "youtube_courses.json",
+  "reason": "playlist not found (404); off-target"
+ },
+ {
+  "id": "yt-cornell-ece-4960-computational-and-software-engineering",
+  "title": "Cornell ECE 4960 Computational and Software Engineering spring 2017, by Edwin Kan",
+  "url": "https://www.youtube.com/playlist?list=PLcVqWUh-bHiFN2CY1KMTw0-L39iDXlemi",
+  "source": "youtube_courses.json",
+  "reason": "niche; covered by better software-engineering courses"
+ },
+ {
+  "id": "yt-mit-deep-learning-for-art-aesthetics-and-creativity",
+  "title": "MIT: Deep Learning for Art, Aesthetics, and Creativity",
+  "url": "https://www.youtube.com/playlist?list=PLCpMvp7ftsnIbNwRnQJbDNRqO6qiN3EyH",
+  "source": "youtube_courses.json",
+  "reason": "off-target for job skills"
+ },
+ {
+  "id": "yt-computational-physics-course-in-python-rutgers-2021",
+  "title": "Computational Physics Course in Python, Rutgers 2021",
+  "url": "https://www.youtube.com/playlist?list=PLXmUYdQdC9IGv61Y1lhGBH0NsDQRdwcJE",
+  "source": "youtube_courses.json",
+  "reason": "off-target for job skills"
+ },
+ {
+  "id": "yt-mooc-cloud-computing-concepts-uiuc",
+  "title": "MOOC - Cloud Computing Concepts - UIUC",
+  "url": "https://www.youtube.com/playlist?list=PLFd87qVsaLhOkTLvfp6MC94iFa_1c9wrU",
+  "source": "youtube_courses.json",
+  "reason": "playlist not found (404)"
+ },
+ {
+  "id": "yt-mooc-database-stanford-dbclass",
+  "title": "MOOC - Database Stanford Dbclass",
+  "url": "https://www.youtube.com/playlist?list=PL6hGtHedy2Z4EkgY76QOcueU8lAC4o6c3",
+  "source": "youtube_courses.json",
+  "reason": "unofficial re-upload"
+ },
+ {
+  "id": "yt-mooc-principles-of-reactive-programming-scala-coursera",
+  "title": "MOOC - Principles of Reactive Programming, Scala - Coursera",
+  "url": "https://www.youtube.com/playlist?list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN",
+  "source": "youtube_courses.json",
+  "reason": "unofficial re-upload; mislabelled as React"
+ },
+ {
+  "id": "yt-cos-226-algorithms-youtube-princeton-by-robert-sedgewic",
+  "title": "COS 226 Algorithms, Youtube, Princeton - by Robert Sedgewick and Kevin Wayne",
+  "url": "https://www.youtube.com/watch?v=1QZDe28peZk&list=PLRdD1c6QbAqJn0606RlOR6T3yUqFWKwmX&index=1",
+  "source": "youtube_courses.json",
+  "reason": "video not found (404)"
+ },
+ {
+  "id": "yt-cs50-s-understanding-technology",
+  "title": "CS50's Understanding Technology",
+  "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T382p8amnvUp1rws1p7n7gJ2p",
+  "source": "youtube_courses.json",
+  "reason": "computer literacy, not a job skill"
+ },
+ {
+  "id": "yt-fundamental-mathematics-for-robotics-spring-2020-by-ken",
+  "title": "Fundamental Mathematics for Robotics spring 2020, by Ken Tomiyama",
+  "url": "https://www.youtube.com/@citqualityeducation803/videos",
+  "source": "youtube_courses.json",
+  "reason": "channel page, not a course; not found (404)"
+ },
+ {
+  "id": "yt-cs-5804-introduction-to-artificial-intelligence-spring-",
+  "title": "CS 5804: Introduction to Artificial Intelligence, Spring 2015",
+  "url": "https://www.youtube.com/playlist?list=PLUenpfvlyoa0PB6_kqJ9WU7m6i6z1RhfJ",
+  "source": "youtube_courses.json",
+  "reason": "2015 duplicate of better AI courses (CS188, CS221)"
+ },
+ {
+  "id": "yt-cs-4804-introduction-to-artificial-intelligence-fall-20",
+  "title": "CS 4804: Introduction to Artificial Intelligence, Fall 2016",
+  "url": "https://www.youtube.com/playlist?list=PLUenpfvlyoa1iiSbGy9BBewgiXjzxVgBd",
+  "source": "youtube_courses.json",
+  "reason": "2016 duplicate of better AI courses (CS188, CS221)"
+ },
+ {
+  "id": "free-hugging-face-agents-course",
+  "title": "Hugging Face Agents Course",
+  "url": "https://huggingface.co/learn/agents-course",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-building-ai-powered-material-generation-for-omniverse-w",
+  "title": "Building AI-Powered Material Generation for Omniverse With DGX Cloud",
+  "url": "https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-53+V1",
+  "source": "free_learning_platforms.json",
+  "reason": "off-target (NVIDIA Omniverse niche)"
+ },
+ {
+  "id": "free-firebase-analytics-android",
+  "title": "Firebase Analytics: Android",
+  "url": "https://www.udacity.com/course/firebase-analytics-android--ud354",
+  "source": "free_learning_platforms.json",
+  "reason": "obsolete Udacity course"
+ },
+ {
+  "id": "free-leetcode-2",
+  "title": "LeetCode",
+  "url": "https://leetcode.com/",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-neural-networks-zero-to-hero-andrej-karpathy",
+  "title": "Neural Networks: Zero to Hero (Andrej Karpathy)",
+  "url": "https://karpathy.ai/zero-to-hero.html",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-bento-css-learning-track",
+  "title": "Bento CSS Learning Track",
+  "url": "https://bento.io/topic/css",
+  "source": "free_learning_platforms.json",
+  "reason": "site gone (redirects to a personal homepage)"
+ },
+ {
+  "id": "free-full-stack-deep-learning",
+  "title": "Full Stack Deep Learning",
+  "url": "https://fullstackdeeplearning.com/",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-build-an-iot-blockchain-network-for-a-supply-chain",
+  "title": "Build an IoT Blockchain Network for a Supply Chain",
+  "url": "https://cognitiveclass.ai/courses/blockchain-iot-node-red-food-network",
+  "source": "free_learning_platforms.json",
+  "reason": "off-target"
+ },
+ {
+  "id": "free-hugging-face-nlp-course",
+  "title": "Hugging Face NLP Course",
+  "url": "https://huggingface.co/learn/nlp-course",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-gradle-for-android-and-java",
+  "title": "Gradle for Android and Java",
+  "url": "https://www.udacity.com/course/gradle-for-android-and-java--ud867",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to an unrelated course)"
+ },
+ {
+  "id": "free-mit-6-s094-deep-learning-for-self-driving-cars",
+  "title": "MIT 6.S094: Deep Learning for Self-Driving Cars",
+  "url": "https://selfdrivingcars.mit.edu",
+  "source": "free_learning_platforms.json",
+  "reason": "domain no longer resolves; YouTube playlist kept instead"
+ },
+ {
+  "id": "free-build-javascript-applications-with-node-js",
+  "title": "Build JavaScript applications with Node.js",
+  "url": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-nodejs",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to the Microsoft Learn catalogue)"
+ },
+ {
+  "id": "free-cloud-computing-and-development",
+  "title": "Cloud Computing and Development",
+  "url": "https://uaceit.com/courses/cloud-computing-and-development",
+  "source": "free_learning_platforms.json",
+  "reason": "site unreachable"
+ },
+ {
+  "id": "free-bento-html-learning-track",
+  "title": "Bento HTML Learning Track",
+  "url": "https://bento.io/topic/html",
+  "source": "free_learning_platforms.json",
+  "reason": "site gone (redirects to a personal homepage)"
+ },
+ {
+  "id": "free-google-machine-learning-crash-course",
+  "title": "Google Machine Learning Crash Course",
+  "url": "https://developers.google.com/machine-learning/crash-course",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-weights-and-biases-docs",
+  "title": "Weights and Biases Docs",
+  "url": "https://docs.wandb.ai/",
+  "source": "free_learning_platforms.json",
+  "reason": "redirects to unrelated CoreWeave docs"
+ },
+ {
+  "id": "free-deep-reinforcement-learning",
+  "title": "Deep Reinforcement Learning",
+  "url": "http://rail.eecs.berkeley.edu/deeprlcourse/",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of free-berkeley-deep-rl"
+ },
+ {
+  "id": "free-intro-to-self-driving-cars-nanodegree",
+  "title": "Intro to Self-Driving Cars Nanodegree",
+  "url": "https://www.udacity.com/course/intro-to-self-driving-cars--nd113",
+  "source": "free_learning_platforms.json",
+  "reason": "paid nanodegree"
+ },
+ {
+  "id": "free-an-introduction-to-ruby-programming-language",
+  "title": "An Introduction to Ruby Programming Language",
+  "url": "https://www.researchgate.net/publication/322222154_An_Introduction_to_Ruby_Programming_Language",
+  "source": "free_learning_platforms.json",
+  "reason": "a research paper behind ResearchGate, not a learning resource"
+ },
+ {
+  "id": "free-data-brokering-with-node-js-process-data-at-the-speed-o",
+  "title": "Data brokering with Node.js: Process data at the speed of technology",
+  "url": "https://heynode.com",
+  "source": "free_learning_platforms.json",
+  "reason": "marketing page, not a course"
+ },
+ {
+  "id": "free-openml",
+  "title": "OpenML",
+  "url": "https://www.openml.org/",
+  "source": "free_learning_platforms.json",
+  "reason": "dataset platform, not a learning resource"
+ },
+ {
+  "id": "free-build-a-personal-website-with-dash",
+  "title": "Build a Personal Website with Dash",
+  "url": "https://dash.generalassemb.ly",
+  "source": "free_learning_platforms.json",
+  "reason": "obsolete"
+ },
+ {
+  "id": "free-papers-with-code-nlp",
+  "title": "Papers With Code NLP",
+  "url": "https://paperswithcode.com/area/natural-language-processing",
+  "source": "free_learning_platforms.json",
+  "reason": "Papers With Code shut down; redirects elsewhere"
+ },
+ {
+  "id": "free-programming-mobile-applications-for-android-handheld-sy-2",
+  "title": "Programming Mobile Applications for Android Handheld Systems pt. 2",
+  "url": "https://www.coursera.org/course/androidpart2",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (deprecated Coursera course)"
+ },
+ {
+  "id": "free-deep-reinforcement-learning-course-hugging-face",
+  "title": "Deep Reinforcement Learning Course - Hugging Face",
+  "url": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-berkeley-university-cs-61b-data-structures",
+  "title": "Berkeley University CS 61B: Data Structures",
+  "url": "https://datastructur.es/sp16/",
+  "source": "free_learning_platforms.json",
+  "reason": "2016 site with a broken TLS certificate"
+ },
+ {
+  "id": "free-build-a-responsive-website-with-webflow",
+  "title": "Build a responsive website with Webflow",
+  "url": "https://www.bloc.io/tutorials/webflow-tutorial-design-responsive-sites-with-webflow",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to Chegg)"
+ },
+ {
+  "id": "free-programming-mobile-services-for-android-handheld-system",
+  "title": "Programming Mobile Services for Android Handheld Systems: Communication",
+  "url": "https://www.coursera.org/course/posacommunication",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (deprecated Coursera course)"
+ },
+ {
+  "id": "free-sourcemap-ninety-days-to-read-any-system",
+  "title": "Sourcemap: Ninety Days to Read Any System",
+  "url": "https://sourcemap.co",
+  "source": "free_learning_platforms.json",
+  "reason": "unclear provenance"
+ },
+ {
+  "id": "free-discover-flask-full-stack-web-development-with-flask",
+  "title": "Discover Flask - Full Stack Web Development with Flask",
+  "url": "https://github.com/realpython/discover-flask",
+  "source": "free_learning_platforms.json",
+  "reason": "2014 content; replaced by the Flask Mega-Tutorial"
+ },
+ {
+  "id": "free-data-analysis-and-visualization",
+  "title": "Data Analysis and Visualization",
+  "url": "https://www.udacity.com/course/data-analysis-and-visualization--ud404",
+  "source": "free_learning_platforms.json",
+  "reason": "redirects to a paid nanodegree"
+ },
+ {
+  "id": "free-data-structures",
+  "title": "Data Structures",
+  "url": "https://stepik.org/course/579/syllabus",
+  "source": "free_learning_platforms.json",
+  "reason": "Stepik page in Russian; duplicates better DSA courses"
+ },
+ {
+  "id": "free-build-a-saas-landing-page-using-skeleton",
+  "title": "Build a SaaS landing page using Skeleton",
+  "url": "https://www.bloc.io/tutorials/jottly-a-beginner-s-guide-to-html-css-skeleton-and-animate-css",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to Chegg)"
+ },
+ {
+  "id": "free-berkeley-s-cs-194-what-is-an-operating-system",
+  "title": "Berkeley's CS 194: What is an Operating System?",
+  "url": "http://www.infocobuild.com/education/audio-video-courses/computer-science/cs194-spring2013-berkeley.html",
+  "source": "free_learning_platforms.json",
+  "reason": "third-party mirror site"
+ },
+ {
+  "id": "free-programming-mobile-services-for-android-handheld-system-2",
+  "title": "Programming Mobile Services for Android Handheld Systems: Concurrency",
+  "url": "https://www.coursera.org/course/posaconcurrency",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (deprecated Coursera course)"
+ },
+ {
+  "id": "free-introduction-to-reinforcement-learning-with-david-silve",
+  "title": "Introduction to Reinforcement Learning with David Silver",
+  "url": "https://deepmind.com/learning-resources/-introduction-reinforcement-learning-david-silver",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to the DeepMind homepage)"
+ },
+ {
+  "id": "free-data-structures-and-algorithms",
+  "title": "Data Structures and Algorithms",
+  "url": "https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/?no-filter=true",
+  "source": "free_learning_platforms.json",
+  "reason": "dead link (redirects to Google careers)"
+ },
+ {
+  "id": "free-build-dynamic-websites",
+  "title": "Build Dynamic Websites",
+  "url": "https://web.archive.org/web/20210812200413/http://cs75.tv/2010/fall/",
+  "source": "free_learning_platforms.json",
+  "reason": "2010 course via web archive"
+ },
+ {
+  "id": "free-deep-learning-for-natural-language-processing",
+  "title": "Deep Learning for Natural Language Processing",
+  "url": "http://cs224d.stanford.edu",
+  "source": "free_learning_platforms.json",
+  "reason": "2016 CS224d superseded by CS224N"
+ },
+ {
+  "id": "free-creating-an-omniverse-extension-with-python",
+  "title": "Creating an Omniverse Extension With Python",
+  "url": "https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-16+V1",
+  "source": "free_learning_platforms.json",
+  "reason": "off-target (NVIDIA Omniverse niche)"
+ },
+ {
+  "id": "free-awesome",
+  "title": "![Awesome",
+  "url": "https://awesome.re/badge.svg",
+  "source": "free_learning_platforms.json",
+  "reason": "not a resource (badge image)"
+ },
+ {
+  "id": "free-how-to-build-aws-vpc-using-terraform-step-by-step",
+  "title": "How to Build AWS VPC Using Terraform \u2013 Step By Step",
+  "url": "https://javatodev.com/how-to-build-aws-vpc-using-terraform-step-by-step/",
+  "source": "free_learning_platforms.json",
+  "reason": "page not found (404)"
+ },
+ {
+  "id": "free-groqcloud",
+  "title": "GroqCloud",
+  "url": "https://console.groq.com/",
+  "source": "free_learning_platforms.json",
+  "reason": "API console, not a learning resource"
+ },
+ {
+  "id": "free-hugging-face-nlp-course-2",
+  "title": "Hugging Face NLP Course",
+  "url": "https://huggingface.co/learn/nlp-course/chapter1/1",
+  "source": "free_learning_platforms.json",
+  "reason": "duplicate of another entry"
+ },
+ {
+  "id": "free-generating-high-quality-motion-data-for-robotics-with-m",
+  "title": "Generating High-Quality Motion Data for Robotics With MobilityGen",
+  "url": "https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-37+V1",
+  "source": "free_learning_platforms.json",
+  "reason": "too narrow"
+ },
+ {
+  "id": "free-free-security-awareness-training-for-everyone",
+  "title": "Free Security Awareness Training For Everyone",
+  "url": "https://ransomleak.com/learning/",
+  "source": "free_learning_platforms.json",
+  "reason": "end-user awareness training, not a job skill"
+ },
+ {
+  "id": null,
+  "title": "Google UX Design (Coursera, audit free)",
+  "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+  "source": "curated_seed",
+  "reason": "not free"
+ },
+ {
+  "id": null,
+  "title": "TryHackMe: Pre Security path (free rooms)",
+  "url": "https://tryhackme.com/path/outline/presecurity",
+  "source": "curated_seed",
+  "reason": "not free"
+ }
+]

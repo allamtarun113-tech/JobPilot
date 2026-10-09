@@ -1,0 +1,167 @@
+# JobPilot tunables. No secrets here (those live in .env). Read only through src/jobpilot/core/config.py.
+
+# Dispatcher logs emails instead of sending them. Turn off only when you are ready to send real emails.
+shadow_mode: true
+# In shadow mode, also skip creating real Gmail drafts (no side effect in the mailbox during the shadow week).
+shadow_creates_gmail_drafts: false
+
+# Daily caps and budgets reset at midnight in this timezone.
+timezone: Asia/Kolkata
+
+match_threshold: 70            # minimum code-computed score for a card
+
+caps:
+  cards_per_day: 50            # ceiling; your cards-per-day preference decides (cards only message you)
+  emails_per_day: null         # no daily limit (decision D4); one email per job always holds
+  jobs_api_calls_per_day: 6    # JSearch free plan (~200 calls/month); raise if you upgrade the plan
+
+budgets:
+  tokens_per_day: null         # no daily limit; set a number to stop runs once it is used
+  run_tokens_estimate: 300000  # alert when a run exceeds 1.5x this
+  cost_alert_multiplier: 1.5
+  job_chat_tokens_per_message: 8000
+  job_chat_tokens_per_day: 120000   # Job Chat is budgeted separately from runs
+
+queue:
+  expiry_days: 10
+  age_decay_per_day: 0.03      # effective score = raw * (1 - decay)^age_days, computed when reading
+
+agents:
+  job_finder:
+    max_steps_per_task: 8
+    lead_searches_per_run: 48  # lead searches per /start, in batches of 8 (titles x sites x places rotate)
+    max_jd_lookups_per_run: 60 # agent JD lookups (after the free careers-site lookups fail); the rest say "JD not found"
+    max_searches_per_run: 200  # lead searches + JD lookups (~2 each); one OpenAI web search is about $0.01
+    max_pages_per_run: 200
+    max_tokens_per_run: 2000000  # ~1-2M on gpt-4o-mini is about $0.15-0.30
+    max_pages_per_lead: 3
+  prep_research:
+    max_steps_per_task: 8
+    max_searches_per_run: 10     # per Prepare request
+    max_pages_per_run: 20
+    max_tokens_per_run: 60000
+  job_chat:
+    max_steps: 6
+    recent_job_minutes: 30     # a free-text message without a job name refers to the last chatted job only this long
+
+reminders:
+  no_action_after_hours: 48
+  digest_hour: 9               # local time; the reminder digest is sent at most once a day after this hour
+
+alerts:
+  budget_fraction: 0.8         # alert at 80% of the daily token budget
+  quota_fraction: 0.8          # alert at 80% of the daily jobs-API calls
+  integration_failures: 3      # alert after this many consecutive failures of one integration
+  stuck_minutes: 10            # a running run with no step change, or a pending outbox row, for this long
+
+outreach:
+  company_window_days: 30
+  max_email_words: 150
+  reconfirm_after_hours: 24
+
+# Pinned model ids per task. A change re-runs the eval suite.
+models:
+  default: gpt-4o-mini
+  tailor: gpt-4o-mini
+  resume_review: gpt-4o-mini
+  resume_composer: gpt-4o-mini
+  email_writer: gpt-4o-mini
+  job_chat: gpt-4o-mini
+  job_finder: gpt-4o-mini
+  role_expansion: gpt-4o-mini
+  web_search: gpt-4o-mini        # OpenAI web_search tool behind the web server
+  prep_research: gpt-4o-mini
+  qa_generator: gpt-4o-mini
+  skill_note: gpt-4o-mini
+  extract_requirements: gpt-4o-mini
+  health_ping: gpt-4o-mini
+  profile_extract: gpt-4o-mini
+
+# Pinned prompt versions: prompts/<area>/<name>_v<N>.md
+prompt_versions:
+  system/ping: 1
+  profile/extract_items: 3
+  scoring/extract_requirements: 2
+  agents/job_finder: 3
+  sources/role_expansion: 1
+  resume/review: 3
+  resume/compose: 5
+  resume/fix_bullets: 1
+  hr_email/email_writer: 6
+  agents/job_chat: 2
+  agents/prep_research: 2
+  prep/qa_generator: 3
+  prep/skill_note: 1
+
+# USD per million tokens (OpenAI model documentation; checked 2026-10-04, gpt-5-nano 2026-10-08).
+pricing:
+  gpt-5-nano: {input: 0.05, output: 0.40, cache_read: 0.005, cache_write: 0.0}
+  gpt-5-nano-2025-08-07: {input: 0.05, output: 0.40, cache_read: 0.005, cache_write: 0.0}
+  gpt-4o-mini: {input: 0.15, output: 0.60, cache_read: 0.075, cache_write: 0.0}
+  gpt-4o-mini-2024-07-18: {input: 0.15, output: 0.60, cache_read: 0.075, cache_write: 0.0}
+
+llm:
+  max_tokens: 16000
+  # Only for gpt-5 / o-series models (none are configured now); gpt-4o-mini calls send no reasoning settings.
+  reasoning_effort: low                 # minimal | low | medium | high
+  reasoning_effort_by_task:             # where quality matters most
+    resume_composer: medium
+    email_writer: medium
+  reasoning_headroom_tokens: 8000       # added to every call's output limit so reasoning can't cut the answer
+
+lease:
+  run_ttl_seconds: 120         # a run lease without a heartbeat for this long is stale
+  heartbeat_seconds: 15
+  work_item_ttl_seconds: 120
+
+worker:
+  concurrency: 4
+  work_item_max_attempts: 5
+  poll_seconds: 2
+
+telegram:
+  long_poll_timeout_seconds: 50
+  dry_run_log: var/telegram_dry_run.jsonl   # used when TELEGRAM_BOT_TOKEN is empty
+
+dispatcher:
+  poll_seconds: 5
+  max_attempts: 8
+  backoff_base_seconds: 2
+  backoff_max_seconds: 300
+  email_first_retry_seconds: 60     # give Gmail search time to index a send before the Sent check
+
+tracing:
+  console: false               # print spans to stdout when no hosted tracing keys are set
+  trace_url: "{host}/trace/{trace_id}"   # Runs tab link into Langfuse
+
+privacy:
+  event_payload_retention_days: 180   # event payloads are redacted after this
+
+resume:
+  template: resume_v1          # templates/resume/resume.tex.j2
+  sandbox: auto                # auto | macos | docker | container  (compiles never download anything)
+  compile_timeout_seconds: 60
+  max_pages: 2                 # a tailored resume may use two pages; skills and activities are never cut
+  max_bullet_chars: 210        # about two lines of the template; longer facts are split by sentence
+  # Words the offline spell check must never "correct" (skills from the taxonomy are already protected).
+  known_words: [frontend, backend, fullstack, chatbot, chatbots, agentic, llm, llms, api, apis, dataset, datasets,
+                workflow, workflows, finetuning, embeddings, devops, mlops, json, yaml, url, urls, repo, repos,
+                github, onboarding, microservices, middleware, webapp, sdk, sdks, ui, ux, cgpa, btech, iit,
+                multithreading, preprocessing, codebase, signup, login, logout, timestamp, async, runtime]
+  review_pass_score: 95         # the resume reviewer's score a tailored resume must reach (D1)
+  review_max_rounds: 3          # compose -> build -> verify -> review rounds per card; the best round is kept
+  storage_dir: Data/user/storage   # local object store (S3-compatible store on the VM later)
+
+embeddings:
+  model: BAAI/bge-small-en-v1.5   # local ONNX model via fastembed (no API key); 384 dims
+  dim: 384
+  cache_dir: var/models
+
+vectors:
+  local_path: var/qdrant          # embedded Qdrant when QDRANT_URL is empty (only the worker opens it)
+  timeout_seconds: 30             # Qdrant Cloud requests; uploads are also batched and retried
+
+login:
+  max_failures: 5              # failed TOTP codes allowed per window before a lockout
+  window_minutes: 15
+  session_hours: 12

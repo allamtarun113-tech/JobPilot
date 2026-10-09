@@ -1,0 +1,16 @@
+# Pass gates for the evals.
+extraction:
+  must_precision: 0.85
+  must_recall: 0.80
+  years_accuracy: 0.90
+  jd_detection_accuracy: 1.0
+job_finder:
+  lead_recall: 0.80
+  jd_accuracy: 0.80
+  wrong_job_matches: 0
+  blocked_fetch_failures: 0
+tailoring:
+  uncited_claims_accepted: 0
+  supported_claims_rejected: 0
+prep:
+  grounded_rate: 0.90

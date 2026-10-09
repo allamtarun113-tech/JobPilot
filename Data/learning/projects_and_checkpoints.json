@@ -1,0 +1,281 @@
+{
+ "version": "1.0",
+ "generated_at": "2026-10-03",
+ "project_defaults": {
+  "required_artifacts": [
+   "source code",
+   "README",
+   "architecture diagram",
+   "tests",
+   "demo",
+   "tradeoff discussion"
+  ],
+  "interview_value": "Be prepared to explain one difficult decision, one failure, one measurement, and one improvement."
+ },
+ "portfolio_projects": [
+  {
+   "id": "project-01",
+   "name": "Developer productivity CLI",
+   "scope": "Python, files, APIs, testing, packaging, and GitHub Actions.",
+   "skill_ids": [
+    "python",
+    "testing",
+    "github-actions",
+    "apis"
+   ]
+  },
+  {
+   "id": "project-02",
+   "name": "Interview problem notebook",
+   "scope": "Pattern-indexed DSA solutions with complexity analysis and alternative approaches.",
+   "skill_ids": [
+    "dsa",
+    "algorithms",
+    "data-structures"
+   ]
+  },
+  {
+   "id": "project-03",
+   "name": "Analytics dashboard",
+   "scope": "SQL, pandas, statistics, visual storytelling, and a Power BI or web dashboard.",
+   "skill_ids": [
+    "sql",
+    "pandas",
+    "statistics",
+    "data-visualization",
+    "power-bi"
+   ]
+  },
+  {
+   "id": "project-04",
+   "name": "Accessible portfolio site",
+   "scope": "Semantic HTML, responsive CSS, JavaScript, accessibility, and performance.",
+   "skill_ids": [
+    "html",
+    "css",
+    "javascript",
+    "web-accessibility",
+    "web-performance"
+   ]
+  },
+  {
+   "id": "project-05",
+   "name": "Full-stack job tracker",
+   "scope": "React, TypeScript, API design, authentication, database modeling, and tests.",
+   "skill_ids": [
+    "react",
+    "typescript",
+    "rest-api",
+    "authentication",
+    "relational-databases",
+    "testing"
+   ]
+  },
+  {
+   "id": "project-06",
+   "name": "Scalable URL shortener",
+   "scope": "System design, caching, rate limits, observability, and capacity estimates.",
+   "skill_ids": [
+    "system-design",
+    "caching",
+    "monitoring"
+   ]
+  },
+  {
+   "id": "project-07",
+   "name": "Containerized microservice",
+   "scope": "Docker, CI/CD, health checks, metrics, secrets, and deployment.",
+   "skill_ids": [
+    "docker",
+    "ci-cd",
+    "microservices",
+    "deployment",
+    "monitoring"
+   ]
+  },
+  {
+   "id": "project-08",
+   "name": "Classical ML prediction service",
+   "scope": "Feature pipelines, baselines, evaluation, serving, and drift checks.",
+   "skill_ids": [
+    "machine-learning",
+    "feature-engineering",
+    "model-evaluation",
+    "mlops"
+   ]
+  },
+  {
+   "id": "project-09",
+   "name": "Deep-learning image classifier",
+   "scope": "Transfer learning, augmentation, experiment tracking, error analysis, and inference.",
+   "skill_ids": [
+    "deep-learning",
+    "computer-vision",
+    "pytorch",
+    "mlflow"
+   ]
+  },
+  {
+   "id": "project-10",
+   "name": "NLP document classifier",
+   "scope": "Tokenization, embeddings, transformers, calibration, and explainability.",
+   "skill_ids": [
+    "nlp",
+    "transformers",
+    "embeddings",
+    "explainable-ai"
+   ]
+  },
+  {
+   "id": "project-11",
+   "name": "LLM structured extraction API",
+   "scope": "Prompt schemas, validation, retries, evaluation sets, latency, and cost tracking.",
+   "skill_ids": [
+    "llm-apis",
+    "prompt-engineering",
+    "llm-evaluation"
+   ]
+  },
+  {
+   "id": "project-12",
+   "name": "Cited RAG assistant",
+   "scope": "Ingestion, chunking, embeddings, retrieval, reranking, citations, and grounded evaluation.",
+   "skill_ids": [
+    "rag",
+    "embeddings",
+    "vector-databases",
+    "llm-evaluation"
+   ]
+  },
+  {
+   "id": "project-13",
+   "name": "Tool-using research agent",
+   "scope": "Planning, search tools, memory, budgets, human approval, traces, and failure recovery.",
+   "skill_ids": [
+    "ai-agents",
+    "llm-apis"
+   ]
+  },
+  {
+   "id": "project-14",
+   "name": "Multi-agent workflow",
+   "scope": "Specialized agents, routing, shared state, concurrency control, and evaluation.",
+   "skill_ids": [
+    "multi-agent-systems",
+    "ai-agents",
+    "langgraph"
+   ]
+  },
+  {
+   "id": "project-15",
+   "name": "Production AI capstone",
+   "scope": "Deployment, monitoring, red teaming, security, fairness, model cards, and incident response.",
+   "skill_ids": [
+    "mlops",
+    "deployment",
+    "monitoring",
+    "llm-security",
+    "responsible-ai"
+   ]
+  }
+ ],
+ "interview_checkpoints": [
+  {
+   "id": "checkpoint-01",
+   "prompt": "Explain a recent project in two minutes, then defend its architecture for ten minutes.",
+   "skill_ids": [
+    "behavioral-interviews",
+    "communication"
+   ]
+  },
+  {
+   "id": "checkpoint-02",
+   "prompt": "Solve a medium coding problem while narrating assumptions, complexity, tests, and edge cases.",
+   "skill_ids": [
+    "dsa",
+    "algorithms"
+   ]
+  },
+  {
+   "id": "checkpoint-03",
+   "prompt": "Write a SQL query using joins, aggregation, a CTE, and a window function.",
+   "skill_ids": [
+    "sql"
+   ]
+  },
+  {
+   "id": "checkpoint-04",
+   "prompt": "Design an API including resources, errors, pagination, authentication, idempotency, and versioning.",
+   "skill_ids": [
+    "rest-api",
+    "apis",
+    "authentication"
+   ]
+  },
+  {
+   "id": "checkpoint-05",
+   "prompt": "Design a scalable service with capacity estimates, bottlenecks, failure handling, and observability.",
+   "skill_ids": [
+    "system-design",
+    "distributed-systems"
+   ]
+  },
+  {
+   "id": "checkpoint-06",
+   "prompt": "Explain bias-variance, leakage, cross-validation, calibration, and metric selection with examples.",
+   "skill_ids": [
+    "machine-learning",
+    "model-evaluation"
+   ]
+  },
+  {
+   "id": "checkpoint-07",
+   "prompt": "Explain backpropagation, regularization, optimization, and debugging a model that does not learn.",
+   "skill_ids": [
+    "deep-learning"
+   ]
+  },
+  {
+   "id": "checkpoint-08",
+   "prompt": "Explain tokenization, embeddings, attention, transformer blocks, pretraining, and post-training.",
+   "skill_ids": [
+    "transformers",
+    "llms"
+   ]
+  },
+  {
+   "id": "checkpoint-09",
+   "prompt": "Compare prompting, RAG, fine-tuning, and tool use for a concrete product requirement.",
+   "skill_ids": [
+    "rag",
+    "fine-tuning",
+    "prompt-engineering",
+    "ai-agents"
+   ]
+  },
+  {
+   "id": "checkpoint-10",
+   "prompt": "Design an agent with explicit state, tools, permissions, budgets, retries, and human approval.",
+   "skill_ids": [
+    "ai-agents"
+   ]
+  },
+  {
+   "id": "checkpoint-11",
+   "prompt": "Describe evaluation for an LLM or agent system, including datasets, graders, traces, and regressions.",
+   "skill_ids": [
+    "llm-evaluation"
+   ]
+  },
+  {
+   "id": "checkpoint-12",
+   "prompt": "Discuss security, prompt injection, privacy, fairness, interpretability, monitoring, and incident response.",
+   "skill_ids": [
+    "llm-security",
+    "responsible-ai",
+    "explainable-ai",
+    "monitoring"
+   ]
+  }
+ ]
+}

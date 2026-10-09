@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "functions": {
+    "app.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.env*,*.ses,*.ses-journal,.venv/**,var/**,Raw_data/**,Data/user/**,Data/books/**,Data/reports/**,tests/**,evals/**,docs/**,.git/**,.pytest_cache/**,.mypy_cache/**,.ruff_cache/**}"
+    }
+  },
+  "regions": [
+    "bom1"
+  ]
+}

@@ -1,0 +1,5 @@
+{"id":"valid-percent","facts":{"1":"Improved performance by forty percent using Python"},"text":"Improved performance by 40% using Python","evidence":[1],"allowed":true}
+{"id":"invented-percent","facts":{"1":"Improved performance by 40 percent"},"text":"Improved performance by 60%","evidence":[1],"allowed":false}
+{"id":"valid-million","facts":{"2":"Processed 1.2M records"},"text":"Processed 1,200,000 records","evidence":[2],"allowed":true}
+{"id":"missing-citation","facts":{"3":"Built a FastAPI service"},"text":"Built a FastAPI service","evidence":[99],"allowed":false}
+{"id":"no-number","facts":{"4":"Built dashboards with Tableau"},"text":"Built Tableau dashboards","evidence":[4],"allowed":true}

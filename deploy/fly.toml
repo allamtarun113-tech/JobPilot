@@ -1,0 +1,12 @@
+# Fly.io config for the backend (worker + dispatcher).
+# Deploy from the repo root: fly deploy -c deploy/fly.toml --dockerfile deploy/Dockerfile
+# No web service: the backend only makes outgoing connections (Telegram, database, OpenAI).
+app = "jobpilot-backend"
+primary_region = "bom"          # Mumbai, next to the database
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "2gb"
+
+[[restart]]
+  policy = "always"

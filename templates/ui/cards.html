@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Jobs - JobPilot{% endblock %}
+{% block content %}
+<div class="page-header"><div><p class="eyebrow">Your job cards</p><h1>Jobs</h1><p class="lead">One row per job JobPilot carded. Open a row for the resume, email, chat and the full JD.</p></div><a class="button" href="/jobs/all">Every job found →</a></div>
+<div class="stats">
+  <div class="stat"><span class="stat-label">Recall (30 days)</span><span class="stat-value">{% if metrics.recall is not none %}{{ "%.0f"|format(metrics.recall * 100) }}%{% else %}—{% endif %}</span><span class="stat-detail">{% if metrics.recall is not none %}{{ metrics.recall_hits }}/{{ metrics.recall_total }} shared jobs already found{% else %}share jobs to measure{% endif %}</span></div>
+  <div class="stat"><span class="stat-label">Approval rate</span><span class="stat-value">{% if metrics.approval.value is not none %}{{ "%.0f"|format(metrics.approval.value * 100) }}%{% else %}—{% endif %}</span><span class="stat-detail">{{ metrics.approval.hits }}/{{ metrics.approval.total }} approved without Job Chat edits</span></div>
+  <div class="stat"><span class="stat-label">Reply rate</span><span class="stat-value">{% if metrics.reply.value is not none %}{{ "%.0f"|format(metrics.reply.value * 100) }}%{% else %}—{% endif %}</span><span class="stat-detail">{{ metrics.reply.hits }}/{{ metrics.reply.total }} applications with a reply</span></div>
+</div>
+<div class="filters">
+  <a href="/jobs" class="pill {% if not status %}confirmed{% endif %}">all cards</a>
+  {% for s in filters %}{% if counts.get(s) %}<a href="/jobs?status={{ s }}" class="pill {% if status == s %}confirmed{% endif %}">{{ s|replace("_", " ") }} {{ counts[s] }}</a>{% endif %}{% endfor %}
+</div>
+{% if not cards %}
+<div class="empty"><h2>No cards yet</h2><p>Send <code>/start</code> to the bot or share a job link.</p></div>
+{% else %}
+<div class="table-wrap"><table>
+<thead><tr><th>Company · Role · Source</th><th>Match<br><span class="muted">before → after resume</span></th><th>Status</th><th>Resume</th><th>Changes made</th><th></th></tr></thead>
+<tbody>
+{% for c in cards %}{% set sc = scores.get(c.job_id) %}
+<tr>
+  <td><a href="/jobs/{{ c.job_id }}" hx-get="/jobs/{{ c.job_id }}" hx-target="#drawer" hx-swap="innerHTML" hx-on::after-request="document.getElementById('drawer').classList.add('open')"><strong>{{ c.company or "Unknown company" }}</strong> · {{ c.title }}</a><br><span class="muted">{{ (sources.get(c.job_id) or [])|join(", ") }}{% if c.city %} · {{ c.city }}{% endif %}</span> · <a href="{{ c.apply_url }}" target="_blank" rel="noopener noreferrer">apply ↗</a></td>
+  {% set rv = resumes.get(c.job_id) %}
+  <td>{% if sc %}{% if rv and rv.after is defined and rv.after != rv.before %}{{ "%.0f"|format(rv.before) }} → <strong>{{ "%.0f"|format(rv.after) }}</strong>{% else %}<strong>{{ "%.0f"|format(sc.score) }}</strong>{% endif %}{% if c.jd_is_snippet %} <span class="muted">snippet</span>{% endif %}{% endif %}</td>
+  <td><span class="pill">{{ c.status|replace("_", " ") }}</span>{% if c.outcome %} <span class="pill confirmed">{{ c.outcome }}</span>{% endif %}<br><span class="muted">carded {{ c.created_at.strftime("%d %b") }}{% if c.applied_at %} · applied {{ c.applied_at.strftime("%d %b") }}{% endif %}</span></td>
+  <td>{% if rv %}<a class="button" href="/files/{{ rv.pdf_key }}" target="_blank" rel="noopener">View resume v{{ rv.version }}</a><br>{% endif %}{% if c.approved_resume_version_id %}<span class="pill confirmed">approved</span>{% else %}<span class="muted">not approved yet</span>{% endif %}</td>
+  <td style="max-width:260px">{% if rv %}{{ rv.changes }}{% else %}<span class="muted">—</span>{% endif %}</td>
+  <td><a href="/jobs/{{ c.job_id }}/prepare">Prepare</a></td>
+</tr>
+{% endfor %}
+</tbody></table></div>
+{% endif %}
+<aside id="drawer" class="drawer" aria-label="Job details"></aside>
+{% endblock %}

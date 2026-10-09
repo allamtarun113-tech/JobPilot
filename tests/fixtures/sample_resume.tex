@@ -1,0 +1,108 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=0.38in,bottom=0.30in,left=0.48in,right=0.48in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1}
+\urlstyle{same}
+
+% Compact bullets matching the original resume.
+\setlist[itemize]{
+  leftmargin=1.25em,
+  itemsep=0pt,
+  topsep=1pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textbullet
+}
+
+% Section heading: sans-serif bold text with a spaced rule underneath it.
+\newcommand{\resumesection}[1]{%
+  \par\vspace{7pt}%
+  {\fontfamily{phv}\selectfont\bfseries\fontsize{10.8}{11.5}\selectfont
+   \MakeUppercase{#1}}\par
+  \vspace{2pt}% Space between the heading and the rule
+  \hrule height 0.7pt
+  \vspace{3pt}% Space between the rule and the section content
+}
+
+% Two-column row with flexible left content and a right-aligned date/value.
+\newcommand{\datedrow}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    #1 & #2
+  \end{tabularx}\vspace{-1pt}%
+}
+
+\newcommand{\skill}[2]{\textbf{#1}: #2\par}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\fontfamily{phv}\selectfont\bfseries\fontsize{25}{27}\selectfont ASHA VERMA}\par
+  \vspace{2pt}\hrule height 1.2pt\vspace{4pt}
+  {\fontsize{10.5}{12}\selectfont
+    +91 90000 00000 \enspace\textbullet\enspace
+    \href{mailto:asha@example.com}{asha@example.com}\enspace\textbullet\enspace
+    \href{https://github.com/asha-example}{\underline{github.com/asha-example}}
+  }
+\end{center}
+\vspace{-3pt}
+
+\resumesection{Summary}
+{\fontsize{11}{13.5}\selectfont
+Backend engineer who likes R\&D work, clean APIs and measurable results (p95 latency down 40\%).\par}
+
+\resumesection{Education}
+\datedrow{\textbf{B.E. Computer Science}}{2019--2023}
+\datedrow{Example Institute of Technology, Pune}{8.1 CGPA}
+
+\resumesection{Technical Skills}
+\skill{Languages}{Python, Go, SQL}
+\skill{Backend}{FastAPI, Kafka, PostgreSQL, Docker}
+\skill{ML}{Machine Learning, Neural Networks, Deep Learning}
+\skill{Data}{SQL, Pandas}
+
+\resumesection{Projects}
+\textbf{Order Service}\par
+\hspace{1.25em}Built with two friends for a college hackathon.\par
+\begin{itemize}
+  \item Designed an event-driven order pipeline with Kafka handling 1,200 events per second.
+  \item Cut p95 latency from 800 ms to 480 ms with caching.
+\end{itemize}
+\vspace{2pt}
+\textbf{Caf\'{e} Finder}\par
+\begin{itemize}
+  \item A small FastAPI app that ranks caf\'{e}s by distance and rating.
+\end{itemize}
+
+\resumesection{Experience}
+\datedrow{\fontfamily{phv}\selectfont\bfseries Acme Corp - Software Engineer.}{july 2023--present}
+\begin{itemize}
+  \item Built REST APIs in Python and FastAPI used by 3 internal teams.
+  \item Migrated batch jobs to Kafka consumers.
+\end{itemize}
+\datedrow{\fontfamily{phv}\selectfont\bfseries Beta Labs, Pune - Intern}{may 2022--july 2022}
+\begin{itemize}
+  \item Wrote data-cleaning scripts in Pandas.
+\end{itemize}
+
+\resumesection{Activities}
+\begin{itemize}
+  \item Open-source contributor\\
+        \hspace{0.35em}Fixed 5 bugs in a popular Python library
+  \item College chess team captain
+\end{itemize}
+
+\end{document}

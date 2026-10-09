@@ -1,0 +1,646 @@
+{
+ "version": "1.0",
+ "generated_at": "2026-10-03",
+ "count": 33,
+ "use_values": {
+  "prep": "include in the interview-prep corpus",
+  "exclude": "do not ingest"
+ },
+ "books": [
+  {
+   "id": "open-data-structures",
+   "title": "Open Data Structures (in pseudocode), edition 0.1Gβ",
+   "authors": "Pat Morin",
+   "year": 2015,
+   "license": "CC BY 2.5",
+   "file": "pdfs/open-data-structures.pdf",
+   "original_file": "01-open-data-structures-python.pdf",
+   "pages": 326,
+   "has_bookmarks": true,
+   "bookmark_count": 145,
+   "language": "en",
+   "skill_ids": [
+    "data-structures",
+    "algorithms"
+   ],
+   "use": "prep",
+   "notes": "The file name says Python, but this is the pseudocode edition."
+  },
+  {
+   "id": "50-coding-interview-questions",
+   "title": "50 Coding Interview Questions",
+   "authors": "Sam Gavis-Hughson (Byte by Byte)",
+   "year": 2018,
+   "license": "free ebook (no explicit license)",
+   "file": "pdfs/50-coding-interview-questions.pdf",
+   "original_file": "02-50-coding-interview-questions.pdf",
+   "pages": 43,
+   "has_bookmarks": false,
+   "bookmark_count": 0,
+   "language": "en",
+   "skill_ids": [
+    "dsa",
+    "algorithms",
+    "data-structures"
+   ],
+   "use": "prep",
+   "notes": "No PDF bookmarks; question headings follow the pattern 'N. Title'."
+  },
+  {
+   "id": "database-systems-atzeni",
+   "title": "Database Systems: Concepts, Languages and Architectures",
+   "authors": "Paolo Atzeni, Stefano Ceri, Stefano Paraboschi, Riccardo Torlone",
+   "year": 1999,
+   "license": "free online edition (McGraw-Hill)",
+   "file": "pdfs/database-systems-atzeni.pdf",
+   "original_file": "03-database-systems.pdf",
+   "pages": 641,
+   "has_bookmarks": true,
+   "bookmark_count": 140,
+   "language": "en",
+   "skill_ids": [
+    "dbms",
+    "relational-databases",
+    "sql"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "sql-notes",
+   "title": "SQL Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/sql-notes.pdf",
+   "original_file": "04-sql-notes-for-professionals.pdf",
+   "pages": 166,
+   "has_bookmarks": true,
+   "bookmark_count": 280,
+   "language": "en",
+   "skill_ids": [
+    "sql"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "agentic-ai-patterns-aws",
+   "title": "Agentic AI Patterns and Workflows on AWS (AWS Prescriptive Guidance)",
+   "authors": "Amazon Web Services",
+   "year": 2026,
+   "license": "© AWS, free to read",
+   "file": "pdfs/agentic-ai-patterns-aws.pdf",
+   "original_file": "05-agentic-ai-patterns-aws.pdf",
+   "pages": 85,
+   "has_bookmarks": true,
+   "bookmark_count": 146,
+   "language": "en",
+   "skill_ids": [
+    "ai-agents",
+    "multi-agent-systems",
+    "aws"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "eloquent-javascript",
+   "title": "Eloquent JavaScript, 4th edition",
+   "authors": "Marijn Haverbeke",
+   "year": 2024,
+   "license": "CC BY-NC 3.0",
+   "file": "pdfs/eloquent-javascript.pdf",
+   "original_file": "06-eloquent-javascript.pdf",
+   "pages": 463,
+   "has_bookmarks": true,
+   "bookmark_count": 309,
+   "language": "en",
+   "skill_ids": [
+    "javascript"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "javascript-notes",
+   "title": "JavaScript Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/javascript-notes.pdf",
+   "original_file": "07-javascript-notes-for-professionals.pdf",
+   "pages": 490,
+   "has_bookmarks": true,
+   "bookmark_count": 688,
+   "language": "en",
+   "skill_ids": [
+    "javascript"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "principles-of-data-science",
+   "title": "Principles of Data Science (OpenStax)",
+   "authors": "Shaun V. Ault, Soohyun Nam Liao, Larry Musolino, et al.",
+   "year": 2025,
+   "license": "CC BY 4.0",
+   "file": "pdfs/principles-of-data-science.pdf",
+   "original_file": "08-principles-of-data-science.pdf",
+   "pages": 569,
+   "has_bookmarks": true,
+   "bookmark_count": 142,
+   "language": "en",
+   "skill_ids": [
+    "data-science",
+    "statistics",
+    "machine-learning",
+    "python"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "dive-into-deep-learning",
+   "title": "Dive into Deep Learning",
+   "authors": "Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola",
+   "year": 2023,
+   "license": "CC BY-SA 4.0",
+   "file": "pdfs/dive-into-deep-learning.pdf",
+   "original_file": "10-dive-into-deep-learning.pdf",
+   "pages": 1151,
+   "has_bookmarks": true,
+   "bookmark_count": 1335,
+   "language": "en",
+   "skill_ids": [
+    "deep-learning",
+    "pytorch",
+    "transformers"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "prompt-engineering-lecture",
+   "title": "Prompt Engineering (lecture slides)",
+   "authors": "Elvis Saravia (DAIR.AI)",
+   "year": 2023,
+   "license": "free (lecture slides)",
+   "file": "pdfs/prompt-engineering-lecture.pdf",
+   "original_file": "11-prompt-engineering-lecture.pdf",
+   "pages": 50,
+   "has_bookmarks": false,
+   "bookmark_count": 0,
+   "language": "en",
+   "skill_ids": [
+    "prompt-engineering",
+    "llms"
+   ],
+   "use": "prep",
+   "notes": "Slides, not prose; no PDF bookmarks."
+  },
+  {
+   "id": "owasp-wstg",
+   "title": "OWASP Web Security Testing Guide v4.2",
+   "authors": "OWASP Foundation",
+   "year": 2020,
+   "license": "CC BY-SA 4.0",
+   "file": "pdfs/owasp-wstg.pdf",
+   "original_file": "13-owasp-web-security-testing-guide.pdf",
+   "pages": 465,
+   "has_bookmarks": true,
+   "bookmark_count": 138,
+   "language": "en",
+   "skill_ids": [
+    "web-security",
+    "penetration-testing"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "python-notes",
+   "title": "Python Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/python-notes.pdf",
+   "original_file": "14-python-notes-for-professionals.pdf",
+   "pages": 856,
+   "has_bookmarks": true,
+   "bookmark_count": 1125,
+   "language": "en",
+   "skill_ids": [
+    "python"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "algorithms-notes",
+   "title": "Algorithms Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/algorithms-notes.pdf",
+   "original_file": "15-algorithms-notes-for-professionals.pdf",
+   "pages": 257,
+   "has_bookmarks": true,
+   "bookmark_count": 185,
+   "language": "en",
+   "skill_ids": [
+    "algorithms",
+    "data-structures",
+    "dsa"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "html5-notes",
+   "title": "HTML5 Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/html5-notes.pdf",
+   "original_file": "16-html5-notes-for-professionals.pdf",
+   "pages": 124,
+   "has_bookmarks": true,
+   "bookmark_count": 257,
+   "language": "en",
+   "skill_ids": [
+    "html"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "css-notes",
+   "title": "CSS Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/css-notes.pdf",
+   "original_file": "17-css-notes-for-professionals.pdf",
+   "pages": 244,
+   "has_bookmarks": true,
+   "bookmark_count": 298,
+   "language": "en",
+   "skill_ids": [
+    "css"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "nodejs-notes",
+   "title": "Node.js Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/nodejs-notes.pdf",
+   "original_file": "18-nodejs-notes-for-professionals.pdf",
+   "pages": 334,
+   "has_bookmarks": true,
+   "bookmark_count": 434,
+   "language": "en",
+   "skill_ids": [
+    "nodejs",
+    "express"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "react-notes",
+   "title": "React JS Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/react-notes.pdf",
+   "original_file": "19-reactjs-notes-for-professionals.pdf",
+   "pages": 110,
+   "has_bookmarks": true,
+   "bookmark_count": 124,
+   "language": "en",
+   "skill_ids": [
+    "react"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "typescript-notes",
+   "title": "TypeScript Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/typescript-notes.pdf",
+   "original_file": "20-typescript-notes-for-professionals.pdf",
+   "pages": 97,
+   "has_bookmarks": true,
+   "bookmark_count": 142,
+   "language": "en",
+   "skill_ids": [
+    "typescript"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "git-notes",
+   "title": "Git Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/git-notes.pdf",
+   "original_file": "21-git-notes-for-professionals.pdf",
+   "pages": 195,
+   "has_bookmarks": true,
+   "bookmark_count": 385,
+   "language": "en",
+   "skill_ids": [
+    "git"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "linux-notes",
+   "title": "Linux Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/linux-notes.pdf",
+   "original_file": "22-linux-notes-for-professionals.pdf",
+   "pages": 65,
+   "has_bookmarks": true,
+   "bookmark_count": 104,
+   "language": "en",
+   "skill_ids": [
+    "linux",
+    "command-line"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "bash-notes",
+   "title": "Bash Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/bash-notes.pdf",
+   "original_file": "23-bash-notes-for-professionals.pdf",
+   "pages": 204,
+   "has_bookmarks": true,
+   "bookmark_count": 378,
+   "language": "en",
+   "skill_ids": [
+    "bash",
+    "shell-scripting"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "mongodb-notes",
+   "title": "MongoDB Notes for Professionals",
+   "authors": "GoalKicker.com (Stack Overflow Documentation contributors)",
+   "year": null,
+   "license": "CC BY-SA 3.0",
+   "file": "pdfs/mongodb-notes.pdf",
+   "original_file": "24-mongodb-notes-for-professionals.pdf",
+   "pages": 73,
+   "has_bookmarks": true,
+   "bookmark_count": 101,
+   "language": "en",
+   "skill_ids": [
+    "mongodb",
+    "nosql"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "mathematics-for-machine-learning",
+   "title": "Mathematics for Machine Learning",
+   "authors": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+   "year": 2020,
+   "license": "free PDF (Cambridge University Press)",
+   "file": "pdfs/mathematics-for-machine-learning.pdf",
+   "original_file": "25-mathematics-for-machine-learning.pdf",
+   "pages": 417,
+   "has_bookmarks": true,
+   "bookmark_count": 104,
+   "language": "en",
+   "skill_ids": [
+    "linear-algebra",
+    "calculus",
+    "probability",
+    "statistics"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "understanding-deep-learning",
+   "title": "Understanding Deep Learning",
+   "authors": "Simon J.D. Prince",
+   "year": 2026,
+   "license": "free PDF (MIT Press)",
+   "file": "pdfs/understanding-deep-learning.pdf",
+   "original_file": "26-understanding-deep-learning.pdf",
+   "pages": 541,
+   "has_bookmarks": true,
+   "bookmark_count": 181,
+   "language": "en",
+   "skill_ids": [
+    "deep-learning",
+    "transformers",
+    "generative-models"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "speech-and-language-processing",
+   "title": "Speech and Language Processing, 3rd edition draft",
+   "authors": "Daniel Jurafsky, James H. Martin",
+   "year": 2026,
+   "license": "free draft",
+   "file": "pdfs/speech-and-language-processing.pdf",
+   "original_file": "27-speech-and-language-processing-llms.pdf",
+   "pages": 646,
+   "has_bookmarks": true,
+   "bookmark_count": 499,
+   "language": "en",
+   "skill_ids": [
+    "nlp",
+    "llms",
+    "transformers",
+    "speech-recognition"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "foundations-of-llms",
+   "title": "Foundations of Large Language Models",
+   "authors": "Tong Xiao, Jingbo Zhu",
+   "year": 2026,
+   "license": "arXiv 2501.09223",
+   "file": "pdfs/foundations-of-llms.pdf",
+   "original_file": "28-foundations-of-large-language-models.pdf",
+   "pages": 317,
+   "has_bookmarks": true,
+   "bookmark_count": 117,
+   "language": "en",
+   "skill_ids": [
+    "llms",
+    "transformers",
+    "fine-tuning",
+    "prompt-engineering"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "foundation-models-for-nlp",
+   "title": "Foundation Models for Natural Language Processing",
+   "authors": "Gerhard Paaß, Sven Giesselbach",
+   "year": 2023,
+   "license": "open access (Springer), arXiv 2302.08575",
+   "file": "pdfs/foundation-models-for-nlp.pdf",
+   "original_file": "29-foundation-models-for-nlp.pdf",
+   "pages": 436,
+   "has_bookmarks": true,
+   "bookmark_count": 205,
+   "language": "en",
+   "skill_ids": [
+    "llms",
+    "nlp",
+    "transformers"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "hitchhikers-guide-agentic-ai",
+   "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems (v1.4)",
+   "authors": "Haggai Roitman",
+   "year": 2026,
+   "license": "arXiv 2606.24937",
+   "file": "pdfs/hitchhikers-guide-agentic-ai.pdf",
+   "original_file": "30-hitchhikers-guide-to-agentic-ai.pdf",
+   "pages": 733,
+   "has_bookmarks": true,
+   "bookmark_count": 1137,
+   "language": "en",
+   "skill_ids": [
+    "ai-agents",
+    "multi-agent-systems",
+    "llms",
+    "rag"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "agentic-systems-vertical-agents",
+   "title": "Agentic Systems: A Guide to Transforming Industries with Vertical AI Agents",
+   "authors": "Fouad Bousetouane",
+   "year": 2025,
+   "license": "arXiv 2501.00881",
+   "file": "pdfs/agentic-systems-vertical-agents.pdf",
+   "original_file": "31-agentic-systems-guide.pdf",
+   "pages": 31,
+   "has_bookmarks": true,
+   "bookmark_count": 28,
+   "language": "en",
+   "skill_ids": [
+    "ai-agents",
+    "multi-agent-systems"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "fairness-and-ml",
+   "title": "Fairness and Machine Learning",
+   "authors": "Solon Barocas, Moritz Hardt, Arvind Narayanan",
+   "year": 2023,
+   "license": "free online (MIT Press)",
+   "file": "pdfs/fairness-and-ml.pdf",
+   "original_file": "32-fairness-and-machine-learning.pdf",
+   "pages": 294,
+   "has_bookmarks": true,
+   "bookmark_count": 105,
+   "language": "en",
+   "skill_ids": [
+    "responsible-ai",
+    "machine-learning"
+   ],
+   "use": "prep",
+   "notes": null
+  },
+  {
+   "id": "rl-notes-russian",
+   "title": "Конспект по обучению с подкреплением (Reinforcement learning notes, in Russian)",
+   "authors": "Sergey Ivanov",
+   "year": 2022,
+   "license": "arXiv 2201.09746",
+   "file": null,
+   "original_file": "33-reinforcement-learning-textbook.pdf",
+   "pages": 245,
+   "has_bookmarks": false,
+   "bookmark_count": 0,
+   "language": "ru",
+   "skill_ids": [
+    "reinforcement-learning"
+   ],
+   "use": "exclude",
+   "notes": "Written in Russian. Excluded from the English corpus; not copied to Data/books."
+  },
+  {
+   "id": "information-theory-mackay",
+   "title": "Information Theory, Inference, and Learning Algorithms",
+   "authors": "David J.C. MacKay",
+   "year": 2003,
+   "license": "free PDF for on-screen viewing",
+   "file": "pdfs/information-theory-mackay.pdf",
+   "original_file": "34-information-theory-inference-learning-algorithms.pdf",
+   "pages": 640,
+   "has_bookmarks": false,
+   "bookmark_count": 0,
+   "language": "en",
+   "skill_ids": [
+    "information-theory",
+    "bayesian-methods",
+    "machine-learning"
+   ],
+   "use": "prep",
+   "notes": "No PDF bookmarks."
+  },
+  {
+   "id": "gaussian-processes-for-ml",
+   "title": "Gaussian Processes for Machine Learning",
+   "authors": "Carl Edward Rasmussen, Christopher K. I. Williams",
+   "year": 2006,
+   "license": "free PDF (MIT Press)",
+   "file": "pdfs/gaussian-processes-for-ml.pdf",
+   "original_file": "35-gaussian-processes-for-machine-learning.pdf",
+   "pages": 266,
+   "has_bookmarks": true,
+   "bookmark_count": 157,
+   "language": "en",
+   "skill_ids": [
+    "bayesian-methods",
+    "machine-learning"
+   ],
+   "use": "prep",
+   "notes": null
+  }
+ ]
+}

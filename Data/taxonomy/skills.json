@@ -1,0 +1,4881 @@
+{
+ "version": "1.0",
+ "generated_at": "2026-10-03",
+ "count": 295,
+ "skills": [
+  {
+   "id": "celery",
+   "name": "Celery",
+   "category": "backend",
+   "aliases": [],
+   "prerequisites": [
+    "python",
+    "message-queues"
+   ],
+   "implies": [
+    "python",
+    "message-queues"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "django",
+   "name": "Django",
+   "category": "backend",
+   "aliases": [
+    "django rest framework",
+    "drf"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "dotnet",
+   "name": ".NET",
+   "category": "backend",
+   "aliases": [
+    ".net core",
+    "asp.net",
+    "asp.net core",
+    "dotnet core",
+    "dot net"
+   ],
+   "prerequisites": [
+    "csharp"
+   ],
+   "implies": [
+    "csharp",
+    "backend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "express",
+   "name": "Express.js",
+   "category": "backend",
+   "aliases": [
+    "express",
+    "expressjs",
+    "express js"
+   ],
+   "prerequisites": [
+    "nodejs"
+   ],
+   "implies": [
+    "nodejs",
+    "javascript",
+    "rest-api",
+    "backend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "fastapi",
+   "name": "FastAPI",
+   "category": "backend",
+   "aliases": [
+    "fast api"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python",
+    "rest-api",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "flask",
+   "name": "Flask",
+   "category": "backend",
+   "aliases": [],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "gin",
+   "name": "Gin",
+   "category": "backend",
+   "aliases": [
+    "gin gonic"
+   ],
+   "prerequisites": [
+    "go"
+   ],
+   "implies": [
+    "go"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "graphql",
+   "name": "GraphQL",
+   "category": "backend",
+   "aliases": [
+    "apollo graphql",
+    "apollo"
+   ],
+   "prerequisites": [
+    "apis"
+   ],
+   "implies": [
+    "apis"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "grpc",
+   "name": "gRPC",
+   "category": "backend",
+   "aliases": [
+    "protocol buffers",
+    "protobuf"
+   ],
+   "prerequisites": [
+    "apis"
+   ],
+   "implies": [
+    "apis"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "hibernate",
+   "name": "Hibernate",
+   "category": "backend",
+   "aliases": [
+    "jpa"
+   ],
+   "prerequisites": [
+    "java",
+    "sql"
+   ],
+   "implies": [
+    "java",
+    "orm"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "kafka",
+   "name": "Apache Kafka",
+   "category": "backend",
+   "aliases": [
+    "kafka"
+   ],
+   "prerequisites": [
+    "message-queues"
+   ],
+   "implies": [
+    "message-queues",
+    "distributed-systems"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "laravel",
+   "name": "Laravel",
+   "category": "backend",
+   "aliases": [],
+   "prerequisites": [
+    "php"
+   ],
+   "implies": [
+    "php",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "nestjs",
+   "name": "NestJS",
+   "category": "backend",
+   "aliases": [
+    "nest.js"
+   ],
+   "prerequisites": [
+    "typescript",
+    "nodejs"
+   ],
+   "implies": [
+    "nodejs",
+    "typescript",
+    "backend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js",
+   "category": "backend",
+   "aliases": [
+    "node",
+    "nodejs",
+    "node js"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "rabbitmq",
+   "name": "RabbitMQ",
+   "category": "backend",
+   "aliases": [],
+   "prerequisites": [
+    "message-queues"
+   ],
+   "implies": [
+    "message-queues"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "rails",
+   "name": "Ruby on Rails",
+   "category": "backend",
+   "aliases": [
+    "rails",
+    "ror"
+   ],
+   "prerequisites": [
+    "ruby"
+   ],
+   "implies": [
+    "ruby",
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "rest-api",
+   "name": "REST APIs",
+   "category": "backend",
+   "aliases": [
+    "rest",
+    "restful apis",
+    "restful",
+    "rest api",
+    "restful services",
+    "restful web services"
+   ],
+   "prerequisites": [
+    "http"
+   ],
+   "implies": [
+    "apis"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "spring",
+   "name": "Spring",
+   "category": "backend",
+   "aliases": [
+    "spring framework",
+    "spring mvc"
+   ],
+   "prerequisites": [
+    "java"
+   ],
+   "implies": [
+    "java",
+    "backend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "spring-boot",
+   "name": "Spring Boot",
+   "category": "backend",
+   "aliases": [
+    "springboot"
+   ],
+   "prerequisites": [
+    "spring"
+   ],
+   "implies": [
+    "spring",
+    "java",
+    "backend-development"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "websockets",
+   "name": "WebSockets",
+   "category": "backend",
+   "aliases": [
+    "websocket",
+    "socket.io",
+    "real-time communication"
+   ],
+   "prerequisites": [
+    "http"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "aws",
+   "name": "AWS",
+   "category": "cloud",
+   "aliases": [
+    "amazon web services",
+    "amazon aws"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [
+    "cloud-computing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "aws-ec2",
+   "name": "AWS EC2",
+   "category": "cloud",
+   "aliases": [
+    "ec2",
+    "amazon ec2"
+   ],
+   "prerequisites": [
+    "aws"
+   ],
+   "implies": [
+    "aws",
+    "cloud-computing"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "aws-lambda",
+   "name": "AWS Lambda",
+   "category": "cloud",
+   "aliases": [
+    "lambda",
+    "amazon lambda"
+   ],
+   "prerequisites": [
+    "aws",
+    "serverless"
+   ],
+   "implies": [
+    "aws",
+    "serverless",
+    "cloud-computing"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "aws-s3",
+   "name": "AWS S3",
+   "category": "cloud",
+   "aliases": [
+    "s3",
+    "amazon s3"
+   ],
+   "prerequisites": [
+    "aws"
+   ],
+   "implies": [
+    "aws",
+    "cloud-computing"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "aws-sagemaker",
+   "name": "Amazon SageMaker",
+   "category": "cloud",
+   "aliases": [
+    "sagemaker",
+    "aws sagemaker"
+   ],
+   "prerequisites": [
+    "aws",
+    "machine-learning"
+   ],
+   "implies": [
+    "aws",
+    "mlops"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "azure",
+   "name": "Microsoft Azure",
+   "category": "cloud",
+   "aliases": [
+    "azure",
+    "microsoft azure cloud"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [
+    "cloud-computing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "cloud-computing",
+   "name": "Cloud computing",
+   "category": "cloud",
+   "aliases": [
+    "cloud",
+    "cloud platforms",
+    "cloud services"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "firebase",
+   "name": "Firebase",
+   "category": "cloud",
+   "aliases": [
+    "firestore",
+    "firebase realtime database"
+   ],
+   "prerequisites": [],
+   "implies": [
+    "nosql",
+    "databases"
+   ],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "gcp",
+   "name": "Google Cloud",
+   "category": "cloud",
+   "aliases": [
+    "gcp",
+    "google cloud platform"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [
+    "cloud-computing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "heroku",
+   "name": "Heroku",
+   "category": "cloud",
+   "aliases": [],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [
+    "deployment"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "serverless",
+   "name": "Serverless",
+   "category": "cloud",
+   "aliases": [
+    "serverless architecture"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "category": "cloud",
+   "aliases": [],
+   "prerequisites": [
+    "postgresql"
+   ],
+   "implies": [
+    "postgresql",
+    "sql"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "category": "cloud",
+   "aliases": [
+    "netlify"
+   ],
+   "prerequisites": [],
+   "implies": [
+    "deployment"
+   ],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "agile",
+   "name": "Agile",
+   "category": "concept",
+   "aliases": [
+    "scrum",
+    "kanban",
+    "agile methodologies",
+    "sprint planning"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "algorithms",
+   "name": "Algorithms",
+   "category": "concept",
+   "aliases": [
+    "algorithm design",
+    "algorithm",
+    "analysis of algorithms"
+   ],
+   "prerequisites": [
+    "data-structures"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "apis",
+   "name": "APIs",
+   "category": "concept",
+   "aliases": [
+    "api",
+    "api development",
+    "web apis",
+    "api design"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "ar-vr",
+   "name": "AR/VR",
+   "category": "concept",
+   "aliases": [
+    "augmented reality",
+    "virtual reality",
+    "xr"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "authentication",
+   "name": "Authentication",
+   "category": "concept",
+   "aliases": [
+    "authn",
+    "authorization",
+    "auth",
+    "oauth",
+    "oauth2",
+    "jwt",
+    "json web tokens",
+    "sso",
+    "openid connect"
+   ],
+   "prerequisites": [
+    "http"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "backend-development",
+   "name": "Backend development",
+   "category": "concept",
+   "aliases": [
+    "back-end development",
+    "backend",
+    "server-side development",
+    "back end"
+   ],
+   "prerequisites": [
+    "programming",
+    "databases",
+    "apis"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "bayesian-methods",
+   "name": "Bayesian methods",
+   "category": "concept",
+   "aliases": [
+    "bayesian statistics",
+    "bayesian inference",
+    "gaussian processes",
+    "probabilistic modeling",
+    "probabilistic modelling",
+    "mcmc",
+    "pymc"
+   ],
+   "prerequisites": [
+    "probability"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "blockchain",
+   "name": "Blockchain",
+   "category": "concept",
+   "aliases": [
+    "web3",
+    "smart contracts",
+    "ethereum"
+   ],
+   "prerequisites": [
+    "cryptography"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "caching",
+   "name": "Caching",
+   "category": "concept",
+   "aliases": [
+    "cache"
+   ],
+   "prerequisites": [
+    "backend-development"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "calculus",
+   "name": "Calculus",
+   "category": "concept",
+   "aliases": [],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "clean-code",
+   "name": "Clean code",
+   "category": "concept",
+   "aliases": [
+    "code quality",
+    "readable code"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "cloud-architecture",
+   "name": "Cloud architecture",
+   "category": "concept",
+   "aliases": [
+    "cloud design",
+    "solutions architecture"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "code-review",
+   "name": "Code review",
+   "category": "concept",
+   "aliases": [
+    "code reviews",
+    "peer review"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "competitive-programming",
+   "name": "Competitive programming",
+   "category": "concept",
+   "aliases": [
+    "leetcode",
+    "codeforces",
+    "codechef"
+   ],
+   "prerequisites": [
+    "dsa"
+   ],
+   "implies": [
+    "algorithms",
+    "data-structures"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "compilers",
+   "name": "Compilers",
+   "category": "concept",
+   "aliases": [
+    "compiler design"
+   ],
+   "prerequisites": [
+    "algorithms"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "computer-architecture",
+   "name": "Computer architecture",
+   "category": "concept",
+   "aliases": [
+    "computer organization",
+    "coa"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "computer-graphics",
+   "name": "Computer graphics",
+   "category": "concept",
+   "aliases": [
+    "opengl",
+    "graphics programming",
+    "webgl"
+   ],
+   "prerequisites": [
+    "linear-algebra"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "computer-networks",
+   "name": "Computer networks",
+   "category": "concept",
+   "aliases": [
+    "networking",
+    "computer networking",
+    "tcp/ip",
+    "networks"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "concurrency",
+   "name": "Concurrency",
+   "category": "concept",
+   "aliases": [
+    "multithreading",
+    "multi-threading",
+    "parallel programming",
+    "async programming",
+    "asynchronous programming"
+   ],
+   "prerequisites": [
+    "operating-systems"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "containers",
+   "name": "Containers",
+   "category": "concept",
+   "aliases": [
+    "container",
+    "containerisation"
+   ],
+   "prerequisites": [
+    "linux"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "data-structures",
+   "name": "Data structures",
+   "category": "concept",
+   "aliases": [
+    "ds",
+    "data structure"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "databases",
+   "name": "Databases",
+   "category": "concept",
+   "aliases": [
+    "database",
+    "database design",
+    "data modeling",
+    "data modelling"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "dbms",
+   "name": "Database management systems",
+   "category": "concept",
+   "aliases": [
+    "database management system",
+    "database management"
+   ],
+   "prerequisites": [
+    "databases"
+   ],
+   "implies": [
+    "databases"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "debugging",
+   "name": "Debugging",
+   "category": "concept",
+   "aliases": [
+    "troubleshooting"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "deployment",
+   "name": "Deployment",
+   "category": "concept",
+   "aliases": [
+    "deploying applications",
+    "app deployment",
+    "hosting"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "design-patterns",
+   "name": "Design patterns",
+   "category": "concept",
+   "aliases": [
+    "software design patterns",
+    "gang of four"
+   ],
+   "prerequisites": [
+    "oop"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "digital-electronics",
+   "name": "Digital electronics",
+   "category": "concept",
+   "aliases": [
+    "digital logic",
+    "digital design"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "discrete-math",
+   "name": "Discrete mathematics",
+   "category": "concept",
+   "aliases": [
+    "discrete math",
+    "discrete maths"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "distributed-systems",
+   "name": "Distributed systems",
+   "category": "concept",
+   "aliases": [
+    "distributed computing"
+   ],
+   "prerequisites": [
+    "computer-networks",
+    "operating-systems"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "dsa",
+   "name": "Data structures and algorithms",
+   "category": "concept",
+   "aliases": [
+    "data structures and algorithms",
+    "dsa",
+    "ds&a",
+    "ds and algo"
+   ],
+   "prerequisites": [
+    "data-structures",
+    "algorithms"
+   ],
+   "implies": [
+    "data-structures",
+    "algorithms"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "embedded-systems",
+   "name": "Embedded systems",
+   "category": "concept",
+   "aliases": [
+    "embedded c",
+    "embedded programming",
+    "microcontrollers",
+    "firmware"
+   ],
+   "prerequisites": [
+    "c",
+    "computer-architecture"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "frontend-development",
+   "name": "Frontend development",
+   "category": "concept",
+   "aliases": [
+    "front-end development",
+    "frontend",
+    "front end",
+    "ui development",
+    "front-end"
+   ],
+   "prerequisites": [
+    "html",
+    "css",
+    "javascript"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "fullstack",
+   "name": "Full-stack development",
+   "category": "concept",
+   "aliases": [
+    "full stack",
+    "full-stack",
+    "fullstack development",
+    "mern",
+    "mean stack",
+    "mern stack"
+   ],
+   "prerequisites": [
+    "frontend-development",
+    "backend-development"
+   ],
+   "implies": [
+    "frontend-development",
+    "backend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "functional-programming",
+   "name": "Functional programming",
+   "category": "concept",
+   "aliases": [
+    "fp"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "game-development",
+   "name": "Game development",
+   "category": "concept",
+   "aliases": [
+    "unity",
+    "unreal engine",
+    "game dev"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "http",
+   "name": "HTTP",
+   "category": "concept",
+   "aliases": [
+    "https",
+    "http protocol"
+   ],
+   "prerequisites": [
+    "computer-networks"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "information-theory",
+   "name": "Information theory",
+   "category": "concept",
+   "aliases": [
+    "information theory",
+    "entropy and coding"
+   ],
+   "prerequisites": [
+    "probability"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "infrastructure-as-code",
+   "name": "Infrastructure as code",
+   "category": "concept",
+   "aliases": [
+    "iac"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "iot",
+   "name": "Internet of Things",
+   "category": "concept",
+   "aliases": [
+    "iot",
+    "arduino",
+    "raspberry pi",
+    "embedded iot"
+   ],
+   "prerequisites": [
+    "embedded-systems"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "linear-algebra",
+   "name": "Linear algebra",
+   "category": "concept",
+   "aliases": [],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "message-queues",
+   "name": "Message queues",
+   "category": "concept",
+   "aliases": [
+    "message queue",
+    "message broker",
+    "pub/sub",
+    "event-driven architecture",
+    "event driven architecture"
+   ],
+   "prerequisites": [
+    "distributed-systems"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "microservices",
+   "name": "Microservices",
+   "category": "concept",
+   "aliases": [
+    "microservice architecture",
+    "microservices architecture",
+    "service-oriented architecture",
+    "soa"
+   ],
+   "prerequisites": [
+    "backend-development",
+    "apis"
+   ],
+   "implies": [
+    "backend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "mobile-development",
+   "name": "Mobile development",
+   "category": "concept",
+   "aliases": [
+    "mobile app development",
+    "mobile apps",
+    "app development"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "monitoring",
+   "name": "Monitoring and observability",
+   "category": "concept",
+   "aliases": [
+    "observability",
+    "monitoring",
+    "logging",
+    "alerting",
+    "opentelemetry",
+    "datadog",
+    "new relic"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "networking-protocols",
+   "name": "Network protocols",
+   "category": "concept",
+   "aliases": [
+    "tcp",
+    "udp",
+    "dns",
+    "ip addressing",
+    "subnetting"
+   ],
+   "prerequisites": [
+    "computer-networks"
+   ],
+   "implies": [
+    "computer-networks"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "nosql",
+   "name": "NoSQL",
+   "category": "concept",
+   "aliases": [
+    "non-relational databases",
+    "nosql databases"
+   ],
+   "prerequisites": [
+    "databases"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "oop",
+   "name": "Object-oriented programming",
+   "category": "concept",
+   "aliases": [
+    "object oriented programming",
+    "oops",
+    "object-oriented design",
+    "ood"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "operating-systems",
+   "name": "Operating systems",
+   "category": "concept",
+   "aliases": [
+    "os",
+    "operating system"
+   ],
+   "prerequisites": [
+    "computer-architecture"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "orm",
+   "name": "ORM",
+   "category": "concept",
+   "aliases": [
+    "object relational mapping",
+    "sqlalchemy",
+    "prisma",
+    "sequelize",
+    "typeorm"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "probability",
+   "name": "Probability",
+   "category": "concept",
+   "aliases": [
+    "probability theory"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "product-management",
+   "name": "Product management",
+   "category": "concept",
+   "aliases": [
+    "product sense",
+    "product thinking",
+    "roadmapping"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "programming",
+   "name": "Programming",
+   "category": "concept",
+   "aliases": [
+    "coding",
+    "software programming",
+    "programming fundamentals"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "project-management",
+   "name": "Project management",
+   "category": "concept",
+   "aliases": [
+    "project planning"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "query-optimization",
+   "name": "Query optimization",
+   "category": "concept",
+   "aliases": [
+    "sql optimization",
+    "indexing",
+    "database indexing"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "relational-databases",
+   "name": "Relational databases",
+   "category": "concept",
+   "aliases": [
+    "rdbms",
+    "relational database",
+    "relational data modeling"
+   ],
+   "prerequisites": [
+    "databases"
+   ],
+   "implies": [
+    "databases"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "responsive-design",
+   "name": "Responsive design",
+   "category": "concept",
+   "aliases": [
+    "responsive web design",
+    "mobile-first design"
+   ],
+   "prerequisites": [
+    "css"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "robotics",
+   "name": "Robotics",
+   "category": "concept",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "shell-scripting",
+   "name": "Shell scripting",
+   "category": "concept",
+   "aliases": [
+    "scripting"
+   ],
+   "prerequisites": [
+    "linux"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "software-engineering",
+   "name": "Software engineering",
+   "category": "concept",
+   "aliases": [
+    "software development",
+    "sdlc",
+    "software development lifecycle"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "sre",
+   "name": "Site reliability engineering",
+   "category": "concept",
+   "aliases": [
+    "site reliability engineering",
+    "sre"
+   ],
+   "prerequisites": [
+    "devops",
+    "monitoring"
+   ],
+   "implies": [],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "state-management",
+   "name": "State management",
+   "category": "concept",
+   "aliases": [],
+   "prerequisites": [
+    "frontend-development"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "statistics",
+   "name": "Statistics",
+   "category": "concept",
+   "aliases": [
+    "statistical analysis",
+    "applied statistics",
+    "stats",
+    "inferential statistics"
+   ],
+   "prerequisites": [
+    "probability"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "system-design",
+   "name": "System design",
+   "category": "concept",
+   "aliases": [
+    "high level design",
+    "hld",
+    "low level design",
+    "lld",
+    "systems design"
+   ],
+   "prerequisites": [
+    "distributed-systems",
+    "databases"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "technical-writing",
+   "name": "Technical writing",
+   "category": "concept",
+   "aliases": [
+    "documentation",
+    "technical documentation"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "ui-ux",
+   "name": "UI/UX design",
+   "category": "concept",
+   "aliases": [
+    "ui design",
+    "ux design",
+    "ui/ux",
+    "user experience",
+    "user interface design"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "web-accessibility",
+   "name": "Web accessibility",
+   "category": "concept",
+   "aliases": [
+    "accessibility",
+    "a11y",
+    "wcag"
+   ],
+   "prerequisites": [
+    "html"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "web-performance",
+   "name": "Web performance",
+   "category": "concept",
+   "aliases": [
+    "core web vitals",
+    "frontend performance"
+   ],
+   "prerequisites": [
+    "frontend-development"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "a-b-testing",
+   "name": "A/B testing",
+   "category": "data",
+   "aliases": [
+    "ab testing",
+    "a/b tests",
+    "experimentation",
+    "hypothesis testing"
+   ],
+   "prerequisites": [
+    "statistics"
+   ],
+   "implies": [
+    "statistics"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "airflow",
+   "name": "Apache Airflow",
+   "category": "data",
+   "aliases": [
+    "airflow"
+   ],
+   "prerequisites": [
+    "python",
+    "data-engineering"
+   ],
+   "implies": [
+    "data-engineering"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "big-data",
+   "name": "Big data",
+   "category": "data",
+   "aliases": [
+    "big data technologies"
+   ],
+   "prerequisites": [
+    "distributed-systems"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "bigquery",
+   "name": "BigQuery",
+   "category": "data",
+   "aliases": [
+    "google bigquery"
+   ],
+   "prerequisites": [
+    "sql",
+    "gcp"
+   ],
+   "implies": [
+    "sql",
+    "data-warehousing",
+    "gcp"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "data-analysis",
+   "name": "Data analysis",
+   "category": "data",
+   "aliases": [
+    "data analytics",
+    "analytics",
+    "analyzing data",
+    "data analyst skills",
+    "exploratory data analysis",
+    "eda"
+   ],
+   "prerequisites": [
+    "statistics"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "data-engineering",
+   "name": "Data engineering",
+   "category": "data",
+   "aliases": [
+    "data pipelines",
+    "data pipeline",
+    "etl",
+    "elt",
+    "etl pipelines"
+   ],
+   "prerequisites": [
+    "sql",
+    "python"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "data-visualization",
+   "name": "Data visualization",
+   "category": "data",
+   "aliases": [
+    "data visualisation",
+    "visualization",
+    "dashboards",
+    "dashboarding"
+   ],
+   "prerequisites": [
+    "data-analysis"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "data-warehousing",
+   "name": "Data warehousing",
+   "category": "data",
+   "aliases": [
+    "data warehouse",
+    "dimensional modeling",
+    "star schema"
+   ],
+   "prerequisites": [
+    "sql",
+    "databases"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "databricks",
+   "name": "Databricks",
+   "category": "data",
+   "aliases": [],
+   "prerequisites": [
+    "spark"
+   ],
+   "implies": [
+    "spark",
+    "data-engineering"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "dbt",
+   "name": "dbt",
+   "category": "data",
+   "aliases": [
+    "data build tool"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "data-engineering",
+    "sql"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "flink",
+   "name": "Apache Flink",
+   "category": "data",
+   "aliases": [
+    "flink"
+   ],
+   "prerequisites": [
+    "distributed-systems"
+   ],
+   "implies": [
+    "data-engineering"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "hadoop",
+   "name": "Hadoop",
+   "category": "data",
+   "aliases": [
+    "hdfs",
+    "mapreduce",
+    "hive"
+   ],
+   "prerequisites": [
+    "distributed-systems"
+   ],
+   "implies": [
+    "data-engineering",
+    "distributed-systems"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "looker",
+   "name": "Looker",
+   "category": "data",
+   "aliases": [
+    "looker studio",
+    "google data studio"
+   ],
+   "prerequisites": [
+    "data-visualization"
+   ],
+   "implies": [
+    "data-visualization"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "matplotlib",
+   "name": "Matplotlib",
+   "category": "data",
+   "aliases": [
+    "seaborn",
+    "plotly"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python",
+    "data-visualization"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "numpy",
+   "name": "NumPy",
+   "category": "data",
+   "aliases": [
+    "numpy"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "pandas",
+   "name": "pandas",
+   "category": "data",
+   "aliases": [],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python",
+    "data-analysis"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "power-bi",
+   "name": "Power BI",
+   "category": "data",
+   "aliases": [
+    "powerbi",
+    "microsoft power bi",
+    "dax"
+   ],
+   "prerequisites": [
+    "data-visualization"
+   ],
+   "implies": [
+    "data-visualization",
+    "data-analysis"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "snowflake",
+   "name": "Snowflake",
+   "category": "data",
+   "aliases": [],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "data-warehousing",
+    "sql"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "spark",
+   "name": "Apache Spark",
+   "category": "data",
+   "aliases": [
+    "spark",
+    "pyspark",
+    "spark sql"
+   ],
+   "prerequisites": [
+    "python",
+    "distributed-systems"
+   ],
+   "implies": [
+    "data-engineering",
+    "distributed-systems"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "tableau",
+   "name": "Tableau",
+   "category": "data",
+   "aliases": [],
+   "prerequisites": [
+    "data-visualization"
+   ],
+   "implies": [
+    "data-visualization",
+    "data-analysis"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "web-scraping",
+   "name": "Web scraping",
+   "category": "data",
+   "aliases": [
+    "scraping",
+    "beautifulsoup",
+    "beautiful soup",
+    "scrapy"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "cassandra",
+   "name": "Cassandra",
+   "category": "database",
+   "aliases": [
+    "apache cassandra"
+   ],
+   "prerequisites": [
+    "nosql"
+   ],
+   "implies": [
+    "nosql",
+    "databases",
+    "distributed-systems"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "dynamodb",
+   "name": "DynamoDB",
+   "category": "database",
+   "aliases": [
+    "amazon dynamodb"
+   ],
+   "prerequisites": [
+    "nosql",
+    "aws"
+   ],
+   "implies": [
+    "nosql",
+    "aws",
+    "databases"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "elasticsearch",
+   "name": "Elasticsearch",
+   "category": "database",
+   "aliases": [
+    "elastic search",
+    "elk",
+    "elk stack",
+    "opensearch"
+   ],
+   "prerequisites": [
+    "nosql"
+   ],
+   "implies": [
+    "databases"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "mongodb",
+   "name": "MongoDB",
+   "category": "database",
+   "aliases": [
+    "mongo",
+    "mongo db",
+    "mongoose"
+   ],
+   "prerequisites": [
+    "nosql"
+   ],
+   "implies": [
+    "nosql",
+    "databases"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "mysql",
+   "name": "MySQL",
+   "category": "database",
+   "aliases": [
+    "my sql",
+    "mariadb"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "sql",
+    "relational-databases",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "neo4j",
+   "name": "Neo4j",
+   "category": "database",
+   "aliases": [
+    "graph database",
+    "graph databases",
+    "cypher"
+   ],
+   "prerequisites": [
+    "nosql"
+   ],
+   "implies": [
+    "nosql",
+    "databases"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "oracle-db",
+   "name": "Oracle Database",
+   "category": "database",
+   "aliases": [
+    "oracle",
+    "oracle db",
+    "pl/sql",
+    "plsql"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "sql",
+    "relational-databases",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "postgresql",
+   "name": "PostgreSQL",
+   "category": "database",
+   "aliases": [
+    "postgres",
+    "postgre sql",
+    "psql",
+    "postgresql database"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "sql",
+    "relational-databases",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "redis",
+   "name": "Redis",
+   "category": "database",
+   "aliases": [],
+   "prerequisites": [
+    "nosql",
+    "caching"
+   ],
+   "implies": [
+    "caching",
+    "nosql",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "sql-server",
+   "name": "SQL Server",
+   "category": "database",
+   "aliases": [
+    "mssql",
+    "microsoft sql server",
+    "ms sql",
+    "t-sql",
+    "tsql"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "sql",
+    "relational-databases",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "sqlite",
+   "name": "SQLite",
+   "category": "database",
+   "aliases": [
+    "sqlite3"
+   ],
+   "prerequisites": [
+    "sql"
+   ],
+   "implies": [
+    "sql",
+    "relational-databases",
+    "databases"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "vector-databases",
+   "name": "Vector databases",
+   "category": "database",
+   "aliases": [
+    "vector database",
+    "vector db",
+    "pinecone",
+    "weaviate",
+    "milvus",
+    "qdrant",
+    "chroma",
+    "chromadb",
+    "pgvector",
+    "faiss"
+   ],
+   "prerequisites": [
+    "embeddings"
+   ],
+   "implies": [
+    "databases"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "ansible",
+   "name": "Ansible",
+   "category": "devops",
+   "aliases": [],
+   "prerequisites": [
+    "linux"
+   ],
+   "implies": [
+    "infrastructure-as-code",
+    "devops"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "ci-cd",
+   "name": "CI/CD",
+   "category": "devops",
+   "aliases": [
+    "ci/cd",
+    "cicd",
+    "continuous integration",
+    "continuous deployment",
+    "continuous delivery",
+    "ci cd pipelines",
+    "ci pipelines",
+    "ci/cd pipelines",
+    "ci/cd pipeline",
+    "cicd pipelines",
+    "deployment pipelines",
+    "build pipelines"
+   ],
+   "prerequisites": [
+    "git"
+   ],
+   "implies": [
+    "devops"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "devops",
+   "name": "DevOps",
+   "category": "devops",
+   "aliases": [
+    "dev ops"
+   ],
+   "prerequisites": [
+    "linux",
+    "git"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "docker",
+   "name": "Docker",
+   "category": "devops",
+   "aliases": [
+    "containerization",
+    "docker compose",
+    "docker-compose",
+    "dockerfile"
+   ],
+   "prerequisites": [
+    "linux"
+   ],
+   "implies": [
+    "containers"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "github-actions",
+   "name": "GitHub Actions",
+   "category": "devops",
+   "aliases": [
+    "gh actions"
+   ],
+   "prerequisites": [
+    "ci-cd",
+    "git"
+   ],
+   "implies": [
+    "ci-cd",
+    "devops"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "grafana",
+   "name": "Grafana",
+   "category": "devops",
+   "aliases": [],
+   "prerequisites": [
+    "monitoring"
+   ],
+   "implies": [
+    "monitoring"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "jenkins",
+   "name": "Jenkins",
+   "category": "devops",
+   "aliases": [],
+   "prerequisites": [
+    "ci-cd"
+   ],
+   "implies": [
+    "ci-cd",
+    "devops"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "kubernetes",
+   "name": "Kubernetes",
+   "category": "devops",
+   "aliases": [
+    "k8s",
+    "k3s",
+    "eks",
+    "gke",
+    "aks",
+    "helm",
+    "container orchestration"
+   ],
+   "prerequisites": [
+    "docker"
+   ],
+   "implies": [
+    "containers",
+    "devops"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "linux",
+   "name": "Linux",
+   "category": "devops",
+   "aliases": [
+    "unix",
+    "ubuntu",
+    "linux administration",
+    "centos",
+    "debian",
+    "red hat"
+   ],
+   "prerequisites": [
+    "operating-systems"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "nginx",
+   "name": "Nginx",
+   "category": "devops",
+   "aliases": [],
+   "prerequisites": [
+    "linux",
+    "http"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "prometheus",
+   "name": "Prometheus",
+   "category": "devops",
+   "aliases": [],
+   "prerequisites": [
+    "monitoring"
+   ],
+   "implies": [
+    "monitoring"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "terraform",
+   "name": "Terraform",
+   "category": "devops",
+   "aliases": [
+    "hcl"
+   ],
+   "prerequisites": [
+    "cloud-computing"
+   ],
+   "implies": [
+    "infrastructure-as-code",
+    "devops"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "adtech",
+   "name": "AdTech",
+   "category": "domain",
+   "aliases": [
+    "advertising technology",
+    "digital advertising"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "ecommerce",
+   "name": "E-commerce",
+   "category": "domain",
+   "aliases": [
+    "e-commerce",
+    "ecommerce",
+    "online retail"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "edtech",
+   "name": "EdTech",
+   "category": "domain",
+   "aliases": [
+    "education technology",
+    "e-learning"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "finance",
+   "name": "Finance",
+   "category": "domain",
+   "aliases": [
+    "financial analysis",
+    "financial modeling",
+    "accounting"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "fintech",
+   "name": "Fintech",
+   "category": "domain",
+   "aliases": [
+    "financial technology",
+    "payments",
+    "banking technology",
+    "digital payments"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "gaming",
+   "name": "Gaming",
+   "category": "domain",
+   "aliases": [
+    "gaming industry"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "healthcare",
+   "name": "Healthcare",
+   "category": "domain",
+   "aliases": [
+    "healthtech",
+    "health tech",
+    "medical",
+    "clinical"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "logistics",
+   "name": "Logistics",
+   "category": "domain",
+   "aliases": [
+    "supply chain",
+    "supply chain management"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "marketing-analytics",
+   "name": "Marketing analytics",
+   "category": "domain",
+   "aliases": [
+    "digital marketing",
+    "seo",
+    "sem",
+    "growth analytics"
+   ],
+   "prerequisites": [
+    "data-analysis"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": false
+  },
+  {
+   "id": "saas",
+   "name": "SaaS",
+   "category": "domain",
+   "aliases": [
+    "software as a service"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "angular",
+   "name": "Angular",
+   "category": "frontend",
+   "aliases": [
+    "angularjs",
+    "angular.js",
+    "angular 2+"
+   ],
+   "prerequisites": [
+    "typescript"
+   ],
+   "implies": [
+    "typescript",
+    "javascript",
+    "frontend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "bootstrap",
+   "name": "Bootstrap",
+   "category": "frontend",
+   "aliases": [],
+   "prerequisites": [
+    "css"
+   ],
+   "implies": [
+    "css"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "css",
+   "name": "CSS",
+   "category": "frontend",
+   "aliases": [
+    "css3"
+   ],
+   "prerequisites": [
+    "html"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "html",
+   "name": "HTML",
+   "category": "frontend",
+   "aliases": [
+    "html5"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "jquery",
+   "name": "jQuery",
+   "category": "frontend",
+   "aliases": [],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "material-ui",
+   "name": "Material UI",
+   "category": "frontend",
+   "aliases": [
+    "mui",
+    "material-ui"
+   ],
+   "prerequisites": [
+    "react"
+   ],
+   "implies": [
+    "react"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "nextjs",
+   "name": "Next.js",
+   "category": "frontend",
+   "aliases": [
+    "nextjs",
+    "next js"
+   ],
+   "prerequisites": [
+    "react"
+   ],
+   "implies": [
+    "react",
+    "javascript",
+    "frontend-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "nuxt",
+   "name": "Nuxt",
+   "category": "frontend",
+   "aliases": [
+    "nuxtjs",
+    "nuxt.js"
+   ],
+   "prerequisites": [
+    "vue"
+   ],
+   "implies": [
+    "vue",
+    "javascript"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "react",
+   "name": "React",
+   "category": "frontend",
+   "aliases": [
+    "reactjs",
+    "react.js",
+    "react js"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript",
+    "frontend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "redux",
+   "name": "Redux",
+   "category": "frontend",
+   "aliases": [
+    "redux toolkit",
+    "rtk"
+   ],
+   "prerequisites": [
+    "react"
+   ],
+   "implies": [
+    "react",
+    "state-management"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "sass",
+   "name": "Sass",
+   "category": "frontend",
+   "aliases": [
+    "scss"
+   ],
+   "prerequisites": [
+    "css"
+   ],
+   "implies": [
+    "css"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "svelte",
+   "name": "Svelte",
+   "category": "frontend",
+   "aliases": [
+    "sveltekit"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript",
+    "frontend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "tailwind",
+   "name": "Tailwind CSS",
+   "category": "frontend",
+   "aliases": [
+    "tailwind",
+    "tailwindcss"
+   ],
+   "prerequisites": [
+    "css"
+   ],
+   "implies": [
+    "css"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "three-js",
+   "name": "Three.js",
+   "category": "frontend",
+   "aliases": [
+    "threejs"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "vite",
+   "name": "Vite",
+   "category": "frontend",
+   "aliases": [
+    "vitejs"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "vue",
+   "name": "Vue.js",
+   "category": "frontend",
+   "aliases": [
+    "vue",
+    "vuejs",
+    "vue js",
+    "vue 3"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [
+    "javascript",
+    "frontend-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "webpack",
+   "name": "Webpack",
+   "category": "frontend",
+   "aliases": [],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "assembly",
+   "name": "Assembly",
+   "category": "language",
+   "aliases": [
+    "assembly language",
+    "x86 assembly",
+    "asm"
+   ],
+   "prerequisites": [
+    "computer-architecture"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "bash",
+   "name": "Bash",
+   "category": "language",
+   "aliases": [
+    "shell",
+    "bash scripting",
+    "sh",
+    "zsh"
+   ],
+   "prerequisites": [
+    "linux"
+   ],
+   "implies": [
+    "shell-scripting"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "c",
+   "name": "C",
+   "category": "language",
+   "aliases": [
+    "c language",
+    "ansi c"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "cpp",
+   "name": "C++",
+   "category": "language",
+   "aliases": [
+    "c plus plus",
+    "cplusplus",
+    "cpp"
+   ],
+   "prerequisites": [
+    "c",
+    "oop"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "csharp",
+   "name": "C#",
+   "category": "language",
+   "aliases": [
+    "c sharp",
+    "csharp"
+   ],
+   "prerequisites": [
+    "programming",
+    "oop"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "dart",
+   "name": "Dart",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "elixir",
+   "name": "Elixir",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "functional-programming"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "excel-vba",
+   "name": "VBA",
+   "category": "language",
+   "aliases": [
+    "excel vba",
+    "macros"
+   ],
+   "prerequisites": [
+    "excel"
+   ],
+   "implies": [
+    "excel"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "go",
+   "name": "Go",
+   "category": "language",
+   "aliases": [
+    "golang"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "haskell",
+   "name": "Haskell",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "functional-programming"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "java",
+   "name": "Java",
+   "category": "language",
+   "aliases": [
+    "core java",
+    "java se",
+    "j2se"
+   ],
+   "prerequisites": [
+    "programming",
+    "oop"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "javascript",
+   "name": "JavaScript",
+   "category": "language",
+   "aliases": [
+    "js",
+    "ecmascript",
+    "es6",
+    "es2015",
+    "vanilla js"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "julia",
+   "name": "Julia",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "kotlin",
+   "name": "Kotlin",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming",
+    "oop"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "lua",
+   "name": "Lua",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "matlab",
+   "name": "MATLAB",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "perl",
+   "name": "Perl",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "php",
+   "name": "PHP",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "powershell",
+   "name": "PowerShell",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "python",
+   "name": "Python",
+   "category": "language",
+   "aliases": [
+    "python3",
+    "py",
+    "python 3"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "r",
+   "name": "R",
+   "category": "language",
+   "aliases": [
+    "r programming",
+    "r language",
+    "rstats"
+   ],
+   "prerequisites": [
+    "programming",
+    "statistics"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "ruby",
+   "name": "Ruby",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "rust",
+   "name": "Rust",
+   "category": "language",
+   "aliases": [
+    "rust lang"
+   ],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "scala",
+   "name": "Scala",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "java"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "solidity",
+   "name": "Solidity",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming",
+    "blockchain"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "sql",
+   "name": "SQL",
+   "category": "language",
+   "aliases": [
+    "structured query language",
+    "sql queries"
+   ],
+   "prerequisites": [
+    "relational-databases"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "swift",
+   "name": "Swift",
+   "category": "language",
+   "aliases": [],
+   "prerequisites": [
+    "programming"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "typescript",
+   "name": "TypeScript",
+   "category": "language",
+   "aliases": [
+    "ts"
+   ],
+   "prerequisites": [
+    "javascript"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "verilog",
+   "name": "Verilog",
+   "category": "language",
+   "aliases": [
+    "systemverilog",
+    "vhdl"
+   ],
+   "prerequisites": [
+    "digital-electronics"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "ai-agents",
+   "name": "AI agents",
+   "category": "ml",
+   "aliases": [
+    "agentic ai",
+    "llm agents",
+    "autonomous agents",
+    "semantic kernel"
+   ],
+   "prerequisites": [
+    "llms"
+   ],
+   "implies": [
+    "llms"
+   ],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "cnn",
+   "name": "Convolutional neural networks",
+   "category": "ml",
+   "aliases": [
+    "cnn",
+    "cnns",
+    "convolutional neural network"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "deep-learning",
+    "computer-vision"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "computer-vision",
+   "name": "Computer vision",
+   "category": "ml",
+   "aliases": [
+    "image processing",
+    "image recognition",
+    "object detection",
+    "image classification"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "data-science",
+   "name": "Data science",
+   "category": "ml",
+   "aliases": [
+    "data scientist skills"
+   ],
+   "prerequisites": [
+    "statistics",
+    "python",
+    "machine-learning"
+   ],
+   "implies": [
+    "data-analysis"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "deep-learning",
+   "name": "Deep learning",
+   "category": "ml",
+   "aliases": [
+    "dl",
+    "neural networks",
+    "neural network",
+    "ann",
+    "deep neural networks"
+   ],
+   "prerequisites": [
+    "machine-learning",
+    "calculus"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "embeddings",
+   "name": "Embeddings",
+   "category": "ml",
+   "aliases": [
+    "vector embeddings",
+    "word embeddings",
+    "word2vec",
+    "sentence embeddings"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "explainable-ai",
+   "name": "Explainable AI",
+   "category": "ml",
+   "aliases": [
+    "xai",
+    "interpretability",
+    "model interpretability",
+    "explainability",
+    "shap",
+    "lime"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "feature-engineering",
+   "name": "Feature engineering",
+   "category": "ml",
+   "aliases": [
+    "feature selection",
+    "feature extraction"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "fine-tuning",
+   "name": "Fine-tuning",
+   "category": "ml",
+   "aliases": [
+    "model fine-tuning",
+    "finetuning",
+    "lora",
+    "peft"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "deep-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "generative-models",
+   "name": "Generative models",
+   "category": "ml",
+   "aliases": [
+    "gans",
+    "gan",
+    "diffusion models",
+    "vae",
+    "stable diffusion"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "deep-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "hugging-face",
+   "name": "Hugging Face",
+   "category": "ml",
+   "aliases": [
+    "huggingface",
+    "hugging face transformers"
+   ],
+   "prerequisites": [
+    "transformers",
+    "python"
+   ],
+   "implies": [
+    "transformers",
+    "nlp",
+    "machine-learning"
+   ],
+   "depth": 5,
+   "resources_expected": true
+  },
+  {
+   "id": "jax",
+   "name": "JAX",
+   "category": "ml",
+   "aliases": [
+    "jax",
+    "flax"
+   ],
+   "prerequisites": [
+    "numpy",
+    "deep-learning"
+   ],
+   "implies": [],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "keras",
+   "name": "Keras",
+   "category": "ml",
+   "aliases": [],
+   "prerequisites": [
+    "deep-learning",
+    "python"
+   ],
+   "implies": [
+    "deep-learning",
+    "machine-learning",
+    "python"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "langchain",
+   "name": "LangChain",
+   "category": "ml",
+   "aliases": [],
+   "prerequisites": [
+    "llms",
+    "python"
+   ],
+   "implies": [
+    "llms",
+    "python"
+   ],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "langgraph",
+   "name": "LangGraph",
+   "category": "ml",
+   "aliases": [
+    "langgraph",
+    "lang graph"
+   ],
+   "prerequisites": [
+    "ai-agents",
+    "python"
+   ],
+   "implies": [],
+   "depth": 7,
+   "resources_expected": true
+  },
+  {
+   "id": "llamaindex",
+   "name": "LlamaIndex",
+   "category": "ml",
+   "aliases": [
+    "llamaindex",
+    "llama index",
+    "llama-index"
+   ],
+   "prerequisites": [
+    "rag"
+   ],
+   "implies": [],
+   "depth": 7,
+   "resources_expected": true
+  },
+  {
+   "id": "llm-apis",
+   "name": "LLM APIs",
+   "category": "ml",
+   "aliases": [
+    "openai api",
+    "anthropic api",
+    "claude api",
+    "gemini api",
+    "chatgpt api",
+    "gpt-4",
+    "function calling",
+    "tool calling",
+    "structured outputs",
+    "llm api"
+   ],
+   "prerequisites": [
+    "llms",
+    "apis"
+   ],
+   "implies": [],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "llm-evaluation",
+   "name": "LLM evaluation",
+   "category": "ml",
+   "aliases": [
+    "llm evals",
+    "llm evaluation",
+    "evals",
+    "llm-as-a-judge",
+    "llm as a judge",
+    "promptfoo",
+    "deepeval",
+    "ragas"
+   ],
+   "prerequisites": [
+    "llms"
+   ],
+   "implies": [],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "llm-serving",
+   "name": "LLM serving and inference",
+   "category": "ml",
+   "aliases": [
+    "vllm",
+    "ollama",
+    "llm inference",
+    "model quantization",
+    "quantization",
+    "tgi",
+    "text generation inference"
+   ],
+   "prerequisites": [
+    "llms"
+   ],
+   "implies": [],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "llms",
+   "name": "Large language models",
+   "category": "ml",
+   "aliases": [
+    "llm",
+    "llms",
+    "large language model",
+    "generative ai",
+    "genai",
+    "gen ai"
+   ],
+   "prerequisites": [
+    "transformers"
+   ],
+   "implies": [
+    "nlp"
+   ],
+   "depth": 5,
+   "resources_expected": true
+  },
+  {
+   "id": "machine-learning",
+   "name": "Machine learning",
+   "category": "ml",
+   "aliases": [
+    "ml",
+    "machine learning algorithms",
+    "supervised learning",
+    "unsupervised learning",
+    "predictive modeling",
+    "predictive modelling"
+   ],
+   "prerequisites": [
+    "python",
+    "statistics",
+    "linear-algebra"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "mcp",
+   "name": "Model Context Protocol",
+   "category": "ml",
+   "aliases": [
+    "model context protocol",
+    "mcp server",
+    "mcp servers"
+   ],
+   "prerequisites": [
+    "llm-apis"
+   ],
+   "implies": [],
+   "depth": 7,
+   "resources_expected": true
+  },
+  {
+   "id": "mlflow",
+   "name": "MLflow",
+   "category": "ml",
+   "aliases": [
+    "mlflow"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "mlops",
+   "name": "MLOps",
+   "category": "ml",
+   "aliases": [
+    "ml ops",
+    "model deployment",
+    "ml deployment",
+    "kubeflow",
+    "model serving",
+    "wandb",
+    "weights & biases",
+    "dvc"
+   ],
+   "prerequisites": [
+    "machine-learning",
+    "docker"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "model-evaluation",
+   "name": "Model evaluation",
+   "category": "ml",
+   "aliases": [
+    "model validation",
+    "cross-validation",
+    "evaluation metrics"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "multi-agent-systems",
+   "name": "Multi-agent systems",
+   "category": "ml",
+   "aliases": [
+    "multi-agent systems",
+    "multi agent systems",
+    "multi-agent",
+    "crewai",
+    "autogen",
+    "agent orchestration"
+   ],
+   "prerequisites": [
+    "ai-agents"
+   ],
+   "implies": [],
+   "depth": 7,
+   "resources_expected": true
+  },
+  {
+   "id": "nlp",
+   "name": "Natural language processing",
+   "category": "ml",
+   "aliases": [
+    "natural language processing",
+    "nlp",
+    "text mining",
+    "text analytics"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "opencv",
+   "name": "OpenCV",
+   "category": "ml",
+   "aliases": [
+    "open cv",
+    "cv2"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "computer-vision"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "prompt-engineering",
+   "name": "Prompt engineering",
+   "category": "ml",
+   "aliases": [
+    "prompting",
+    "prompt design"
+   ],
+   "prerequisites": [
+    "llms"
+   ],
+   "implies": [
+    "llms"
+   ],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "pytorch",
+   "name": "PyTorch",
+   "category": "ml",
+   "aliases": [
+    "torch",
+    "pytorch lightning"
+   ],
+   "prerequisites": [
+    "deep-learning",
+    "python"
+   ],
+   "implies": [
+    "deep-learning",
+    "machine-learning",
+    "python"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "rag",
+   "name": "Retrieval-augmented generation",
+   "category": "ml",
+   "aliases": [
+    "rag",
+    "retrieval augmented generation"
+   ],
+   "prerequisites": [
+    "llms",
+    "embeddings"
+   ],
+   "implies": [
+    "llms"
+   ],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "recommender-systems",
+   "name": "Recommender systems",
+   "category": "ml",
+   "aliases": [
+    "recommendation systems",
+    "recommendation engine",
+    "collaborative filtering"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "reinforcement-learning",
+   "name": "Reinforcement learning",
+   "category": "ml",
+   "aliases": [
+    "rl",
+    "deep reinforcement learning"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "responsible-ai",
+   "name": "Responsible AI",
+   "category": "ml",
+   "aliases": [
+    "fairness",
+    "ml fairness",
+    "ai ethics",
+    "responsible ai",
+    "bias mitigation",
+    "ai governance"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "rnn",
+   "name": "Recurrent neural networks",
+   "category": "ml",
+   "aliases": [
+    "rnn",
+    "lstm",
+    "gru",
+    "rnns"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "deep-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "scikit-learn",
+   "name": "scikit-learn",
+   "category": "ml",
+   "aliases": [
+    "sklearn",
+    "scikit learn"
+   ],
+   "prerequisites": [
+    "machine-learning",
+    "python"
+   ],
+   "implies": [
+    "machine-learning",
+    "python"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "speech-recognition",
+   "name": "Speech recognition",
+   "category": "ml",
+   "aliases": [
+    "asr",
+    "speech processing",
+    "speech-to-text"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "tensorflow",
+   "name": "TensorFlow",
+   "category": "ml",
+   "aliases": [
+    "tf",
+    "tensorflow 2"
+   ],
+   "prerequisites": [
+    "deep-learning",
+    "python"
+   ],
+   "implies": [
+    "deep-learning",
+    "machine-learning",
+    "python"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "time-series",
+   "name": "Time series analysis",
+   "category": "ml",
+   "aliases": [
+    "time series",
+    "forecasting",
+    "time series forecasting",
+    "arima"
+   ],
+   "prerequisites": [
+    "statistics"
+   ],
+   "implies": [],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "transformers",
+   "name": "Transformers",
+   "category": "ml",
+   "aliases": [
+    "transformer models",
+    "transformer architecture",
+    "attention mechanism",
+    "bert",
+    "gpt"
+   ],
+   "prerequisites": [
+    "deep-learning"
+   ],
+   "implies": [
+    "deep-learning",
+    "nlp"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "xgboost",
+   "name": "XGBoost",
+   "category": "ml",
+   "aliases": [
+    "lightgbm",
+    "catboost",
+    "gradient boosting"
+   ],
+   "prerequisites": [
+    "machine-learning"
+   ],
+   "implies": [
+    "machine-learning"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "android",
+   "name": "Android development",
+   "category": "mobile",
+   "aliases": [
+    "android",
+    "android studio",
+    "android sdk"
+   ],
+   "prerequisites": [
+    "kotlin"
+   ],
+   "implies": [
+    "mobile-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "flutter",
+   "name": "Flutter",
+   "category": "mobile",
+   "aliases": [],
+   "prerequisites": [
+    "dart"
+   ],
+   "implies": [
+    "dart",
+    "mobile-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "ios",
+   "name": "iOS development",
+   "category": "mobile",
+   "aliases": [
+    "ios",
+    "swiftui",
+    "uikit",
+    "xcode"
+   ],
+   "prerequisites": [
+    "swift"
+   ],
+   "implies": [
+    "mobile-development"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "jetpack-compose",
+   "name": "Jetpack Compose",
+   "category": "mobile",
+   "aliases": [],
+   "prerequisites": [
+    "android"
+   ],
+   "implies": [
+    "android",
+    "kotlin"
+   ],
+   "depth": 4,
+   "resources_expected": true
+  },
+  {
+   "id": "react-native",
+   "name": "React Native",
+   "category": "mobile",
+   "aliases": [
+    "react-native",
+    "rn"
+   ],
+   "prerequisites": [
+    "react"
+   ],
+   "implies": [
+    "react",
+    "javascript",
+    "mobile-development"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "cloud-security",
+   "name": "Cloud security",
+   "category": "security",
+   "aliases": [
+    "iam",
+    "identity and access management"
+   ],
+   "prerequisites": [
+    "cloud-computing",
+    "cybersecurity"
+   ],
+   "implies": [
+    "cybersecurity"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "cryptography",
+   "name": "Cryptography",
+   "category": "security",
+   "aliases": [
+    "encryption"
+   ],
+   "prerequisites": [
+    "discrete-math"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "cybersecurity",
+   "name": "Cybersecurity",
+   "category": "security",
+   "aliases": [
+    "cyber security",
+    "information security",
+    "infosec",
+    "security"
+   ],
+   "prerequisites": [
+    "computer-networks"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "llm-security",
+   "name": "LLM security",
+   "category": "security",
+   "aliases": [
+    "prompt injection",
+    "owasp llm top 10",
+    "ai security",
+    "llm guardrails",
+    "guardrails",
+    "jailbreaks"
+   ],
+   "prerequisites": [
+    "llms"
+   ],
+   "implies": [],
+   "depth": 6,
+   "resources_expected": true
+  },
+  {
+   "id": "network-security",
+   "name": "Network security",
+   "category": "security",
+   "aliases": [
+    "firewalls",
+    "ids/ips"
+   ],
+   "prerequisites": [
+    "cybersecurity",
+    "computer-networks"
+   ],
+   "implies": [
+    "cybersecurity"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "penetration-testing",
+   "name": "Penetration testing",
+   "category": "security",
+   "aliases": [
+    "pentesting",
+    "ethical hacking",
+    "vapt",
+    "burp suite",
+    "metasploit"
+   ],
+   "prerequisites": [
+    "cybersecurity"
+   ],
+   "implies": [
+    "cybersecurity"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "siem",
+   "name": "SIEM",
+   "category": "security",
+   "aliases": [
+    "splunk",
+    "security monitoring",
+    "soc"
+   ],
+   "prerequisites": [
+    "cybersecurity"
+   ],
+   "implies": [
+    "cybersecurity"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "web-security",
+   "name": "Web application security",
+   "category": "security",
+   "aliases": [
+    "owasp",
+    "owasp top 10",
+    "application security",
+    "appsec",
+    "xss",
+    "sql injection",
+    "csrf"
+   ],
+   "prerequisites": [
+    "http",
+    "cybersecurity"
+   ],
+   "implies": [
+    "cybersecurity"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "adaptability",
+   "name": "Adaptability",
+   "category": "soft",
+   "aliases": [
+    "flexibility",
+    "learning agility",
+    "quick learner",
+    "fast learner"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "attention-to-detail",
+   "name": "Attention to detail",
+   "category": "soft",
+   "aliases": [
+    "detail-oriented",
+    "detail oriented"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "behavioral-interviews",
+   "name": "Behavioral interviews",
+   "category": "soft",
+   "aliases": [
+    "behavioral interview",
+    "behavioural interview",
+    "star method",
+    "hr interview"
+   ],
+   "prerequisites": [
+    "communication"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "communication",
+   "name": "Communication",
+   "category": "soft",
+   "aliases": [
+    "communication skills",
+    "verbal communication",
+    "written communication",
+    "presentation skills",
+    "public speaking"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "creativity",
+   "name": "Creativity",
+   "category": "soft",
+   "aliases": [
+    "innovation",
+    "creative thinking"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "leadership",
+   "name": "Leadership",
+   "category": "soft",
+   "aliases": [
+    "team leadership",
+    "leading teams",
+    "mentoring",
+    "mentorship"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "ownership",
+   "name": "Ownership",
+   "category": "soft",
+   "aliases": [
+    "accountability",
+    "self-motivated",
+    "self-starter",
+    "initiative",
+    "proactive"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "problem-solving",
+   "name": "Problem solving",
+   "category": "soft",
+   "aliases": [
+    "problem-solving skills",
+    "analytical skills",
+    "analytical thinking",
+    "critical thinking"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "stakeholder-management",
+   "name": "Stakeholder management",
+   "category": "soft",
+   "aliases": [
+    "client communication",
+    "stakeholder communication",
+    "customer-facing"
+   ],
+   "prerequisites": [
+    "communication"
+   ],
+   "implies": [],
+   "depth": 1,
+   "resources_expected": false
+  },
+  {
+   "id": "teamwork",
+   "name": "Teamwork",
+   "category": "soft",
+   "aliases": [
+    "collaboration",
+    "team player",
+    "working in teams",
+    "cross-functional collaboration"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "time-management",
+   "name": "Time management",
+   "category": "soft",
+   "aliases": [
+    "prioritization",
+    "organizational skills"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": false
+  },
+  {
+   "id": "cypress",
+   "name": "Cypress",
+   "category": "testing",
+   "aliases": [],
+   "prerequisites": [
+    "javascript",
+    "testing"
+   ],
+   "implies": [
+    "testing",
+    "integration-testing",
+    "test-automation"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "integration-testing",
+   "name": "Integration testing",
+   "category": "testing",
+   "aliases": [
+    "integration tests",
+    "end-to-end testing",
+    "e2e testing",
+    "e2e tests"
+   ],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "jest",
+   "name": "Jest",
+   "category": "testing",
+   "aliases": [],
+   "prerequisites": [
+    "javascript",
+    "unit-testing"
+   ],
+   "implies": [
+    "unit-testing",
+    "testing",
+    "javascript"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "junit",
+   "name": "JUnit",
+   "category": "testing",
+   "aliases": [
+    "junit5"
+   ],
+   "prerequisites": [
+    "java",
+    "unit-testing"
+   ],
+   "implies": [
+    "unit-testing",
+    "testing",
+    "java"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "load-testing",
+   "name": "Load testing",
+   "category": "testing",
+   "aliases": [
+    "performance testing",
+    "jmeter",
+    "locust",
+    "k6"
+   ],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "manual-testing",
+   "name": "Manual testing",
+   "category": "testing",
+   "aliases": [],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "playwright",
+   "name": "Playwright",
+   "category": "testing",
+   "aliases": [],
+   "prerequisites": [
+    "javascript",
+    "testing"
+   ],
+   "implies": [
+    "testing",
+    "integration-testing",
+    "test-automation"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "pytest",
+   "name": "pytest",
+   "category": "testing",
+   "aliases": [],
+   "prerequisites": [
+    "python",
+    "unit-testing"
+   ],
+   "implies": [
+    "unit-testing",
+    "testing",
+    "python"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "selenium",
+   "name": "Selenium",
+   "category": "testing",
+   "aliases": [
+    "selenium webdriver"
+   ],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing",
+    "test-automation"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "tdd",
+   "name": "Test-driven development",
+   "category": "testing",
+   "aliases": [
+    "test driven development",
+    "tdd"
+   ],
+   "prerequisites": [
+    "unit-testing"
+   ],
+   "implies": [
+    "unit-testing",
+    "testing"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "test-automation",
+   "name": "Test automation",
+   "category": "testing",
+   "aliases": [
+    "automation testing",
+    "automated testing"
+   ],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "testing",
+   "name": "Software testing",
+   "category": "testing",
+   "aliases": [
+    "testing",
+    "software testing",
+    "qa",
+    "quality assurance"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "unit-testing",
+   "name": "Unit testing",
+   "category": "testing",
+   "aliases": [
+    "unit tests",
+    "unit test"
+   ],
+   "prerequisites": [
+    "testing"
+   ],
+   "implies": [
+    "testing"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "bitbucket",
+   "name": "Bitbucket",
+   "category": "tool",
+   "aliases": [],
+   "prerequisites": [
+    "git"
+   ],
+   "implies": [
+    "git"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "command-line",
+   "name": "Command line",
+   "category": "tool",
+   "aliases": [
+    "cli",
+    "terminal",
+    "command line interface"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "excel",
+   "name": "Microsoft Excel",
+   "category": "tool",
+   "aliases": [
+    "excel",
+    "ms excel",
+    "advanced excel",
+    "spreadsheets",
+    "vlookup",
+    "pivot tables",
+    "google sheets"
+   ],
+   "prerequisites": [],
+   "implies": [
+    "data-analysis"
+   ],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "category": "tool",
+   "aliases": [],
+   "prerequisites": [
+    "ui-ux"
+   ],
+   "implies": [
+    "ui-ux"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "git",
+   "name": "Git",
+   "category": "tool",
+   "aliases": [
+    "version control",
+    "git version control",
+    "source control",
+    "vcs"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "github",
+   "name": "GitHub",
+   "category": "tool",
+   "aliases": [],
+   "prerequisites": [
+    "git"
+   ],
+   "implies": [
+    "git"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "gitlab",
+   "name": "GitLab",
+   "category": "tool",
+   "aliases": [],
+   "prerequisites": [
+    "git"
+   ],
+   "implies": [
+    "git"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "gpu-programming",
+   "name": "GPU programming",
+   "category": "tool",
+   "aliases": [
+    "cuda",
+    "gpu computing",
+    "gpu programming",
+    "rapids",
+    "triton kernels"
+   ],
+   "prerequisites": [
+    "cpp"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "jira",
+   "name": "Jira",
+   "category": "tool",
+   "aliases": [
+    "confluence"
+   ],
+   "prerequisites": [
+    "agile"
+   ],
+   "implies": [
+    "agile"
+   ],
+   "depth": 1,
+   "resources_expected": true
+  },
+  {
+   "id": "jupyter",
+   "name": "Jupyter",
+   "category": "tool",
+   "aliases": [
+    "jupyter notebook",
+    "jupyter notebooks",
+    "jupyterlab",
+    "google colab",
+    "colab"
+   ],
+   "prerequisites": [
+    "python"
+   ],
+   "implies": [
+    "python"
+   ],
+   "depth": 2,
+   "resources_expected": true
+  },
+  {
+   "id": "postman",
+   "name": "Postman",
+   "category": "tool",
+   "aliases": [],
+   "prerequisites": [
+    "rest-api"
+   ],
+   "implies": [
+    "rest-api"
+   ],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "ros",
+   "name": "ROS",
+   "category": "tool",
+   "aliases": [
+    "ros",
+    "ros2",
+    "ros 2",
+    "robot operating system"
+   ],
+   "prerequisites": [
+    "robotics",
+    "linux"
+   ],
+   "implies": [],
+   "depth": 3,
+   "resources_expected": true
+  },
+  {
+   "id": "rpa",
+   "name": "Robotic process automation",
+   "category": "tool",
+   "aliases": [
+    "rpa",
+    "uipath",
+    "automation anywhere",
+    "blue prism"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "salesforce",
+   "name": "Salesforce",
+   "category": "tool",
+   "aliases": [
+    "salesforce crm",
+    "apex"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "sap",
+   "name": "SAP",
+   "category": "tool",
+   "aliases": [
+    "sap erp",
+    "sap abap"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  },
+  {
+   "id": "vscode",
+   "name": "VS Code",
+   "category": "tool",
+   "aliases": [
+    "visual studio code"
+   ],
+   "prerequisites": [],
+   "implies": [],
+   "depth": 0,
+   "resources_expected": true
+  }
+ ]
+}

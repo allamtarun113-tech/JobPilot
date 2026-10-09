@@ -1,0 +1,21 @@
+# Web fetch rules: a deny-list plus checks.
+deny_domains:
+  - linkedin.com
+  - naukri.com
+  - indeed.com
+  - indeed.co.in
+preferred_careers_domains:
+  - greenhouse.io
+  - lever.co
+  - ashbyhq.com
+  - workable.com
+  - smartrecruiters.com
+  - myworkdayjobs.com
+  - keka.com
+  - darwinbox.in
+  - zohorecruit.com
+max_pages_per_lead: 3
+max_response_bytes: 2000000
+timeout_seconds: 15
+min_interval_seconds: 1.0     # politeness: one request per host per second at most
+respect_robots: true

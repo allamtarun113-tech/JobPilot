@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Settings - JobPilot{% endblock %}
+{% block content %}
+<div class="page-header"><div><p class="eyebrow">Controls</p><h1>Settings</h1><p class="lead">Kill switch, message delivery and system health.</p></div></div>
+<div class="card"><h2>Kill switch</h2>
+<p>Status: <span class="pill {% if killswitch.on %}rejected{% else %}confirmed{% endif %}">{{ "ON" if killswitch.on else "off" }}</span>{% if killswitch.on %} · {{ killswitch.reason }} · since {{ killswitch.at }}{% endif %}</p>
+<p class="muted">When on, no run starts and no email is sent (also <code>/killswitch on|off</code> in Telegram). It turns on by itself after an error spike or a budget breach.</p>
+<form method="post" action="/settings/action"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-k">
+<button name="action" value="{{ 'killswitch_off' if killswitch.on else 'killswitch_on' }}">{{ "Release kill switch" if killswitch.on else "Engage kill switch" }}</button></form>
+</div>
+<div class="card"><h2>Message delivery</h2>
+<p>Dispatcher: <span class="pill {% if paused.on %}rejected{% else %}confirmed{% endif %}">{{ "paused" if paused.on else "running" }}</span> · shadow mode: <strong>{{ "on (emails are logged, not sent)" if shadow_mode else "OFF (emails are sent)" }}</strong></p>
+<form method="post" action="/settings/action"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-d">
+<button name="action" value="{{ 'dispatcher_resume' if paused.on else 'dispatcher_pause' }}">{{ "Resume delivery" if paused.on else "Pause delivery" }}</button></form>
+<h3>Stuck messages</h3>
+{% for row in dead %}
+<div class="soft-card" style="margin:8px 0"><strong>{{ row.kind }}</strong> · {{ row.partition_key }} · {{ row.payload.op }} · {{ row.attempts }} attempts<br><span class="muted">{{ row.last_error }}</span>
+{% if row.kind == "telegram" %}<form method="post" action="/settings/action"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="nonce" value="{{ nonce }}-s{{ row.id }}"><input type="hidden" name="outbox_id" value="{{ row.id }}"><button name="action" value="skip_dead">Skip this message</button></form>
+{% else %}<p class="muted">Reconcile with <code>make reconcile</code> on the laptop (see docs/runbook.md).</p>{% endif %}</div>
+{% else %}<p class="muted">Nothing is stuck.</p>{% endfor %}
+</div>
+<div class="card"><h2>System health</h2><table class="meta-table">
+<tr><th>Messages waiting</th><td>{{ counters.undelivered }} (dead: {{ counters.dead }})</td></tr>
+<tr><th>Run lease takeovers</th><td>{{ counters.lease_takeovers or 0 }}</td></tr>
+<tr><th>Consecutive integration failures</th><td>{% for k, v in counters.integration_failures.items() %}{{ k }} {{ v }}{% if not loop.last %} · {% endif %}{% else %}none{% endfor %}</td></tr>
+</table><p class="muted"><a href="/health/details">Raw health details</a></p></div>
+{% endblock %}

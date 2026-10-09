@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Jobs - JobPilot{% endblock %}
+{% block content %}
+<div class="page-header"><div><p class="eyebrow">Opportunity pipeline</p><h1>Every job found</h1><p class="lead">The pipeline: what was found, filtered, scored, queued or carded - and why.</p></div></div>
+<div class="stats">
+  <div class="stat"><span class="stat-label">Total jobs</span><span class="stat-value">{{ jobs|length }}</span><span class="stat-detail">in this view</span></div>
+  <div class="stat"><span class="stat-label">30-day recall</span><span class="stat-value">{% if recall is not none %}{{ "%.0f"|format(recall * 100) }}%{% else %}—{% endif %}</span><span class="stat-detail">{% if recall is not none %}{{ hits }}/{{ shared }} shared jobs found{% else %}Share jobs to measure{% endif %}</span></div>
+  <div class="stat"><span class="stat-label">Pipeline</span><span class="stat-value">{{ counts.values()|sum }}</span><span class="stat-detail">tracked opportunities</span></div>
+</div>
+<div class="filters">
+  <a href="/jobs" class="pill">cards</a> <a href="/jobs/all" class="pill {% if not status %}confirmed{% endif %}">all found</a>
+  {% for s in statuses %}{% if counts.get(s) %}
+  <a href="/jobs/all?status={{ s }}" class="pill {% if status == s %}confirmed{% endif %}">{{ s|replace("_", " ") }} {{ counts[s] }}</a>
+  {% endif %}{% endfor %}
+</div>
+{% if not jobs %}
+<div class="empty"><h2>No jobs yet</h2><p>Send <code>/start</code> to the bot or share a job link to begin.</p></div>
+{% else %}
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Score</th><th>Role</th><th>Company</th><th>Where</th><th>Status</th><th>Sources</th><th>Found</th></tr></thead>
+  <tbody>
+  {% for j in jobs %}
+    {% set sc = scores.get(j.id) %}
+    <tr>
+      <td>{% if sc %}<strong>{{ "%.0f"|format(sc.score) }}</strong>{% elif j.stage_a is not none %}<span class="muted">A {{ "%.2f"|format(j.stage_a) }}</span>{% endif %}</td>
+      <td><a href="/jobs/{{ j.id }}">{{ j.title }}</a>{% if j.jd_lookup == "not_found" %} <span class="muted">· JD not found</span>{% elif j.jd_is_snippet %} <span class="muted">· snippet</span>{% endif %}</td>
+      <td>{{ j.company }}</td>
+      <td>{{ j.city or "" }}{% if j.remote %} <span class="muted">remote</span>{% endif %}</td>
+      <td><span class="pill">{{ j.pipeline_status|replace("_", " ") }}</span>{% if j.filter_reason %}<br><span class="muted" style="font-size:13px">{{ j.filter_reason }}</span>{% endif %}</td>
+      <td class="muted">{{ (sources.get(j.id) or [])|join(", ") }}</td>
+      <td class="muted">{{ j.first_seen_at.strftime("%d %b") }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+{% endblock %}
